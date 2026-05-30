@@ -62,7 +62,7 @@ export const Footer: React.FC<FooterProps> = () => {
                 </li>
                 <li>
                   <button
-                    onClick={() => scrollToSection("about-section")}
+                    onClick={() => scrollToSection("spark-program")}
                     className="text-slate-400 hover:text-white transition-colors cursor-pointer"
                   >
                     About Internship

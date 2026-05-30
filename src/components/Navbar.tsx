@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection("about-section")}
+                onClick={() => scrollToSection("spark-program")}
                 className="text-sm font-medium text-slate-300 hover:text-orange-400 hover:scale-105 transition-all cursor-pointer font-sans"
               >
                 About Internship
@@ -119,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection("about-section")}
+                onClick={() => scrollToSection("spark-program")}
                 className="text-left py-3 px-4 text-base font-semibold text-slate-250 hover:bg-slate-900 rounded-lg transition-all border-l-2 border-transparent hover:border-orange-500 cursor-pointer"
               >
                 About Internship

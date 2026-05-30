@@ -1,3 +1,9 @@
+export interface WeeklyReview {
+  week: number;
+  review: string;
+  rating: number;
+}
+
 export interface Contributor {
   id: string;
   name: string;
@@ -8,6 +14,8 @@ export interface Contributor {
   techUsed: string[];
   bio: string;
   contributions: string;
+  dailyTasks: string[];
+  weeklyReviews: WeeklyReview[];
   resume: {
     education: {
       degree: string;
