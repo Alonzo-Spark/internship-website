@@ -67,11 +67,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <ul className="space-y-2 text-xs text-slate-400">
                 <li className="flex items-center gap-2">
                   <Mail size={13} className="text-slate-500" />
-                  <a href="mailto:info@alonzo.ai" className="hover:text-slate-100 transition-colors">info@alonzo.ai</a>
+                  <a href="mailto:admin@alonzoai.in" className="hover:text-slate-100 transition-colors">admin@alonzoai.in</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={13} className="text-slate-500" />
-                  <span>+1 (800) 555-ALNZ</span>
+                  <a href="tel:+919966992217" className="hover:text-slate-100 transition-colors">+91 9966992217</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Linkedin size={13} className="text-slate-500" />

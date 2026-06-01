@@ -26,20 +26,17 @@ export const SparkProgram: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            {/* Left Visual Badge Column */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center text-center p-6 md:p-10 bg-slate-950/70 border border-slate-900/80 rounded-3xl relative overflow-hidden min-h-[340px] shadow-inner">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-orange-500/5 to-transparent opacity-50" />
-              
-              <div className="relative p-5 bg-gradient-to-tr from-red-600/15 to-orange-500/15 border border-orange-500/30 rounded-full mb-5 animate-pulse">
-                <Sparkles className="text-orange-500 h-12 w-12" />
-              </div>
-              
-              <span className="font-mono text-xs uppercase font-bold tracking-widest text-orange-400">Program Spotlight</span>
-              <h3 className="text-3xl font-serif font-black text-slate-100 mt-2 leading-tight">Alonzo Spark Internship</h3>
-              <div className="mt-5 px-4 py-1.5 bg-orange-500/10 border border-orange-500/25 rounded-full text-orange-300 text-xs font-mono tracking-wider font-semibold uppercase">
-                5-Week Cohort
-              </div>
+            {/* Left Visual Column - High-Fidelity Spark Poster */}
+            <div className="lg:col-span-5 overflow-hidden rounded-[1.8rem] border border-slate-800 shadow-2xl flex items-center justify-center bg-slate-950/40 relative group/poster aspect-[4/5] max-w-sm mx-auto lg:max-w-none">
+              <img
+                src="/spark-poster.png"
+                alt="Alonzo Spark Internship Programme"
+                className="w-full h-full object-cover transition-transform duration-750 group-hover/poster:scale-105"
+              />
+              {/* Premium overlay subtle warm glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-orange-500/10 via-transparent to-transparent opacity-0 group-hover/poster:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
+
 
             {/* Right Text Column */}
             <div className="lg:col-span-7 space-y-6 lg:pl-2">

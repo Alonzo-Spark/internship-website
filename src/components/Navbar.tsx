@@ -10,7 +10,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   // Dynamic theme state reading from localStorage or system setting
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     if (typeof window !== "undefined") {
@@ -57,15 +57,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     <>
       <nav
         id="alonzo-navbar"
-        className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${scrolled
             ? "py-3 bg-slate-950/80 backdrop-blur-md border-b border-slate-900 shadow-lg"
             : "py-5 bg-transparent border-b border-transparent"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            
+
             {/* Logo */}
             <div
               className="cursor-pointer"
