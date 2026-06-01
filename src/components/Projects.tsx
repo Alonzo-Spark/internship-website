@@ -6,9 +6,10 @@ import { Users, Star, Calendar, Bookmark, User, MessageSquareCode, ArrowDownRigh
 
 interface ProjectsProps {
   onContributorSelect: (contributor: Contributor, project: Project) => void;
+  onProjectSelect: (project: Project) => void;
 }
 
-export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect }) => {
+export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProjectSelect }) => {
   // Store expanded state per project card: 'contributors' | 'reviews' | null
   const [expandedSection, setExpandedSection] = useState<{ [key: string]: "contributors" | "reviews" | null }>({});
 
@@ -62,7 +63,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect }) => {
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      onClick={() => onProjectSelect(project)}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950/80 to-transparent" />
                     
@@ -80,7 +82,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect }) => {
                       
                       {/* Title, duration, and metadata info */}
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-900 pb-3">
-                        <h3 className="text-2xl font-serif font-black text-white tracking-wide">
+                        <h3 
+                          onClick={() => onProjectSelect(project)}
+                          className="text-2xl font-serif font-black text-white tracking-wide cursor-pointer hover:text-orange-400 transition-colors"
+                          title="View Project Details"
+                        >
                           {project.name}
                         </h3>
                         <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400">
@@ -202,9 +208,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect }) => {
                                   </div>
                                 </div>
 
-                                {/* Skills / CGPA Tag Row */}
+                                {/* Skills Tag Row */}
                                 <div className="border-t border-slate-950 mt-4 pt-3 flex justify-between items-center text-[10px]">
-                                  <span className="text-slate-500 font-mono">GPA Score: <strong className="text-white font-mono">{contrib.cgpa}</strong></span>
+                                  <span className="text-slate-500 font-mono">Primary Skill: <strong className="text-orange-500/80 font-mono">{contrib.skills[0]}</strong></span>
                                   
                                   <button
                                     id={`view-profile-btn-${contrib.id}`}

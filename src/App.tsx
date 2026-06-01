@@ -11,8 +11,9 @@
 import { useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { About } from "./components/About";
+import { SparkProgram } from "./components/SparkProgram";
 import { Projects } from "./components/Projects";
+import { ProjectDetails } from "./components/ProjectDetails";
 import { Footer } from "./components/Footer";
 import { ContributorProfile } from "./components/ContributorProfile";
 import { Contributor, Project } from "./types";
@@ -24,9 +25,16 @@ export default function App() {
     project: Project;
   } | null>(null);
 
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   const handleContributorSelect = (contributor: Contributor, project: Project) => {
     // Set profile active, and scroll top to begin clean viewing coordinate
     setSelectedProfile({ contributor, project });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleProjectSelect = (project: Project) => {
+    setSelectedProject(project);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -37,7 +45,6 @@ export default function App() {
 
       {/* Main viewport flow */}
       <main className="flex-1">
-        {/* If a contributor profile is selected, we mount the profile page overlay directly */}
         <AnimatePresence mode="wait">
           {selectedProfile ? (
             <ContributorProfile
@@ -48,12 +55,22 @@ export default function App() {
               mentor={selectedProfile.project.mentor}
               onClose={() => setSelectedProfile(null)}
             />
+          ) : selectedProject ? (
+            <ProjectDetails
+              key={selectedProject.id}
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+              onContributorSelect={handleContributorSelect}
+            />
           ) : (
             <>
               {/* Home Landing Sections */}
               <Hero />
-              <About />
-              <Projects onContributorSelect={handleContributorSelect} />
+              <SparkProgram />
+              <Projects 
+                onContributorSelect={handleContributorSelect} 
+                onProjectSelect={handleProjectSelect}
+              />
             </>
           )}
         </AnimatePresence>
