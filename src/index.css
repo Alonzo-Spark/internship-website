@@ -88,20 +88,18 @@ body {
   }
 }
 
-/* Shaded gradient overlay for project cards image */
+/* Project card image overlay removed to keep images crisp and clear */
 .project-image-overlay {
-  background-image: linear-gradient(to top, rgba(2, 6, 23, 0.8), transparent);
+  background: transparent !important;
 }
 
 @media (min-width: 768px) {
   .project-image-overlay {
-    background-image: linear-gradient(to right, rgba(2, 6, 23, 0.8), transparent);
+    background: transparent !important;
   }
 }
 
-/* Completely remove/transparentize in light mode */
 .light .project-image-overlay {
-  background-image: none !important;
   background: transparent !important;
 }
 
