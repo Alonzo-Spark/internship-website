@@ -71,7 +71,7 @@ export const Logo: React.FC<LogoProps> = ({
 
       {showText && (
         <div className="flex flex-col">
-          <span className="font-serif tracking-[0.25em] text-white text-lg font-bold leading-tight uppercase">
+          <span className="font-serif tracking-[0.25em] text-slate-100 text-lg font-bold leading-tight uppercase">
             Alonzo AI
           </span>
           <span className="font-sans text-[10px] tracking-[0.18em] text-orange-400 font-medium uppercase min-w-[130px]">

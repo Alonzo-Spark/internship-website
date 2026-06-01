@@ -38,10 +38,43 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleNavigate = (sectionId?: string) => {
+    setSelectedProfile(null);
+    setSelectedProject(null);
+
+    if (!sectionId) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // Wait for the AnimatePresence exit transitions to finish and mount components on the DOM by polling
+    let attempts = 0;
+    const checkAndScroll = () => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      } else if (attempts < 15) {
+        attempts++;
+        setTimeout(checkAndScroll, 50);
+      }
+    };
+
+    setTimeout(checkAndScroll, 50);
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans antialiased overflow-x-hidden selection:bg-orange-500/30 selection:text-white">
       {/* Absolute fixed Header Coordinate */}
-      <Navbar />
+      <Navbar onNavigate={handleNavigate} />
 
       {/* Main viewport flow */}
       <main className="flex-1">
@@ -77,7 +110,7 @@ export default function App() {
       </main>
 
       {/* Persistent global footer */}
-      <Footer />
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }

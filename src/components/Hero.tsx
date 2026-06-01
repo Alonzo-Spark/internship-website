@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDown, Briefcase, ChevronRight } from "lucide-react";
+import { ArrowDown, Briefcase } from "lucide-react";
 import { motion } from "motion/react";
 
 interface HeroProps {
@@ -39,20 +39,10 @@ export const Hero: React.FC<HeroProps> = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px] opacity-60" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-full z-10 w-full flex flex-col items-center justify-center text-center">
-        
-        {/* Status pill badge */}
-        <div className="inline-flex items-center gap-2 p-1.5 pr-3 bg-slate-900/80 border border-slate-800/80 rounded-full text-slate-300 font-sans text-xs">
-          <span className="flex h-2 w-2 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-          </span>
-          <span className="font-mono text-[10px] uppercase font-bold tracking-widest text-[#f59e0b]">Summer Placement Active</span>
-          <ChevronRight size={12} className="text-slate-500" />
-        </div>
 
         {/* Headline & Subheading */}
-        <div className="space-y-6 mt-8 max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-black tracking-tight text-white leading-[1.15]">
+        <div className="space-y-6 max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-black tracking-tight text-slate-100 leading-[1.15]">
             Building Future{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-500 to-amber-400">
               Innovators
@@ -61,7 +51,7 @@ export const Hero: React.FC<HeroProps> = () => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed font-sans font-light max-w-2xl mx-auto">
-            Explore impactful internships, industry projects, mentor-guided learning experiences, and success stories from our talented contributors.
+            Explore impactful internships, industry projects, mentor-guided learning experiences, and success stories from our talented team members.
           </p>
         </div>
 
@@ -79,7 +69,7 @@ export const Hero: React.FC<HeroProps> = () => {
           <button
             id="hero-about-btn"
             onClick={() => scrollToSection("spark-program")}
-            className="px-8 py-3.5 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-semibold text-sm rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="px-8 py-3.5 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 text-slate-300 hover:text-slate-100 font-semibold text-sm rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             About Internship
             <Briefcase size={16} className="text-slate-400" />
