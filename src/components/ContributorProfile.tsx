@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Contributor, Mentor } from "../types";
 import { get30DaysTasks, TaskItem } from "../utils/dailyTasksGenerator";
-import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar } from "lucide-react";
+import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone } from "lucide-react";
 
 interface ContributorProfileProps {
   contributor: Contributor;
@@ -23,7 +23,15 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
   const [selectedWeekFilter, setSelectedWeekFilter] = useState<string>("all");
   const [showResume, setShowResume] = useState<boolean>(false);
 
-  const allTasks = get30DaysTasks(contributor.role, contributor.name);
+  const rawGithub = contributor.github !== undefined ? contributor.github : contributor.name.toLowerCase().replace(/\s/g, "");
+  const githubUrl = rawGithub ? (rawGithub.startsWith("http") ? rawGithub : `https://github.com/${rawGithub.replace(/^(https?:\/\/)?(www\.)?github\.com\//, "")}`) : "";
+  const githubDisplay = rawGithub ? `github.com/${rawGithub.replace(/^(https?:\/\/)?(www\.)?github\.com\//, "")}` : "";
+
+  const rawLinkedin = contributor.linkedin !== undefined ? contributor.linkedin : contributor.name.toLowerCase().replace(/\s/g, "");
+  const linkedinUrl = rawLinkedin ? (rawLinkedin.startsWith("http") ? rawLinkedin : `https://linkedin.com/in/${rawLinkedin.replace(/^(https?:\/\/)?(www\.)?linkedin\.com\/in\//, "")}`) : "";
+  const linkedinDisplay = rawLinkedin ? `linkedin.com/in/${rawLinkedin.replace(/^(https?:\/\/)?(www\.)?linkedin\.com\/in\//, "")}` : "";
+
+  const allTasks = get30DaysTasks(contributor.role, contributor.name, contributor.dailyTasks);
 
   // Filter tasks for grid presentation based on week selector
   const displayedTasks = allTasks.filter((task) => {
@@ -57,10 +65,10 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
       {/* 2-Column Main Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start" id="contributor-main-grid">
-        
+
         {/* LEFT SIDE: Portrait, Contact Links, Experience, Achievements & Education */}
         <div className="lg:col-span-4 space-y-6">
-          
+
           {/* Portrait Card */}
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-slate-800 overflow-hidden shadow-xl" id="portrait-card">
             <div className="aspect-square w-full relative bg-slate-950">
@@ -96,7 +104,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
               <GraduationCap size={15} />
               College & Education
             </h3>
-            
+
             {/* Primary College highlight */}
             <div className="space-y-1.5 p-3 bg-slate-950/60 border border-slate-900 rounded-xl">
               <div className="text-[10px] text-slate-500 font-mono uppercase font-bold">Academic Institution</div>
@@ -119,24 +127,46 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
           <div className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-slate-800/80 p-5 space-y-3.5 shadow-md">
             <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Professional Directory</h3>
             <div className="space-y-2.5 text-xs">
-              <a 
-                href={`https://github.com/${contributor.name.toLowerCase().replace(/\s/g, "")}`}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
-              >
-                <Github size={14} className="text-slate-500" />
-                <span>github.com/{contributor.name.toLowerCase().replace(/\s/g, "")}</span>
-              </a>
-              <a 
-                href={`https://linkedin.com/in/${contributor.name.toLowerCase().replace(/\s/g, "")}`}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
-              >
-                <Linkedin size={14} className="text-slate-500" />
-                <span>linkedin.com/in/{contributor.name.toLowerCase().replace(/\s/g, "")}</span>
-              </a>
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Github size={14} className="text-slate-500" />
+                  <span>{githubDisplay}</span>
+                </a>
+              )}
+              {linkedinUrl && (
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Linkedin size={14} className="text-slate-500" />
+                  <span>{linkedinDisplay}</span>
+                </a>
+              )}
+              {contributor.email && (
+                <a
+                  href={`mailto:${contributor.email}`}
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Mail size={14} className="text-slate-500" />
+                  <span>{contributor.email}</span>
+                </a>
+              )}
+              {contributor.phone && (
+                <a
+                  href={`tel:${contributor.phone}`}
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Phone size={14} className="text-slate-500" />
+                  <span>{contributor.phone}</span>
+                </a>
+              )}
             </div>
           </div>
 
@@ -144,7 +174,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
         {/* RIGHT SIDE: Biography, "What I Contributed", 30 Days Tasks, Weekly Reviews & Resume */}
         <div className="lg:col-span-8 space-y-8">
-          
+
           {/* Bio Segment */}
           <div className="space-y-3">
             <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-100 tracking-tight">{contributor.name}</h1>
@@ -167,6 +197,17 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             </div>
           </div>
 
+          {/* Key Contributions Segment */}
+          <div className="space-y-3 bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800/80 p-6 md:p-8 shadow-xl">
+            <h3 className="text-xs font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
+              <Award size={15} />
+              Key Internship Contributions
+            </h3>
+            <p className="text-slate-300 text-sm leading-relaxed text-justify font-sans">
+              {contributor.contributions}
+            </p>
+          </div>
+
           {/* 5-Week Internship Task Interactive Roadmap */}
           <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-blue-500/10 p-6 md:p-8 space-y-6 shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800/80 pb-5">
@@ -186,11 +227,10 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   <button
                     key={wk}
                     onClick={() => setSelectedWeekFilter(wk)}
-                    className={`px-2.5 py-1 text-[10px] font-mono font-bold uppercase rounded-lg transition-all cursor-pointer ${
-                      selectedWeekFilter === wk
-                        ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                        : "text-slate-500 hover:text-slate-350 border border-transparent"
-                    }`}
+                    className={`px-2.5 py-1 text-[10px] font-mono font-bold uppercase rounded-lg transition-all cursor-pointer ${selectedWeekFilter === wk
+                      ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                      : "text-slate-500 hover:text-slate-350 border border-transparent"
+                      }`}
                   >
                     {wk === "all" ? "All" : `W-${wk}`}
                   </button>
@@ -200,7 +240,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
             {/* Task Grid & Showcase Layout split */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-              
+
               {/* Left Column: 30 Interactive Day Tiles */}
               <div className="md:col-span-7 space-y-3">
                 <div className="grid grid-cols-6 gap-2">
@@ -210,11 +250,10 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                       <button
                         key={t.day}
                         onClick={() => setSelectedDay(t.day)}
-                        className={`h-11 rounded-lg flex flex-col items-center justify-center font-mono text-xs font-bold transition-all relative cursor-pointer border ${
-                          isSelected
-                            ? "bg-blue-500/10 border-blue-500 text-blue-400 shadow-md shadow-blue-500/10 scale-105"
-                            : "bg-slate-950/60 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800"
-                        }`}
+                        className={`h-11 rounded-lg flex flex-col items-center justify-center font-mono text-xs font-bold transition-all relative cursor-pointer border ${isSelected
+                          ? "bg-blue-500/10 border-blue-500 text-blue-400 shadow-md shadow-blue-500/10 scale-105"
+                          : "bg-slate-950/60 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800"
+                          }`}
                       >
                         <span className="text-[9px] text-slate-500 block leading-none mb-0.5">Day</span>
                         {t.day}
@@ -236,11 +275,11 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                       {activeTask.status}
                     </span>
                   </div>
-                  
+
                   <h4 className="font-serif text-sm font-bold text-slate-100 border-b border-slate-900 pb-2">
                     {activeTask.title}
                   </h4>
-                  
+
                   <p className="text-xs text-slate-350 leading-relaxed font-light font-sans">
                     {activeTask.detail}
                   </p>
@@ -274,14 +313,14 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
               {contributor.weeklyReviews.map((rev) => (
-                <div 
-                  key={rev.week} 
+                <div
+                  key={rev.week}
                   className="p-4 bg-slate-950/60 border border-slate-900 hover:border-orange-500/30 rounded-xl space-y-3 transition-all duration-300 relative group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 p-1 px-2 bg-orange-500/10 text-orange-400 font-mono text-[9px] font-bold rounded-bl-lg">
                     W-{rev.week}
                   </div>
-                  
+
                   <div className="flex items-center gap-1 text-amber-500">
                     <Award size={12} fill="currentColor" />
                     <span className="text-xs font-mono font-bold text-slate-200">{rev.rating.toFixed(1)}</span>
@@ -305,14 +344,19 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   <span className="text-[10px] text-slate-500 font-mono mt-0.5 block">Alonzo verified digital signature</span>
                 </div>
               </div>
-              
+
               <button
-                onClick={() => setShowResume(!showResume)}
-                className={`px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border ${
-                  showResume
-                    ? "bg-slate-950 hover:bg-slate-900 border-slate-850 text-slate-400 hover:text-slate-200"
-                    : "bg-orange-500 hover:bg-orange-600 border-orange-450 text-white shadow-lg shadow-orange-500/20"
-                }`}
+                onClick={() => {
+                  if (contributor.resumePdf) {
+                    window.open(contributor.resumePdf, "_blank");
+                  } else {
+                    setShowResume(!showResume);
+                  }
+                }}
+                className={`px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border ${showResume
+                  ? "bg-slate-950 hover:bg-slate-900 border-slate-850 text-slate-400 hover:text-slate-200"
+                  : "bg-orange-500 hover:bg-orange-600 border-orange-450 text-white shadow-lg shadow-orange-500/20"
+                  }`}
               >
                 {showResume ? "Hide Resume" : "View Resume CV"}
               </button>
@@ -329,17 +373,19 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                 >
                   {/* Realistic Clean A4 Résumé Paper Rendering */}
                   <div className="p-8 md:p-12 bg-white text-slate-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-slate-100">
-                    
+
                     {/* Resume Header */}
                     <div className="text-center space-y-2 border-b-2 border-slate-900 pb-5">
                       <h2 className="text-slate-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
                       <div className="text-xs font-mono font-bold tracking-wide text-orange-600 uppercase">{contributor.role}</div>
-                      <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] text-slate-500 font-mono">
-                        <span>{contributor.name.toLowerCase().replace(/\s/g, "")}@alonzo.ai</span>
-                        <span>•</span>
-                        <span>+1 (800) 555-ALNZ</span>
-                        <span>•</span>
-                        <span>{contributor.name.toLowerCase().replace(/\s/g, "")}.io</span>
+                      <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 font-mono">
+                        {contributor.email && <span>{contributor.email}</span>}
+                        {contributor.email && contributor.phone && <span>•</span>}
+                        {contributor.phone && <span>{contributor.phone}</span>}
+                        {githubDisplay && (contributor.email || contributor.phone) && <span>•</span>}
+                        {githubDisplay && <span>{githubDisplay}</span>}
+                        {linkedinDisplay && (contributor.email || contributor.phone || githubDisplay) && <span>•</span>}
+                        {linkedinDisplay && <span>{linkedinDisplay}</span>}
                       </div>
                     </div>
 
@@ -347,8 +393,8 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                     <div className="py-5 border-b border-slate-100 space-y-2">
                       <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Executive Summary</h3>
                       <p className="text-xs text-slate-700 leading-relaxed text-justify">
-                        A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}. 
-                        Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background 
+                        A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}.
+                        Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background
                         in {contributor.skills.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
                       </p>
                     </div>
@@ -420,7 +466,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
                   {/* Action row */}
                   <div className="flex items-center justify-between p-5 bg-slate-950 border-t border-slate-850">
-                    <span className="text-[10px] text-slate-500 font-mono">Verified Security Hash ID: alz_{contributor.id.substring(0,4)}</span>
+                    <span className="text-[10px] text-slate-500 font-mono">Verified Security Hash ID: alz_{contributor.id.substring(0, 4)}</span>
                     <button
                       id="faux-print-btn"
                       onClick={() => window.print()}

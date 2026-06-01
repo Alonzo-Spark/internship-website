@@ -39,7 +39,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           <img
             src={project.image}
             alt={project.name}
-            className="w-full h-full object-cover opacity-80"
+            className="w-full h-full object-contain p-6 bg-white opacity-95"
           />
           {/* Subtle vignette layer */}
           <div className="absolute inset-0 project-details-overlay" />

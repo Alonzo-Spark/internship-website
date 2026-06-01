@@ -1,0 +1,1043 @@
+{
+  "Neeraj": [
+    {
+      "date": "2026-05-04",
+      "release_no": "1.0",
+      "release_details": [
+        "1:Design Documentation,Admin login,Patient registration,patient vitals"
+      ],
+      "component": "Admin Login",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-05",
+      "release_no": "2.0",
+      "release_details": [
+        "1)Django frontend templates to react, 2) creating tables in the db, 3)Admin Login Page UI, 4) Enhancement of Application UI"
+      ],
+      "component": "Admin Login Table and conversion to React",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-06",
+      "release_no": "3.0",
+      "release_details": [
+        "1)Created Total Stock Entry Page, 2) created camp-wise-stock table, 3) Created required tables in database"
+      ],
+      "component": "Total stock entry page and tables in db",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-07",
+      "release_no": "4.0",
+      "release_details": [
+        "1)Multiple Camp-wise-stock deatils, 2)Medicine Allocation for each Patient, 3)Re-adding the left over stock,  4) Medical Camp User Inteface, 5) Adding Issue Medicines section, 6) Exixting user and New Patient Registration creation, 7) Camp Registration section and Logo"
+      ],
+      "component": "multiple-camp-wise-stock, re-adding the left over stock",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-08",
+      "release_no": "5.0",
+      "release_details": [
+        "1)Alert Symbol , 2) Test Issue table , 3)checkboxes for the test reports , 4) camp-wise-patient-list dropdown, 5) Camp Patient list section, 6) Icons in medical camp registration section, 7) Lab Tests section in Log Vitals"
+      ],
+      "component": "Test Isuue table and checkboxes and alert symbol",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-09",
+      "release_no": "6.0",
+      "release_details": [
+        "1)Role-based -accessing , 2)Old-patient-registration table , 3) adding new medicine feature , 4) edit patient feature , 5) medicine details tab, 6) UI changes"
+      ],
+      "component": "Role based Accesing , add new medicine feature and edit patient feature , medicine details tab",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-11",
+      "release_no": "7.0",
+      "release_details": [
+        "1) tried various ocr's for implementing the text-extraction from the patient document  2)  Testing on Scanning methods using Pytorch framework and docTR library 3) Created UI for Doctor List and Reasearch on Scanning methods"
+      ],
+      "component": "tried chandra ocr , easy ocr and glm ocr and glm ocr is working",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-12",
+      "release_no": "8.0",
+      "release_details": [
+        "1)mapped the lab tests as key value pairs for text extraction, 2)implemented doctor's list and doctor wise patient list according to particular camp and doctor registration"
+      ],
+      "component": "Mapped the lab tests and connectd with database for doctor's list and adding new doctors and registering and doctor-wise patients",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-13",
+      "release_no": "9.0",
+      "release_details": [
+        "1) added column called strength and added inpput field for the formulation and it will be auto-filled, 2) the document can be uploaded from the local folder feature"
+      ],
+      "component": "did databases changes and uploading from folder feature",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-14",
+      "release_no": "10.0",
+      "release_details": [
+        "1) Unified Camp Reporting Module",
+        "2) Advanced Data Visualization",
+        "3) System Documentation and Configuration"
+      ],
+      "component": "Camp Report section is created which has total camp summary and download option for the camp report",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-15",
+      "release_no": "11.0",
+      "release_details": [
+        "1) Implemented the log vitals details edit in Patient Profile section",
+        "2) Updated status coloumn in doctor details section (Active or Inactive)",
+        "3) Updated database table for doctor details section adding status coloumn"
+      ],
+      "component": "Added edit feature for patient vitals in Patient Profile section",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-16",
+      "release_no": "12.0",
+      "release_details": [
+        "1) Updated Old Patients Registration Section",
+        "2) Added Total Cost spent in each camp in Camp Reports section",
+        "3) placed Edit button in stock entry to edit Medicine Names and Formulation",
+        "4) Remove No.of Days for medicines in Issue Medicines section",
+        "5) Checked and Updated the Database and Tables"
+      ],
+      "component": "Reviewed and Checked the Tables in Database",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-18",
+      "release_no": "13.0",
+      "release_details": [
+        "1) Created doctor report section showing camp wise patient list for each doctor",
+        "2) added unit cost and total cost in camp wise inventory section",
+        "3) UI enhancement in inventory section",
+        "4) role based access in credentials for inventory management",
+        "5) Integrated total cost input fields with database",
+        "6) created manual patiententry table in database for doctor report section",
+        "7) medicine no and medicine name edit feature connected with database"
+      ],
+      "component": "Role based access credentials, created manualpatiententry table in database, Connected medicine number and name with database",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-19",
+      "release_no": "14.0",
+      "release_details": [
+        "1) Researched on Scanning methods using Gemini Flash 1.5, 3.1, Gemini Pro 2.5 and Qwen Ocr",
+        "2) Campwise Total Cost Summation in Camp Report Summary",
+        "3) Connected Old Patient registration and New Patient registration with the database table"
+      ],
+      "component": "Implemented Campwise Total Cost summation in Camp reports and database linking foe Old patients and New patients registration",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-20",
+      "release_no": "15.0",
+      "release_details": [
+        "1) Application Testing",
+        "2) Researched on voicebot and its Approaches, twilio/exotel and crown/celery",
+        "3) Finding bugs through testing all the features and fixing them"
+      ],
+      "component": "Fixed bug in total stock entry page for unit cost, Researched on voice bot approaches with rule based technique",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-21",
+      "release_no": "16.0",
+      "release_details": [
+        "1) Fixing UI bugs and functionality bugs in the application",
+        "2) Enhancing UI and Feature functionality of the application",
+        "3) Testing the working of complete application"
+      ],
+      "component": "Fixed bug on medical fulfillment quantity, added returned stock and available stock coloumns, quantity updation issue, Non registered patients should logging isuue, created alternative coloumn in campwise stock table",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-22",
+      "release_no": "17.0",
+      "release_details": [
+        "1) Testing edge cases in the application with all the features",
+        "2) changed in campwise stock replaced with proper headings",
+        "3) updated the UI as per the clients request and Updated role based access",
+        "4) fixed a bug of Alternate Medicine name feature and did database updations",
+        "5) solved UI bugs and Functionality bugs",
+        "6) Enhanced the UI of Patient Rregistrations section - Old and New"
+      ],
+      "component": "Fixed bug of alternate name feature for medicines, modified camp date in old patient registration, Updated role based access, did some database changes",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-23",
+      "release_no": "18.0",
+      "release_details": [
+        "1) Integration of Doctor Consultation and Doctor List page with the database",
+        "2) Creation of Test Issue Tracker page and integration with database",
+        "3) Integrated medicine details page with the backend and database",
+        "4) in stock entry in medicine details added a drop down for selecting camp",
+        "5) in inventory section added formulation column and enhanced the UI",
+        "6) in doctor consultation section removed the old feature and added as per client request"
+      ],
+      "component": "Integration of Doctor Consultation and Doctor List with database, created Test Issue Tracker page, Medical Details page connected with backend and database",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-25",
+      "release_no": "19.0",
+      "release_details": [
+        "1) Loging Patient Vitals without without Registering",
+        "2) Adding Old Patients Registration through Ocr Scanning",
+        "3) in inventory section and stock entry section added medicines with formulations category wise",
+        "4) added an add patient feature using ocr the old patient records will be scanned and verified",
+        "5) Data Entry of Patient Records"
+      ],
+      "component": "Added Feature of Log Patient Vitals without Patient Registration, Adding Old Patients Registration through OCR and Data Entry of Patient Registration details",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-26",
+      "release_no": "20.0",
+      "release_details": [
+        "1) Replaced Old Medicine Data with New Medicine Data",
+        "2) Created Category Based classification of Medicines",
+        "3) Mapping of Medicine ID with the Formulation of Medicines in database",
+        "4) Medicines with same or different quantity will be shown as separate record",
+        "5)  Dialogue box Showing newly added medicines and existing medicines with along Vitals and Tests",
+        "6) Dropdown for Category of Medicines",
+        "7) Research on Voice Bot"
+      ],
+      "component": "Replaced the old and new medicine data, Implemented Category wise medicine classification, mapped medicine details with Medicine ID and Medicine Formulation, added an dialogue box which show the newly added medicines and the already existed medicines",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-27",
+      "release_no": "21.0",
+      "release_details": [
+        "1) Data Entry of Patient Registration details",
+        "2) Reasearched on voice bot using Sarvam AI and Exotel",
+        "3) Broadcast Reminders in Campwise Patient List",
+        "4) Created Voice Reminder for patients using sarvam AI",
+        "5) Implemented Text to Speech by Sarvam AI",
+        "6) Integrated Voicebot feature with Exotel and Sarvam AI"
+      ],
+      "component": "Implmplemented TTS using Sarvam AI for voicebot, Integrated Voice Bot with Exotel and Sarvam AI",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-28",
+      "release_no": "22.0",
+      "release_details": [
+        "1) Data Entry of Patient Registration details",
+        "2) Researched on Voice Bot",
+        "3) Integrated Fast API with the backend",
+        "4) Created category management feature for medicines",
+        "5) Integrated Voicebot feature with Exotel and did inbound call to exotel test number",
+        "6) Researched on Deploying Platforms (AWS, Render, Railway, Neon, MongoDB etc)"
+      ],
+      "component": "Created Category Management Feature for Medicine Stock, Tested integration of Voice Bot with Exotel and tested inbound call to the exotel test number and extraction of Camp Remainder Audio from URL",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-29",
+      "release_no": "23.0",
+      "release_details": [
+        "1) Implemented Voicebot Remainders creating Outbound call to Patients",
+        "2) Did complete testing on Voice Bot and call going to Patients",
+        "3) Tested call with multiple numbers and Audio Generation accuracy",
+        "4) Implemented Functional Testing on Features",
+        "5) Tested Railway Deploying service for Application deploying"
+      ],
+      "component": "Implemented outbound call for patients for camp remainder and tweaked pronounciation and pace of speech, tested with multiple numbers and Audio generation is accurately being done and Downloaded by exotel",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-30",
+      "release_no": "24.0",
+      "release_details": [
+        "1) Implemented diabetic voicebot for Diabetic Patients",
+        "2) Implemented a Feature where data is Stored from Patients call",
+        "3) Implemented Functional Testing and Data testing for the Application",
+        "4) Implemented Test Issued Patients follow up Voice Bot"
+      ],
+      "component": "created an test issued patients follow up voicebot which it asks the questions for the particular patients for whom the tests are issued and stores the responses from the user",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    }
+  ],
+  "Sathvika": [
+    {
+      "date": "2026-05-04",
+      "release_no": "1.0",
+      "release_details": [
+        "1:Design Documentation,Admin login,Patient registration,patient vitals"
+      ],
+      "component": "Patient Registration",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-05",
+      "release_no": "2.0",
+      "release_details": [
+        "1)Django frontend templates to react, 2) creating tables in the db, 3)Admin Login Page UI, 4) Enhancement of Application UI"
+      ],
+      "component": "Admin Page Login UI, Frontend Working",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-06",
+      "release_no": "3.0",
+      "release_details": [
+        "1)Created Total Stock Entry Page, 2) created camp-wise-stock table, 3) Created required tables in database"
+      ],
+      "component": "Created database tables with data",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-07",
+      "release_no": "4.0",
+      "release_details": [
+        "1)Multiple Camp-wise-stock deatils, 2)Medicine Allocation for each Patient, 3)Re-adding the left over stock,  4) Medical Camp User Inteface, 5) Adding Issue Medicines section, 6) Exixting user and New Patient Registration creation, 7) Camp Registration section and Logo"
+      ],
+      "component": "Issue Medicines section and Existing User & New Patient Registration",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-08",
+      "release_no": "5.0",
+      "release_details": [
+        "1)Alert Symbol , 2) Test Issue table , 3)checkboxes for the test reports , 4) camp-wise-patient-list dropdown, 5) Camp Patient list section, 6) Icons in medical camp registration section, 7) Lab Tests section in Log Vitals"
+      ],
+      "component": "Camp Patient Registration Sectiona and camp selection dropdown",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-09",
+      "release_no": "6.0",
+      "release_details": [
+        "1)Role-based -accessing , 2)Old-patient-registration table , 3) adding new medicine feature , 4) edit patient feature , 5) medicine details tab, 6) UI changes"
+      ],
+      "component": "added Old Patients option in dashboard and Registration form",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-11",
+      "release_no": "7.0",
+      "release_details": [
+        "1) tried various ocr's for implementing the text-extraction from the patient document  2)  Testing on Scanning methods using Pytorch framework and docTR library 3) Created UI for Doctor List and Reasearch on Scanning methods"
+      ],
+      "component": "Did testing on scanning mechanism and tried scanning using pytorch",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-12",
+      "release_no": "8.0",
+      "release_details": [
+        "1)mapped the lab tests as key value pairs for text extraction, 2)implemented doctor's list and doctor wise patient list according to particular camp and doctor registration"
+      ],
+      "component": "Reasearch on Scanning Methods using docTR, Pytorch and OpenCV",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-13",
+      "release_no": "9.0",
+      "release_details": [
+        "1) added column called strength and added inpput field for the formulation and it will be auto-filled, 2) the document can be uploaded from the local folder feature"
+      ],
+      "component": "UI changes and Optimizing the Scanning method",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-14",
+      "release_no": "10.0",
+      "release_details": [
+        "1) Unified Camp Reporting Module",
+        "2) Advanced Data Visualization",
+        "3) System Documentation and Configuration"
+      ],
+      "component": "Created Readme and Requirements files - system configuration and project structure",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-15",
+      "release_no": "11.0",
+      "release_details": [
+        "1) Implemented the log vitals details edit in Patient Profile section",
+        "2) Updated status coloumn in doctor details section (Active or Inactive)",
+        "3) Updated database table for doctor details section adding status coloumn"
+      ],
+      "component": "Updated the Database table of doctor details",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-16",
+      "release_no": "12.0",
+      "release_details": [
+        "1) Updated Old Patients Registration Section",
+        "2) Added Total Cost spent in each camp in Camp Reports section",
+        "3) placed Edit button in stock entry to edit Medicine Names and Formulation",
+        "4) Remove No.of Days for medicines in Issue Medicines section",
+        "5) Checked and Updated the Database and Tables"
+      ],
+      "component": "Updated Old Patients section and Added Edit button for Medicines",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-18",
+      "release_no": "13.0",
+      "release_details": [
+        "1) Created doctor report section showing camp wise patient list for each doctor",
+        "2) added unit cost and total cost in camp wise inventory section",
+        "3) UI enhancement in inventory section",
+        "4) role based access in credentials for inventory management",
+        "5) Integrated total cost input fields with database",
+        "6) created manual patiententry table in database for doctor report section",
+        "7) medicine no and medicine name edit feature connected with database"
+      ],
+      "component": "Worked on doctor report section, UI enhancement of inventory section and Research on Voice Bot",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-19",
+      "release_no": "14.0",
+      "release_details": [
+        "1) Researched on Scanning methods using Gemini Flash 1.5, 3.1, Gemini Pro 2.5 and Qwen Ocr",
+        "2) Campwise Total Cost Summation in Camp Report Summary",
+        "3) Connected Old Patient registration and New Patient registration with the database table"
+      ],
+      "component": "Worked with Gemini Flash 1.5 and Gemini Pro 2.5 for Scanning",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-20",
+      "release_no": "15.0",
+      "release_details": [
+        "1) Application Testing",
+        "2) Researched on voicebot and its Approaches, twilio/exotel and crown/celery",
+        "3) Finding bugs through testing all the features and fixing them"
+      ],
+      "component": "Did research on voice bot throughgithub projects, Implemented testing and found bugs",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-21",
+      "release_no": "16.0",
+      "release_details": [
+        "1) Fixing UI bugs and functionality bugs in the application",
+        "2) Enhancing UI and Feature functionality of the application",
+        "3) Testing the working of complete application"
+      ],
+      "component": "In patient profile section Issue medicines removed days UI, added total number of tests card in camp reports, enhanced the UI of Edit and delete button, fixed auto filling of Dr. ID and Dr. Name",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-22",
+      "release_no": "17.0",
+      "release_details": [
+        "1) Testing edge cases in the application with all the features",
+        "2) changed in campwise stock replaced with proper headings",
+        "3) updated the UI as per the clients request and Updated role based access",
+        "4) fixed a bug of Alternate Medicine name feature and did database updations",
+        "5) solved UI bugs and Functionality bugs",
+        "6) Enhanced the UI of Patient Rregistrations section - Old and New"
+      ],
+      "component": "Fixed UI functionality bugs, Arranged the UI of Patient registration section (Old patient registration and new patient registration) properly, Researched on diffrent voice bot approaches",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-23",
+      "release_no": "18.0",
+      "release_details": [
+        "1) Integration of Doctor Consultation and Doctor List page with the database",
+        "2) Creation of Test Issue Tracker page and integration with database",
+        "3) Integrated medicine details page with the backend and database",
+        "4) in stock entry in medicine details added a drop down for selecting camp",
+        "5) in inventory section added formulation column and enhanced the UI",
+        "6) in doctor consultation section removed the old feature and added as per client request"
+      ],
+      "component": "Enhanced Proper UI of Inventory Section, checked the edge cases of each feature of the application, searched different voice bot approaches",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-25",
+      "release_no": "19.0",
+      "release_details": [
+        "1) Loging Patient Vitals without without Registering",
+        "2) Adding Old Patients Registration through Ocr Scanning",
+        "3) in inventory section and stock entry section added medicines with formulations category wise",
+        "4) added an add patient feature using ocr the old patient records will be scanned and verified",
+        "5) Data Entry of Patient Records"
+      ],
+      "component": "Added Medicines with formulation in Inventory section and Data Entry",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-26",
+      "release_no": "20.0",
+      "release_details": [
+        "1) Replaced Old Medicine Data with New Medicine Data",
+        "2) Created Category Based classification of Medicines",
+        "3) Mapping of Medicine ID with the Formulation of Medicines in database",
+        "4) Medicines with same or different quantity will be shown as separate record",
+        "5)  Dialogue box Showing newly added medicines and existing medicines with along Vitals and Tests",
+        "6) Dropdown for Category of Medicines",
+        "7) Research on Voice Bot"
+      ],
+      "component": "Researched on voice bot - Exotel and Sarvam AI, replaced the old medicine data with the new medicine data and integrated with the db",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-27",
+      "release_no": "21.0",
+      "release_details": [
+        "1) Data Entry of Patient Registration details",
+        "2) Reasearched on voice bot using Sarvam AI and Exotel",
+        "3) Broadcast Reminders in Campwise Patient List",
+        "4) Created Voice Reminder for patients using sarvam AI",
+        "5) Implemented Text to Speech by Sarvam AI",
+        "6) Integrated Voicebot feature with Exotel and Sarvam AI"
+      ],
+      "component": "Did Data entry of Patients, Researched on voice bot using Sarvam AI and worked on Deployment methods of Application",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-28",
+      "release_no": "22.0",
+      "release_details": [
+        "1) Data Entry of Patient Registration details",
+        "2) Researched on Voice Bot",
+        "3) Integrated Fast API with the backend",
+        "4) Created category management feature for medicines",
+        "5) Integrated Voicebot feature with Exotel and did inbound call to exotel test number",
+        "6) Researched on Deploying Platforms (AWS, Render, Railway, Neon, MongoDB etc)"
+      ],
+      "component": "Did data Entry of Patients, Researched on Voice Bot, Researched on various deployment Platforms like AWS, MongoDB, Render, Railway etc.",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-29",
+      "release_no": "23.0",
+      "release_details": [
+        "1) Implemented Voicebot Remainders creating Outbound call to Patients",
+        "2) Did complete testing on Voice Bot and call going to Patients",
+        "3) Tested call with multiple numbers and Audio Generation accuracy",
+        "4) Implemented Functional Testing on Features",
+        "5) Tested Railway Deploying service for Application deploying"
+      ],
+      "component": "Implemented Testing for Application Features, Tested on Deploying the Application using Railway deploying service",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-30",
+      "release_no": "24.0",
+      "release_details": [
+        "1) Implemented diabetic voicebot for Diabetic Patients",
+        "2) Implemented a Feature where data is Stored from Patients call",
+        "3) Implemented Functional Testing and Data testing for the Application",
+        "4) Implemented Test Issued Patients follow up Voice Bot"
+      ],
+      "component": "Implemented Overall Functional Testing and Data Testing of all the features in the Application and worked on voice bot for Diabetic Patients",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    }
+  ],
+  "Pavithra": [
+    {
+      "date": "2026-05-04",
+      "release_no": "1.0",
+      "release_details": [
+        "1:Design Documentation,Admin login,Patient registration,patient vitals"
+      ],
+      "component": "Patient Vitals",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-05",
+      "release_no": "2.0",
+      "release_details": [
+        "1)Django frontend templates to react, 2) creating tables in the db, 3)Admin Login Page UI, 4) Enhancement of Application UI"
+      ],
+      "component": "Creating Tables in database, Patient Registration UI",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-06",
+      "release_no": "3.0",
+      "release_details": [
+        "1)Created Total Stock Entry Page, 2) created camp-wise-stock table, 3) Created required tables in database"
+      ],
+      "component": "Enhanced UI and frontend",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-07",
+      "release_no": "4.0",
+      "release_details": [
+        "1)Multiple Camp-wise-stock deatils, 2)Medicine Allocation for each Patient, 3)Re-adding the left over stock,  4) Medical Camp User Inteface, 5) Adding Issue Medicines section, 6) Exixting user and New Patient Registration creation, 7) Camp Registration section and Logo"
+      ],
+      "component": "Camp Registration scetion, Enhanced login page, Added Logo",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-08",
+      "release_no": "5.0",
+      "release_details": [
+        "1)Alert Symbol , 2) Test Issue table , 3)checkboxes for the test reports , 4) camp-wise-patient-list dropdown, 5) Camp Patient list section, 6) Icons in medical camp registration section, 7) Lab Tests section in Log Vitals"
+      ],
+      "component": "Updated Icons, Included Lab tests in Log vitals with checkboxes",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-09",
+      "release_no": "6.0",
+      "release_details": [
+        "1)Role-based -accessing , 2)Old-patient-registration table , 3) adding new medicine feature , 4) edit patient feature , 5) medicine details tab, 6) UI changes"
+      ],
+      "component": "Implemented registration form redirection and UI enhancements",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-11",
+      "release_no": "7.0",
+      "release_details": [
+        "1) tried various ocr's for implementing the text-extraction from the patient document  2)  Testing on Scanning methods using Pytorch framework and docTR library 3) Created UI for Doctor List and Reasearch on Scanning methods"
+      ],
+      "component": "Created UI for Doctor list, did some research on scanning, worked on frontend",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-12",
+      "release_no": "8.0",
+      "release_details": [
+        "1)mapped the lab tests as key value pairs for text extraction, 2)implemented doctor's list and doctor wise patient list according to particular camp and doctor registration"
+      ],
+      "component": "Reasearch on Scanning Methods using Tessract and Paddle OCR",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-13",
+      "release_no": "9.0",
+      "release_details": [
+        "1) added column called strength and added inpput field for the formulation and it will be auto-filled, 2) the document can be uploaded from the local folder feature"
+      ],
+      "component": "Changed the UI of Admin Dashboard",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-14",
+      "release_no": "10.0",
+      "release_details": [
+        "1) Unified Camp Reporting Module",
+        "2) Advanced Data Visualization",
+        "3) System Documentation and Configuration"
+      ],
+      "component": "Enhanced the Graphs in log vitals section - Data Visualization Enhancements",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-15",
+      "release_no": "11.0",
+      "release_details": [
+        "1) Implemented the log vitals details edit in Patient Profile section",
+        "2) Updated status coloumn in doctor details section (Active or Inactive)",
+        "3) Updated database table for doctor details section adding status coloumn"
+      ],
+      "component": "Added the status coloum in doctor details section in application",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-16",
+      "release_no": "12.0",
+      "release_details": [
+        "1) Updated Old Patients Registration Section",
+        "2) Added Total Cost spent in each camp in Camp Reports section",
+        "3) placed Edit button in stock entry to edit Medicine Names and Formulation",
+        "4) Remove No.of Days for medicines in Issue Medicines section",
+        "5) Checked and Updated the Database and Tables"
+      ],
+      "component": "Added Edit button for medicine names, Updated Issue Medicines section,Added Total Cost spent",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-18",
+      "release_no": "13.0",
+      "release_details": [
+        "1) Created doctor report section showing camp wise patient list for each doctor",
+        "2) added unit cost and total cost in camp wise inventory section",
+        "3) UI enhancement in inventory section",
+        "4) role based access in credentials for inventory management",
+        "5) Integrated total cost input fields with database",
+        "6) created manual patiententry table in database for doctor report section",
+        "7) medicine no and medicine name edit feature connected with database"
+      ],
+      "component": "Added unit cost and total cost in campwise inventory section, created doctor report section, UI enhancement of Inventory section",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-19",
+      "release_no": "14.0",
+      "release_details": [
+        "1) Researched on Scanning methods using Gemini Flash 1.5, 3.1, Gemini Pro 2.5 and Qwen Ocr",
+        "2) Campwise Total Cost Summation in Camp Report Summary",
+        "3) Connected Old Patient registration and New Patient registration with the database table"
+      ],
+      "component": "Worked with Gemini Flash3.1 Lite and Qwen Ocr for Scanning Method",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-20",
+      "release_no": "15.0",
+      "release_details": [
+        "1) Application Testing",
+        "2) Researched on voicebot and its Approaches, twilio/exotel and crown/celery",
+        "3) Finding bugs through testing all the features and fixing them"
+      ],
+      "component": "Did research on voicebot using exotel and twilio, Implemented testing on the Application",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-21",
+      "release_no": "16.0",
+      "release_details": [
+        "1) Fixing UI bugs and functionality bugs in the application",
+        "2) Enhancing UI and Feature functionality of the application",
+        "3) Testing the working of complete application"
+      ],
+      "component": "Added Select camp as  default in drop down, added add patients section in doctor consultation log, added autofilling patient name and age in log vitals, added alert message for register patient id in log vitals",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-22",
+      "release_no": "17.0",
+      "release_details": [
+        "1) Testing edge cases in the application with all the features",
+        "2) changed in campwise stock replaced with proper headings",
+        "3) updated the UI as per the clients request and Updated role based access",
+        "4) fixed a bug of Alternate Medicine name feature and did database updations",
+        "5) solved UI bugs and Functionality bugs",
+        "6) Enhanced the UI of Patient Rregistrations section - Old and New"
+      ],
+      "component": "Tested edge cases, did UI changes as per client request, added update option in total stock section, did UI changes in campwise stock table with diffrent headings",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-23",
+      "release_no": "18.0",
+      "release_details": [
+        "1) Integration of Doctor Consultation and Doctor List page with the database",
+        "2) Creation of Test Issue Tracker page and integration with database",
+        "3) Integrated medicine details page with the backend and database",
+        "4) in stock entry in medicine details added a drop down for selecting camp",
+        "5) in inventory section added formulation column and enhanced the UI",
+        "6) in doctor consultation section removed the old feature and added as per client request"
+      ],
+      "component": "Added Dropdown for Camp Selection (Select Camp), Added Formulation coloumn in Inventory section, created section in doctor consultation log section called doctor patient list",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-25",
+      "release_no": "19.0",
+      "release_details": [
+        "1) Loging Patient Vitals without without Registering",
+        "2) Adding Old Patients Registration through Ocr Scanning",
+        "3) in inventory section and stock entry section added medicines with formulations category wise",
+        "4) added an add patient feature using ocr the old patient records will be scanned and verified",
+        "5) Data Entry of Patient Records"
+      ],
+      "component": "Adding Old Patients Registration Through OCR Scanning and Implemented add patient features and added medicines with formilation in Inventory section",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-26",
+      "release_no": "20.0",
+      "release_details": [
+        "1) Replaced Old Medicine Data with New Medicine Data",
+        "2) Created Category Based classification of Medicines",
+        "3) Mapping of Medicine ID with the Formulation of Medicines in database",
+        "4) Medicines with same or different quantity will be shown as separate record",
+        "5)  Dialogue box Showing newly added medicines and existing medicines with along Vitals and Tests",
+        "6) Dropdown for Category of Medicines",
+        "7) Research on Voice Bot"
+      ],
+      "component": "Did mapping in log vitals where medicine id is mapped with formulation, added a dropdown for category of medicines",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-27",
+      "release_no": "21.0",
+      "release_details": [
+        "1) Data Entry of Patient Registration details",
+        "2) Reasearched on voice bot using Sarvam AI and Exotel",
+        "3) Broadcast Reminders in Campwise Patient List",
+        "4) Created Voice Reminder for patients using sarvam AI",
+        "5) Implemented Text to Speech by Sarvam AI",
+        "6) Integrated Voicebot feature with Exotel and Sarvam AI"
+      ],
+      "component": "Did Data entry of Patients, Researched on voice bot using exotel and sarvam AI and implemented Broadcast Reminders in campwise patient list",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-28",
+      "release_no": "22.0",
+      "release_details": [
+        "1) Data Entry of Patient Registration details",
+        "2) Researched on Voice Bot",
+        "3) Integrated Fast API with the backend",
+        "4) Created category management feature for medicines",
+        "5) Integrated Voicebot feature with Exotel and did inbound call to exotel test number",
+        "6) Researched on Deploying Platforms (AWS, Render, Railway, Neon, MongoDB etc)"
+      ],
+      "component": "Did data Entry of Patients, Researched on Voicebot using Exotel and Sarvam AI, Integrated Fast API in the Backend",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-29",
+      "release_no": "23.0",
+      "release_details": [
+        "1) Implemented Voicebot Remainders creating Outbound call to Patients",
+        "2) Did complete testing on Voice Bot and call going to Patients",
+        "3) Tested call with multiple numbers and Audio Generation accuracy",
+        "4) Implemented Functional Testing on Features",
+        "5) Tested Railway Deploying service for Application deploying"
+      ],
+      "component": "Implemented voice bot on remainders for outbound call to patients dor camp remainders, Done Testing of Voice Bot and Implemented call to every Patient Feature",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    },
+    {
+      "date": "2026-05-30",
+      "release_no": "24.0",
+      "release_details": [
+        "1) Implemented diabetic voicebot for Diabetic Patients",
+        "2) Implemented a Feature where data is Stored from Patients call",
+        "3) Implemented Functional Testing and Data testing for the Application",
+        "4) Implemented Test Issued Patients follow up Voice Bot"
+      ],
+      "component": "created diabetic voicebot where the patients who are diabetic, created a json file where the STT gets converted to text in a json file, created a database called inventory_diabeticfollowup where it stores the speech to text, created a drop down like all patients tests on click that we get to see only those patients and calls goes to patients",
+      "status": "Done",
+      "blocker": "No",
+      "testing": "Done",
+      "output": "Completed"
+    }
+  ]
+}

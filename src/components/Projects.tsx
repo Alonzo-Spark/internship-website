@@ -64,7 +64,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                       src={project.image}
                       alt={project.name}
                       onClick={() => onProjectSelect(project)}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
+                      className="w-full h-full object-contain p-4 bg-white transition-transform duration-500 hover:scale-105 cursor-pointer"
                     />
                     <div className="absolute inset-0 project-image-overlay" />
                     

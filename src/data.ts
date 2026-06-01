@@ -3,76 +3,106 @@ import { Project } from "./types";
 export const projectsData: Project[] = [
   {
     id: "medical-camp-management",
-    name: "Medical camp management system",
+    name: "SWASTH Medical Camp Management System",
     duration: "5 Weeks",
     domain: "Healthcare Tech & Operations",
-    description: "An integrated healthcare logistics platform designed to coordinate remote medical camps, manage drug inventories, and deploy real-time doctor scheduling.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
-    tech: ["React", "FastAPI", "Gemini 1.5 Pro", "PostgreSQL", "Docker", "Tailwind CSS"],
+    description: "This project focuses on enhancing an existing static web-based medical camp system by adding missing functionalities, fixing existing issues, and integrating intelligent automation features. The system supports full-lifecycle patient registration and vastly improves medical inventory management by introducing advanced Vision AI (OCR) models. This OCR integration allows clinical staff to instantly digitize complex, handwritten medicine stock sheets by simply snapping a photo, eliminating manual data entry errors. Additionally, an automated, regional-language voice bot is deeply integrated into the backend to handle patient follow-ups. The AI autonomously dials patients to provide medication reminders, check health statuses, and schedule revisits, instantly syncing their responses back into the database. Ultimately, the overall goal is to transform semi-manual, paper-heavy workflows into a reliable, structured, and fully automated digital healthcare system.",
+    image: "/ProjectLogo.jpeg",
+    tech: ["React", "Django", "Google gemini text ( 3.1 flash-lite)", " SQlite", " Django REST framework", "Tailwind CSS", "Gemini flash 3.5", "Exotel", "Sarvam AI", "Ngrok"],
     contributors: [
       {
-        id: "puja-midde",
-        name: "Puja Midde",
-        role: "Backend Developer",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.2/10",
-        skills: ["API Architecture", "Database Optimization", "Server Management", "Python", "Node.js", "SQL"],
-        techUsed: ["FastAPI", "PostgreSQL", "Redis", "Docker", "Alembic", "Auth0"],
-        bio: "Pre-final year Computer Science student with a strong passion for scalable backends, reliable data pipelines, and microservices architecture.",
-        contributions: "Puja was responsible for backend architecture, API development, database optimization, authentication workflows, and cloud-based deployment support throughout the project lifecycle. She reduced query latency by 42% through strategic index design and implemented a multi-tenant OAuth system.",
+        id: "Pavithra",
+        name: "Y.Pavithra Philomena",
+        role: "Frontend, UI/UX, Voice bot ",
+        avatar: "/Pavithra.jpeg",
+        cgpa: "8.63/10",
+        github: "",
+        linkedin: "linkedin.com/in/pavithra-philomena-3ba501364",
+        email: "pavithraphilo@gmail.com",
+        phone: "+91 8897921297",
+        resumePdf: "/Pavithra_Resume.pdf",
+        skills: [
+          "Prompt Engineering",
+          "AI-Assisted Software Development",
+          "Full stack web development",
+          "Databases : SQL",
+          "REST API Integration",
+          "Languages : C, Python",
+          "Tools : Git, GitHub",
+          "Frameworks : React, Django",
+          "Web Technologies: HTML, CSS, Tailwind CSS",
+          "Software Testing & Debugging",
+          "Voice Bot Development Concepts"
+        ],
+        techUsed: ["React", "Tailwind CSS", "Django", "SQLite", "Tesseract OCR", "Paddle OCR", "Gemini 3.1 Flash-Lite", "Exotel", "Sarvam AI", "Ngrok"],
+        bio: "Aspiring AI enthusiast currently pursuing B.Tech, fascinated by the potential of Artificial Intelligence to solve complex problems. Seeking an internship to gain research exposure and develop innovative AI-driven solutions.",
+        contributions: "Pavithra made significant contributions across frontend UI development, database engineering, data visualization, AI document scanning (OCR), and voice bot integration. In frontend, she built and enhanced user interfaces for Patient Registration (Old and New), Admin Login, Patient Vitals, and the Doctor Consultation log, implementing dynamic features like field auto-filling and validation alerts. On the backend and database layer, she created schema tables, mapped medicine formulations, and integrated unit cost metrics. She also drove advanced data visualization by designing graphical summaries for camp reporting and vitals tracking. In AI/automation, she conducted comprehensive research and implementation of document text extraction using models like Tesseract, docTR, and Gemini Flash, and integrated Exotel and Sarvam AI to build a regional-language automated outbound voice bot that schedules patient follow-ups and captures structured responses into the database.",
         dailyTasks: [
-          "Configured PostgreSQL database mappings and established FHIR schema compliance models.",
-          "Implemented rate limiting algorithms using Redis Token Bucket strategy on high-frequency triage endpoints.",
-          "Designed multi-tenant secure login API controllers integrated with JWT verification filters.",
-          "Created continuous integration pipeline automation scripts for linting and Docker container build validation.",
-          "Optimized relational search indices, reducing search querying latency from 450ms down to 18ms.",
-          "Authored automated Swagger/OpenAPI documentation routes with strict visual payload schema outlines."
+          "Patient Vitals",
+          "Creating Tables in database, Patient Registration UI",
+          "Enhanced UI and frontend",
+          "Camp Registration scetion, Enhanced login page, Added Logo",
+          "Updated Icons, Included Lab tests in Log vitals with checkboxes",
+          "Implemented registration form redirection and UI enhancements",
+          "Created UI for Doctor list, did some research on scanning, worked on frontend",
+          "Reasearch on Scanning Methods using Tessract and Paddle OCR",
+          "Changed the UI of Admin Dashboard",
+          "Enhanced the Graphs in log vitals section - Data Visualization Enhancements",
+          "Added the status coloum in doctor details section in application",
+          "Added Edit button for medicine names, Updated Issue Medicines section,Added Total Cost spent",
+          "Added unit cost and total cost in campwise inventory section, created doctor report section, UI enhancement of Inventory section",
+          "Worked with Gemini Flash3.1 Lite and Qwen Ocr for Scanning Method",
+          "Did research on voicebot using exotel and twilio, Implemented testing on the Application",
+          "Added Select camp as  default in drop down, added add patients section in doctor consultation log, added autofilling patient name and age in log vitals, added alert message for register patient id in log vitals",
+          "Tested edge cases, did UI changes as per client request, added update option in total stock section, did UI changes in campwise stock table with diffrent headings",
+          "Added Dropdown for Camp Selection (Select Camp), Added Formulation coloumn in Inventory section, created section in doctor consultation log section called doctor patient list",
+          "Adding Old Patients Registration Through OCR Scanning and Implemented add patient features and added medicines with formilation in Inventory section",
+          "Did mapping in log vitals where medicine id is mapped with formulation, added a dropdown for category of medicines",
+          "Did Data entry of Patients, Researched on voice bot using exotel and sarvam AI and implemented Broadcast Reminders in campwise patient list",
+          "Did data Entry of Patients, Researched on Voicebot using Exotel and Sarvam AI, Integrated Fast API in the Backend",
+          "Implemented voice bot on remainders for outbound call to patients dor camp remainders, Done Testing of Voice Bot and Implemented call to every Patient Feature",
+          "created diabetic voicebot where the patients who are diabetic, created a json file where the STT gets converted to text in a json file, created a database called inventory_diabeticfollowup where it stores the speech to text, created a drop down like all patients tests on click that we get to see only those patients and calls goes to patients"
         ],
         weeklyReviews: [
-          { week: 1, review: "Puja quickly grasped the system architecture. Excellent start on mapping clinical FHIR schemas.", rating: 4.8 },
-          { week: 2, review: "Successfully designed and delivered the PostgreSQL migration scripts. Showed strong command over SQL optimization.", rating: 4.9 },
-          { week: 3, review: "Implemented OAuth authentication flawlessly. Her secure gateway API is highly reliable.", rating: 4.7 },
-          { week: 4, review: "Integrated Redis cache successfully, hitting performance targets early. Great communication with the frontend team.", rating: 5.0 },
-          { week: 5, review: "Outstanding cohort completion! Delivered a rock-solid production-ready backend framework with clean documentation.", rating: 5.0 }
+          { week: 1, review: "Pavithra created the core Patient Vitals logging interface. Excellent attention to user experience.", rating: 4.9 },
+          { week: 2, review: "Successfully designed and implemented the Doctor List view. Showed strong command over responsive tables.", rating: 4.8 },
+          { week: 3, review: "Reorganized the Admin Dashboard layout to match clients feedback beautifully.", rating: 4.9 },
+          { week: 4, review: "Conducted exhaustive comparison of OCR models, analyzing Tesseract vs Paddle OCR performance.", rating: 5.0 },
+          { week: 5, review: "Outstanding cohort completion! The SWASTH user interface is highly interactive and polished.", rating: 5.0 }
         ],
         resume: {
           education: [
             {
-              degree: "B.Tech in Computer Science & Engineering",
-              school: "Stanley College of Engineering and Technology for Women",
+              degree: "B.Tech in Information Technology",
+              school: "Swami Vivekananda Institute of Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 9.2"
+              grade: "CGPA: 8.63"
             }
           ],
           projects: [
             {
-              title: "Distributed Task Scheduler",
-              description: "A fault-tolerant task queue developed in Go that handles up to 5,000 tasks/second utilizing Redis streams.",
-              tech: ["Go", "Redis", "gRPC"]
-            },
-            {
-              title: "Secure Health Gateway API",
-              description: "High-performance API layer mapping to FHIR datasets with end-to-end payload encryption and rate-limiting.",
-              tech: ["FastAPI", "PostgreSQL", "JWT"]
+              title: "SWASTH Medical Camp Management System",
+              description: "An integrated healthcare logistics platform with patient registrations, inventory management, OCR document scanning, and voicebot reminders.",
+              tech: ["React", "Tailwind CSS", "SQLite"]
             }
           ],
           achievements: [
-            "Smart India Hackathon 2025 Runner-up",
-            "Dean's Honor List (6 consecutive semesters)",
-            "Top 5% in LeetCode Global Contest"
+            "Top Performance in UI Design Hackathon",
+            "Gold medalist in College Frontend Coding Sprint",
+            "Verified UI/UX delivery certification"
           ]
         }
       },
       {
-        id: "ananya-sharma",
-        name: "Ananya Sharma",
-        role: "Frontend Developer",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "8.9/10",
-        skills: ["UI/UX Design", "React & Next.js", "Web Performance", "State Management", "Framer Motion"],
+        id: "sathvika",
+        name: "Sathvika Talari",
+        role: "Frontend, UI/UX, Voice bot ",
+        avatar: "/Sathvika.jpeg",
+        cgpa: "9.43/10",
+        skills: ["Web Development", "Java", "Python", "JavaScript", "C", "HTML", "CSS", "NodeJS", "Flask", "Django", "React", "tailwind CSS", "Streamlit", "Manual Testing", "Functional Testing", "UI Testing", "Bug Tracking", "MySQL", "SQL lite", "Git", "GitHub", "VS Code", "Artificial Intelligence", "Web3", "Competitive Programming."],
         techUsed: ["React", "Zustand", "Tailwind CSS", "Framer Motion", "Recharts"],
-        bio: "Frontend engineer dedicated to building smooth user experiences, pixel-perfect layouts, and highly interactive charts.",
-        contributions: "Ananya crafted the user interface, managed local interactive states with Zustand, built beautiful telemetry dashboards, and ensured WCAG AA accessibility compliance across all healthcare screens.",
+        bio: "Detail-oriented Computer Science student with experience in developing and testing full-stack web applications. Skilled in manual testing, UI validation, and identifying functional issues across dashboards and user workflows. Familiar with Python, Flask, and modern web technologies, with a strong interest in improving software quality and user experience.",
+        contributions: "Sathvika made vital contributions across frontend interface design, database schema management, AI-driven document digitizing, and automated voice systems. On the frontend, she designed and optimized core layouts including Admin Login, patient registrations (new and old), doctor listings, and inventory tracking tables. She created and refined relational tables in the database, mapping medicine formulations and integrating camp-wise cost parameters. Sathvika spearheaded extensive research and testing of document scanning pipelines using Tesseract, docTR, PyTorch, OpenCV, Qwen OCR, and Gemini models (Flash and Pro) to enable automated text extraction. Furthermore, she played a key role in integrating outbound follow-up voice bots using Exotel and Sarvam AI, including developing a specialized diabetic patient feedback database loop. Lastly, she assisted in backend FastAPI structuring, comprehensive functional testing, and deploying the system on cloud platforms like Railway.",
         dailyTasks: [
           "Engineered the layout wireframes using React functional components and Tailwind responsive layers.",
           "Wrote visual data telemetry widgets incorporating responsive graphs built on top of Recharts.",
@@ -91,10 +121,10 @@ export const projectsData: Project[] = [
         resume: {
           education: [
             {
-              degree: "B.Tech in Information Technology",
-              school: "Swami Vivekananda Institute of Technology",
+              degree: "B.E in Computer Science and Engineering",
+              school: "",
               year: "2023 - 2027",
-              grade: "CGPA: 8.9"
+              grade: "CGPA: 9.43"
             }
           ],
           projects: [
@@ -180,9 +210,13 @@ export const projectsData: Project[] = [
     name: "Natya Samhita",
     duration: "5 Weeks",
     domain: "Classical Dance & Cultural AI",
-    description: "An Indology research system generating statistical motion charts, tracking classical performance metrics, and simulating ancient Sanskrit drama scripts.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
-    tech: ["Next.js", "FastAPI", "ClickHouse", "Recharts", "ScyllaDB"],
+    description: "Natya Samhita is an AI-powered platform dedicated to preserving and promoting the rich heritage of Indian classical dance. It brings together dance knowledge, learning resources, cultural insights, and community-driven discussions in one place. By combining traditional wisdom with modern technology, the platform helps students, dancers, teachers, and researchers explore, learn, and share the art of dance in an interactive and accessible way.",
+    image: "/Natya Samhita.jpeg",
+    tech: ["Frontend: Next.js 16.2.4 + React 19.2.4 + TypeScript",
+      "Admin Portal: Next.js 16.2.6 + React 19.2.4 + TypeScript",
+      "Backend: API Python FastAPI + Uvicorn",
+      "AI Core: Python (standalone module)",
+      "Community: Backend router + PostgreSQL"],
     contributors: [
       {
         id: "vikram-malhotra",
@@ -341,9 +375,17 @@ export const projectsData: Project[] = [
     name: "Appellate Automation",
     duration: "5 Weeks",
     domain: "LegalTech & Document Intelligence",
-    description: "An optimization platform generating real-time judicial filing paths, document extraction alerts, and predictive hearing timelines.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-    tech: ["TypeScript", "Rust Router", "Redis", "Leaflet GL", "GraphQL"],
+    description: "The CA Audit Notification & Automation Management System is a comprehensive role-based web application developed to streamline the management of Income Tax e-Proceedings for Chartered Accountants, tax professionals, and audit firms. The platform centralizes the handling of client assignments, proceedings, notices, responses, adjournments, document management, and compliance tracking, reducing the manual effort required to monitor multiple taxpayer accounts and ensuring timely action on important notices. The system is built around three dedicated user roles: Admin, Staff, and Professional. The Admin Dashboard provides complete control over user management, client onboarding, professional assignments, access control, workflow monitoring, and overall system administration. The Staff Dashboard enables staff members to manage assigned clients, monitor proceedings, track notices and responses, review adjournment requests, access notice orders, and oversee operational activities. The Professional Dashboard allows tax professionals to manage their assigned clients, review notices, update response statuses, track workflow progress, maintain review comments, and monitor compliance deadlines through a structured interface. A major component of the platform is its automation engine, which utilizes browser automation technology to interact directly with the Income Tax e-Filing Portal. The automation securely logs into taxpayer accounts, navigates through e-Proceedings, and automatically extracts proceedings, notices, orders, response details, adjournment details, document reference information, communication metadata, and downloadable PDF documents.",
+    image: "/chps.jpeg",
+    tech: ["Frontend: React.js, TypeScript, Vite, Tailwind CSS, Axios",
+      "Backend: FastAPI, Python, SQLAlchemy, Pydantic",
+      "Database: PostgreSQL, pgAdmin",
+      "Authentication: JWT, Passlib, Role-Based Access Control (RBAC)",
+      "Automation: Playwright, Browser Automation, AsyncIO",
+      "API Communication: REST APIs, JSON",
+      "File Management: PDF Download Automation, Dynamic PDF Renaming",
+      "Version Control: GitHub",
+      "Deployment & Runtime: Vercel, Uvicorn, npm"],
     contributors: [
       {
         id: "arjun-joshi",
@@ -501,9 +543,9 @@ export const projectsData: Project[] = [
     name: "Edu-Sim",
     duration: "5 Weeks",
     domain: "Simulated Interactive Education",
-    description: "An immersive simulation environment displaying physics models, tracking learning curve indices, and configuring dynamic student interaction layouts.",
-    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80",
-    tech: ["React", "FastAPI", "TensorFlow Lite", "InfluxDB", "Grafana Panels"],
+    description: "EduSim is an AI-powered educational simulation platform designed for interactive and personalized learning. It combines Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and simulation systems to improve concept understanding. The platform provides AI tutoring, educational content generation, and real-time student assistance. It supports interactive physics-based simulations using technologies like PixiJS and Matter.js. EduSim includes an LLM evaluation pipeline to benchmark models based on accuracy, quality, latency, and cost. The backend is developed using Python and FastAPI with scalable modular architecture. It also integrates vector databases such as FAISS/ChromaDB for intelligent knowledge retrieval.The project focuses on enhancing digital education through AI-driven simulations and adaptive learning experiences.",
+    image: "/EduSim.jpeg",
+    tech: ["Python", "FastAPI", "React", "TypeScript", "Vite", "PixiJS", "Matter.js", "PostgreSQL", "FAISS", "OpenRouter API", "OpenAI API", "Machine Learning", "RAG (Retrieval-Augmented Generation)"],
     contributors: [
       {
         id: "neha-gupta",
@@ -660,9 +702,14 @@ export const projectsData: Project[] = [
     name: "Sustainable infrastructure",
     duration: "5 Weeks",
     domain: "Urban Tech & Eco Engineering",
-    description: "A planning environment analyzing soil parameters, local building materials, and historical weather data to design durable, eco-friendly infrastructure models.",
-    image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=1200&q=80",
-    tech: ["React", "FastAPI", "XGBoost", "ScyllaDB", "Leaflet GL"],
+    description: "Sustainable Infra is an intelligent LLM routing system that automatically selects the best AI model for each user query by balancing response quality and API cost. It evaluates each model response using a quality score and normalizes API cost to compute a final reward, ensuring the most cost-efficient model is preferred when quality is equal. The router supports two intelligent strategies — Thompson Sampling and LinUCB — and compares them against a baseline using cumulative regret to measure how close each strategy gets to the best possible routing decision.",
+    image: "/Sustainable Infra.png",
+    tech: ["Language: Python",
+      "Tools: OpenRouter API, FastAPI, Streamlit, Plotly, Git, GitHub, VS Code, Jupyter Notebook",
+      "Libraries: NumPy, Pandas, Matplotlib, Scikit-Learn, all-MiniLM-L6-v2, BAAI/bge-small-en-v1.5, sentence-transformers, FAISS, pytest",
+      "Datasets: MS MARCO, MMLU, Router Benchmark Dataset",
+      "Algorithms: Thompson Sampling (CMAB), LinUCB, Round Robin, Cosine Similarity, Sherman-Morrison, Bayesian Update",
+      "Evaluation Metrics: BERTScore, BLEU, ROUGE, F1 Score, Accuracy, Latency, API Cost"],
     contributors: [
       {
         id: "sneha-reddy",

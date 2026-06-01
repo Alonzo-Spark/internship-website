@@ -14,6 +14,11 @@ export interface Contributor {
   techUsed: string[];
   bio: string;
   contributions: string;
+  github?: string;
+  linkedin?: string;
+  email?: string;
+  phone?: string;
+  resumePdf?: string;
   dailyTasks: string[];
   weeklyReviews: WeeklyReview[];
   resume: {
