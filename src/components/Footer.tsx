@@ -1,32 +1,14 @@
 import React from "react";
 import { Logo } from "./Logo";
-import { Mail, Phone, Linkedin, ArrowUp } from "lucide-react";
+import { Mail, Phone, Linkedin } from "lucide-react";
 
 interface FooterProps {
+  onNavigate: (sectionId?: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleNavClick = (id?: string) => {
+    onNavigate(id);
   };
 
   return (
@@ -54,24 +36,24 @@ export const Footer: React.FC<FooterProps> = () => {
               <ul className="space-y-2 text-xs">
                 <li>
                   <button
-                    onClick={scrollToTop}
-                    className="text-slate-400 hover:text-white transition-colors cursor-pointer"
+                    onClick={() => handleNavClick()}
+                    className="text-slate-400 hover:text-slate-100 transition-colors cursor-pointer"
                   >
                     Home
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => scrollToSection("spark-program")}
-                    className="text-slate-400 hover:text-white transition-colors cursor-pointer"
+                    onClick={() => handleNavClick("spark-program")}
+                    className="text-slate-400 hover:text-slate-100 transition-colors cursor-pointer"
                   >
                     About Internship
                   </button>
                 </li>
                 <li>
                   <button
-                    onClick={() => scrollToSection("projects-section")}
-                    className="text-slate-400 hover:text-white transition-colors cursor-pointer"
+                    onClick={() => handleNavClick("projects-section")}
+                    className="text-slate-400 hover:text-slate-100 transition-colors cursor-pointer"
                   >
                     Projects
                   </button>
@@ -85,15 +67,15 @@ export const Footer: React.FC<FooterProps> = () => {
               <ul className="space-y-2 text-xs text-slate-400">
                 <li className="flex items-center gap-2">
                   <Mail size={13} className="text-slate-500" />
-                  <a href="mailto:info@alonzo.ai" className="hover:text-white transition-colors">info@alonzo.ai</a>
+                  <a href="mailto:admin@alonzoai.in" className="hover:text-slate-100 transition-colors">admin@alonzoai.in</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone size={13} className="text-slate-500" />
-                  <span>+1 (800) 555-ALNZ</span>
+                  <a href="tel:+919966992217" className="hover:text-slate-100 transition-colors">+91 9966992217</a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Linkedin size={13} className="text-slate-500" />
-                  <a href="https://linkedin.com/company/alonzo-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1">
+                  <a href="https://linkedin.com/company/alonzo-ai" target="_blank" rel="noopener noreferrer" className="hover:text-slate-100 transition-colors flex items-center gap-1">
                     linkedin.com/company/alonzo-ai
                   </a>
                 </li>
@@ -101,28 +83,6 @@ export const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500">
-          <div>
-            &copy; {new Date().getFullYear()} Alonzo AI. All rights reserved. • Built by Senior Architect team.
-          </div>
-          
-          <div className="flex items-center gap-4">
-            <span className="hover:text-slate-355 cursor-pointer">Security Policy</span>
-            <span>&bull;</span>
-            <span className="hover:text-slate-355 cursor-pointer">Terms of Service</span>
-            <span>&bull;</span>
-            <button
-              onClick={scrollToTop}
-              className="p-1.5 bg-slate-900 border border-slate-800 rounded text-slate-400 hover:text-white transition-all cursor-pointer flex items-center gap-1.5"
-              title="Return to topmost coordinates"
-            >
-              <span>Top</span>
-              <ArrowUp size={12} />
-            </button>
-          </div>
         </div>
 
       </div>

@@ -820,5 +820,5 @@ export const statisticsData = [
   { label: "Number of Interns", value: 15, suffix: "" },
   { label: "Projects Completed", value: 5, suffix: "" },
   { label: "Industry Mentors", value: 5, suffix: "" },
-  { label: "Client Satisfaction", value: 99.1, suffix: "%" }
+  { label: "Partner Satisfaction", value: 99.1, suffix: "%" }
 ];

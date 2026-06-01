@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeft, Calendar, Users, Cpu, Code2, GraduationCap } from "lucide-react";
+import { ArrowLeft, Cpu, Code2, GraduationCap } from "lucide-react";
 import { Project, Contributor } from "../types";
 import { motion } from "motion/react";
 
@@ -20,12 +20,12 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 15 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 md:pt-28 md:pb-12 relative z-10"
+      className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10 md:pt-32 md:pb-12 relative z-10"
     >
       {/* Return Navigation Anchor */}
       <button
         onClick={onClose}
-        className="group mt-2 mb-8 inline-flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-slate-400 hover:text-orange-400 transition-colors uppercase cursor-pointer"
+        className="group mt-2 mb-8 inline-flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-slate-400 hover:text-orange-400 transition-colors uppercase cursor-pointer relative z-50"
       >
         <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
         Back to Showcase
@@ -42,13 +42,13 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             className="w-full h-full object-cover opacity-80"
           />
           {/* Subtle vignette layer */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+          <div className="absolute inset-0 project-details-overlay" />
           
           <div className="absolute bottom-6 left-6 right-6">
             <span className="px-3 py-1 bg-orange-500/10 border border-orange-500/20 text-orange-400 font-mono text-[10px] font-bold uppercase tracking-widest rounded-md">
               {project.domain}
             </span>
-            <h1 className="text-3xl sm:text-5xl font-serif font-black text-white mt-3 tracking-tight drop-shadow-md">
+            <h1 className="text-3xl sm:text-5xl font-serif font-black text-slate-100 mt-3 tracking-tight drop-shadow-md">
               {project.name}
             </h1>
           </div>
@@ -86,28 +86,10 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 ))}
               </div>
             </div>
-
-            {/* Program duration highlight */}
-            <div className="flex items-center gap-3 p-4 bg-slate-950/60 border border-slate-900 rounded-2xl w-fit">
-              <Calendar className="text-orange-500" size={18} />
-              <div>
-                <div className="text-xs font-semibold text-slate-400 uppercase font-mono tracking-wider">Cohort Timeline</div>
-                <div className="text-sm font-bold text-white font-mono mt-0.5">{project.duration}</div>
-              </div>
-            </div>
           </div>
 
           {/* Right Block: 3 Cohort Contributors */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-2 border-b border-slate-800 pb-3">
-              <h3 className="text-xs font-bold text-orange-400 uppercase tracking-widest font-mono flex items-center gap-2">
-                <Users size={14} className="text-orange-500" />
-                Assigned Team Task-Force
-              </h3>
-              <p className="text-[11px] text-slate-500 leading-relaxed font-sans">
-                Elite team members driving active architecture & deployment.
-              </p>
-            </div>
 
             <div className="space-y-4">
               {project.contributors.map((contrib) => (
@@ -127,7 +109,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 
                     {/* Meta labels */}
                     <div>
-                      <h4 className="font-serif text-sm font-bold text-white group-hover:text-orange-400 transition-colors">
+                      <h4 className="font-serif text-sm font-bold text-slate-100 group-hover:text-orange-400 transition-colors">
                         {contrib.name}
                       </h4>
                       <p className="text-[10px] text-orange-500 font-mono uppercase tracking-wider mt-0.5">

@@ -77,7 +77,7 @@ export const About: React.FC = () => {
     {
       icon: <Award className="text-orange-400" size={24} />,
       title: "Industry Collaboration",
-      desc: "Interacting directly with clients and venture partners to demonstrate progress and shape features based on authentic market requirements."
+      desc: "Interacting directly with corporate partners and venture teams to demonstrate progress and shape features based on authentic market requirements."
     }
   ];
 
@@ -94,7 +94,7 @@ export const About: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-xs font-semibold text-orange-400 uppercase tracking-widest font-mono">
             Placement Mandate
           </div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-100 tracking-tight">
             A Masterclass in High-Impact Technical Training
           </h2>
           <p className="text-slate-400 text-sm leading-relaxed">
@@ -112,7 +112,7 @@ export const About: React.FC = () => {
               <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl w-fit mb-4 group-hover:scale-110 transition-transform">
                 {item.icon}
               </div>
-              <h3 className="text-base font-serif font-bold text-white mb-2 tracking-wide group-hover:text-orange-400 transition-colors">
+              <h3 className="text-base font-serif font-bold text-slate-100 mb-2 tracking-wide group-hover:text-orange-400 transition-colors">
                 {item.title}
               </h3>
               <p className="text-xs text-slate-400 leading-relaxed font-sans">

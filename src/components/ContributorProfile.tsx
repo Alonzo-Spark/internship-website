@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Contributor, Mentor } from "../types";
 import { get30DaysTasks, TaskItem } from "../utils/dailyTasksGenerator";
-import { X, Award, Code2, GraduationCap, ArrowLeft, Mail, Phone, Globe, ExternalLink, FileCheck2, UserCheck, Calendar } from "lucide-react";
+import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar } from "lucide-react";
 
 interface ContributorProfileProps {
   contributor: Contributor;
@@ -43,13 +43,13 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.98 }}
       transition={{ duration: 0.35 }}
-      className="max-w-6xl mx-auto px-4 pt-20 pb-8 md:pt-28 md:pb-12 z-10 relative"
+      className="max-w-6xl mx-auto px-4 pt-24 pb-8 md:pt-32 md:pb-12 z-10 relative"
     >
       {/* Return Navigation Anchor */}
       <button
         id="back-to-projects-btn"
         onClick={onClose}
-        className="group mt-2 mb-8 inline-flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-slate-400 hover:text-orange-400 transition-colors uppercase cursor-pointer"
+        className="group mt-2 mb-8 inline-flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-slate-400 hover:text-orange-400 transition-colors uppercase cursor-pointer relative z-50"
       >
         <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
         Back to Project Details
@@ -69,13 +69,6 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                 alt={contributor.name}
                 className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-              
-              {/* Float tag on image */}
-              <div className="absolute bottom-4 left-4 right-4">
-                <div className="text-sm font-mono text-orange-400 font-semibold uppercase">{contributor.role}</div>
-                <h2 className="text-2xl font-serif font-bold text-white tracking-wide mt-1">{contributor.name}</h2>
-              </div>
             </div>
 
             {/* Stat Lines in Portrait */}
@@ -107,7 +100,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             {/* Primary College highlight */}
             <div className="space-y-1.5 p-3 bg-slate-950/60 border border-slate-900 rounded-xl">
               <div className="text-[10px] text-slate-500 font-mono uppercase font-bold">Academic Institution</div>
-              <div className="text-xs font-bold text-white leading-relaxed">{contributor.resume.education[0].school}</div>
+              <div className="text-xs font-bold text-slate-100 leading-relaxed">{contributor.resume.education[0].school}</div>
               <div className="text-[10px] text-orange-500 font-mono mt-1 font-semibold">{contributor.resume.education[0].degree}</div>
             </div>
 
@@ -126,18 +119,24 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
           <div className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-slate-800/80 p-5 space-y-3.5 shadow-md">
             <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Professional Directory</h3>
             <div className="space-y-2.5 text-xs">
-              <a href={`mailto:${contributor.name.toLowerCase().replace(/\s/g, "")}@alonzo.ai`} className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors">
-                <Mail size={14} className="text-slate-500" />
-                <span>{contributor.name.toLowerCase().replace(/\s/g, "")}@alonzo.ai</span>
+              <a 
+                href={`https://github.com/${contributor.name.toLowerCase().replace(/\s/g, "")}`}
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+              >
+                <Github size={14} className="text-slate-500" />
+                <span>github.com/{contributor.name.toLowerCase().replace(/\s/g, "")}</span>
               </a>
-              <div className="flex items-center gap-2 text-slate-300">
-                <Phone size={14} className="text-slate-500" />
-                <span>+1 (800) 555-ALNZ</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors">
-                <Globe size={14} className="text-slate-500" />
-                <span>portfolio.{contributor.name.toLowerCase().replace(/\s/g, "")}.io</span>
-              </div>
+              <a 
+                href={`https://linkedin.com/in/${contributor.name.toLowerCase().replace(/\s/g, "")}`}
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+              >
+                <Linkedin size={14} className="text-slate-500" />
+                <span>linkedin.com/in/{contributor.name.toLowerCase().replace(/\s/g, "")}</span>
+              </a>
             </div>
           </div>
 
@@ -148,33 +147,33 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
           
           {/* Bio Segment */}
           <div className="space-y-3">
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-white tracking-tight">{contributor.name}</h1>
+            <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-100 tracking-tight">{contributor.name}</h1>
             <div className="text-base text-orange-400 font-mono uppercase tracking-wider">{contributor.role} • {projectName}</div>
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl">{contributor.bio}</p>
           </div>
 
-          {/* Skills / Tech Used tags */}
+          {/* Skills tags */}
           <div className="space-y-3">
-            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Technologies & Tools</h3>
+            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {contributor.techUsed.map((tech, idx) => (
+              {contributor.skills.map((skill, idx) => (
                 <span
                   key={idx}
                   className="px-3 py-1 bg-slate-900 border border-slate-800 text-slate-200 text-xs font-mono rounded"
                 >
-                  {tech}
+                  {skill}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* 30-Day Internship Task Interactive Roadmap */}
+          {/* 5-Week Internship Task Interactive Roadmap */}
           <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-blue-500/10 p-6 md:p-8 space-y-6 shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800/80 pb-5">
               <div className="space-y-1">
                 <h3 className="text-xs font-semibold text-blue-400 uppercase tracking-widest flex items-center gap-2 font-mono">
                   <span className="h-2 w-2 bg-blue-400 rounded-full animate-pulse" />
-                  30-Day Internship Task Matrix
+                  5-Week Internship Task Matrix
                 </h3>
                 <p className="text-[11px] text-slate-500 font-sans">
                   Click on any day index tile to view the complete daily technical deliverables log.
@@ -238,7 +237,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                     </span>
                   </div>
                   
-                  <h4 className="font-serif text-sm font-bold text-white border-b border-slate-900 pb-2">
+                  <h4 className="font-serif text-sm font-bold text-slate-100 border-b border-slate-900 pb-2">
                     {activeTask.title}
                   </h4>
                   
@@ -247,10 +246,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   </p>
                 </div>
 
-                <div className="text-[10px] text-slate-500 font-mono pt-3 border-t border-slate-900 flex justify-between items-center">
-                  <span>Task Scope: Technical Dev</span>
-                  <span>100% Verified</span>
-                </div>
+
               </div>
 
             </div>
