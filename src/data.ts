@@ -8,7 +8,7 @@ export const projectsData: Project[] = [
     domain: "Healthcare Tech & Operations",
     description: "This project focuses on enhancing an existing static web-based medical camp system by adding missing functionalities, fixing existing issues, and integrating intelligent automation features. The system supports full-lifecycle patient registration and vastly improves medical inventory management by introducing advanced Vision AI (OCR) models. This OCR integration allows clinical staff to instantly digitize complex, handwritten medicine stock sheets by simply snapping a photo, eliminating manual data entry errors. Additionally, an automated, regional-language voice bot is deeply integrated into the backend to handle patient follow-ups. The AI autonomously dials patients to provide medication reminders, check health statuses, and schedule revisits, instantly syncing their responses back into the database. Ultimately, the overall goal is to transform semi-manual, paper-heavy workflows into a reliable, structured, and fully automated digital healthcare system.",
     image: "/ProjectLogo.jpeg",
-    tech: ["React", "Django", "Google gemini text ( 3.1 flash-lite)", " SQlite", " Django REST framework", "Tailwind CSS", "Gemini flash 3.5", "Exotel", "Sarvam AI", "Ngrok"],
+    tech: ["React", "Django", "Google gemini text ( 3.1 flash-lite)", , "Axios", "Lucide React", " SQlite", " Django REST framework", "Tailwind CSS", "Gemini flash 3.5", "Exotel", "Sarvam AI", "Ngrok", "Pillow", "OpenCV "],
     contributors: [
       {
         id: "Pavithra",
@@ -16,7 +16,7 @@ export const projectsData: Project[] = [
         role: "Frontend, UI/UX, Voice bot ",
         avatar: "/Pavithra.jpeg",
         cgpa: "8.63/10",
-        github: "",
+        github: "https://github.com/pavithraphilo-ops",
         linkedin: "linkedin.com/in/pavithra-philomena-3ba501364",
         email: "pavithraphilo@gmail.com",
         phone: "+91 8897921297",
@@ -99,30 +99,53 @@ export const projectsData: Project[] = [
         role: "Frontend, UI/UX, Voice bot ",
         avatar: "/Sathvika.jpeg",
         cgpa: "9.43/10",
+        github: "https://github.com/pavithraphilo-ops",
+        linkedin: "linkedin.com/in/pavithra-philomena-3ba501364",
+        email: "sathvika.talari04@gmail.com",
+        phone: "+91 93074 23350",
+        resumePdf: "/SathvikaTalari_Resume.pdf",
         skills: ["Web Development", "Java", "Python", "JavaScript", "C", "HTML", "CSS", "NodeJS", "Flask", "Django", "React", "tailwind CSS", "Streamlit", "Manual Testing", "Functional Testing", "UI Testing", "Bug Tracking", "MySQL", "SQL lite", "Git", "GitHub", "VS Code", "Artificial Intelligence", "Web3", "Competitive Programming."],
         techUsed: ["React", "Zustand", "Tailwind CSS", "Framer Motion", "Recharts"],
         bio: "Detail-oriented Computer Science student with experience in developing and testing full-stack web applications. Skilled in manual testing, UI validation, and identifying functional issues across dashboards and user workflows. Familiar with Python, Flask, and modern web technologies, with a strong interest in improving software quality and user experience.",
         contributions: "Sathvika made vital contributions across frontend interface design, database schema management, AI-driven document digitizing, and automated voice systems. On the frontend, she designed and optimized core layouts including Admin Login, patient registrations (new and old), doctor listings, and inventory tracking tables. She created and refined relational tables in the database, mapping medicine formulations and integrating camp-wise cost parameters. Sathvika spearheaded extensive research and testing of document scanning pipelines using Tesseract, docTR, PyTorch, OpenCV, Qwen OCR, and Gemini models (Flash and Pro) to enable automated text extraction. Furthermore, she played a key role in integrating outbound follow-up voice bots using Exotel and Sarvam AI, including developing a specialized diabetic patient feedback database loop. Lastly, she assisted in backend FastAPI structuring, comprehensive functional testing, and deploying the system on cloud platforms like Railway.",
         dailyTasks: [
-          "Engineered the layout wireframes using React functional components and Tailwind responsive layers.",
-          "Wrote visual data telemetry widgets incorporating responsive graphs built on top of Recharts.",
-          "Integrated Zustand state management to synchronize user choices across multiple clinical modules.",
-          "Implemented semantic HTML5 anchors and keyboard-accessible modal tabs ensuring WCAG AA standard alignment.",
-          "Created micro-animations using Framer Motion to make state changes feel smooth and delightful.",
-          "Built high-speed WebSocket listeners updating critical hospital alert panels in real time."
+          "Patient Registration",
+          "Admin Page Login UI, Frontend Working",
+          "Created database tables with data",
+          "Issue Medicines section and Existing User & New Patient Registration",
+          "Camp Patient Registration Sectiona and camp selection dropdown",
+          "added Old Patients option in dashboard and Registration form",
+          "Did testing on scanning mechanism and tried scanning using pytorch",
+          "Reasearch on Scanning Methods using docTR, Pytorch and OpenCV",
+          "UI changes and Optimizing the Scanning method",
+          "Created Readme and Requirements files - system configuration and project structure",
+          "Updated the Database table of doctor details",
+          "Updated Old Patients section and Added Edit button for Medicines",
+          "Worked on doctor report section, UI enhancement of inventory section and Research on Voice Bot",
+          "Worked with Gemini Flash 1.5 and Gemini Pro 2.5 for Scanning",
+          "Did research on voice bot throughgithub projects, Implemented testing and found bugs",
+          "In patient profile section Issue medicines removed days UI, added total number of tests card in camp reports, enhanced the UI of Edit and delete button, fixed auto filling of Dr. ID and Dr. Name",
+          "Fixed UI functionality bugs, Arranged the UI of Patient registration section (Old patient registration and new patient registration) properly, Researched on diffrent voice bot approaches",
+          "Enhanced Proper UI of Inventory Section, checked the edge cases of each feature of the application, searched different voice bot approaches",
+          "Added Medicines with formulation in Inventory section and Data Entry",
+          "Researched on voice bot - Exotel and Sarvam AI, replaced the old medicine data with the new medicine data and integrated with the db",
+          "Did Data entry of Patients, Researched on voice bot using Sarvam AI and worked on Deployment methods of Application",
+          "Did data Entry of Patients, Researched on Voice Bot, Researched on various deployment Platforms like AWS, MongoDB, Render, Railway etc.",
+          "Implemented Testing for Application Features, Tested on Deploying the Application using Railway deploying service",
+          "Implemented Overall Functional Testing and Data Testing of all the features in the Application and worked on voice bot for Diabetic Patients"
         ],
         weeklyReviews: [
-          { week: 1, review: "Ananya immediately established UI system foundations. Figma designs match the code perfectly.", rating: 4.7 },
-          { week: 2, review: "Delivered stunning telemetry panels. The responsive layout is beautifully executed.", rating: 4.9 },
-          { week: 3, review: "Integrated Zustand state management cleanly, keeping client side reactivity fast.", rating: 4.8 },
-          { week: 4, review: "Excelled at WCAG AA compliance and keyboard navigation. Outstanding attention to detailing.", rating: 4.9 },
-          { week: 5, review: "Fabulous project completion! The dashboard is incredibly intuitive, responsive, and visually phenomenal.", rating: 5.0 }
+          { week: 1, review: "Sathvika immediately established UI system foundations and designed the patient registration interfaces.", rating: 4.7 },
+          { week: 2, review: "Successfully implemented doctor and camp details tables. Outstanding database management skills.", rating: 4.9 },
+          { week: 3, review: "Delivered clean text-extraction logic using advanced scanning models. Showed great analytical skills.", rating: 4.8 },
+          { week: 4, review: "Integrated Exotel and Sarvam AI voice reminders. Excellent effort in building automated patient follow-ups.", rating: 4.9 },
+          { week: 5, review: "Fabulous project completion! Sathvika worked tirelessly on testing application features and setting up deployment pipeline.", rating: 5.0 }
         ],
         resume: {
           education: [
             {
               degree: "B.E in Computer Science and Engineering",
-              school: "",
+              school: "Stanley College of Engineering and Technology",
               year: "2023 - 2027",
               grade: "CGPA: 9.43"
             }
@@ -141,49 +164,76 @@ export const projectsData: Project[] = [
         }
       },
       {
-        id: "rahul-kumar",
-        name: "Rahul Kumar",
-        role: "AI Engineer",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.5/10",
-        skills: ["Machine Learning", "NLP / LLMs", "Retrieval-Augmented Generation", "PyTorch", "Model Evaluation"],
-        techUsed: ["Python", "PyTorch", "Hugging Face", "Pinecone", "LangChain"],
-        bio: "Aspiring AI Researcher with publications in medical text classification and structured prompt optimization strategies.",
-        contributions: "Rahul handled the deployment and fine-tuning of embedding models, set up retrieval databases (RAG) with vector indexing, and configured structured validation pipelines for the healthcare recommendations engine.",
+        id: "Neeraj",
+        name: "Neeraj Gangavarapu",
+        role: "Backend Developer , OCR Integration , VoiceBot",
+        avatar: "/Neeraj.jpg",
+        cgpa: "8.35/10",
+        github: "https://github.com/NEERAJGANGAVARAPU",
+        linkedin: "https://www.linkedin.com/in/neeraj-gangavarapu-b59379274/",
+        email: "neerajgangavarapu@gmail.com",
+        phone: "+91 8074862459",
+        resumePdf: "/Neeraj Resume.pdf",
+        skills: ["Programming: Python, JavaScript",
+          "Frontend: HTML, CSS, Bootstrap , React",
+          "Web Framework: Django",
+          "Databases: Oracle",
+          "Version Control: Git , Github"],
+        techUsed: ["Python", "Django", "React", "SQLite", "Exotel", "Sarvam AI", "EasyOCR", "GLM OCR", "Git", "GitHub"],
+        bio: "AI & ML undergraduate student seeking opportunities to apply my technical skills in software development and data-driven problem solving. Motivated to contribute to innovative projects while continuously enhancing my expertise in full-stack development and emerging technologies. Possess foundational knowledge in web development and machine learning, with hands-on experience through academic projects.",
+        contributions: "Neeraj made substantial contributions to the backend architecture, database integration, OCR text-extraction pipelines, and automated telephonic systems. He designed the SQLite database schema, mapping relationships for patient vitals, camp-wise medicine inventory, doctor consultation registries, and automated follow-up responses. Neeraj successfully implemented OCR scanning mechanisms using GLM and EasyOCR to automatically capture and parse patient files. In addition, he integrated the application's core telephony notification features, developing both inbound and outbound voice reminders using Exotel and Sarvam AI TTS (Text-to-Speech), complete with interactive follow-up response loops for test-issued patients.",
         dailyTasks: [
-          "Built a RAG pipeline utilizing LangChain routing models to search matching vector embeddings.",
-          "Established and populated a Pinecone database cluster using cosine similarity metrics.",
-          "Fine-tuned clinical summarization layers using medical NLP models hosted on Hugging Face.",
-          "Designed prompt validation templates enforcing valid JSON formats for output safety.",
-          "Constructed comparative accuracy benchmark graphs comparing latency vs hallucinations.",
-          "Integrated Gemini API layers to dynamically generate triage action summaries."
+          "Admin Login",
+          "Admin Login Table and conversion to React",
+          "Total stock entry page and tables in db",
+          "multiple-camp-wise-stock, re-adding the left over stock",
+          "Test Isuue table and checkboxes and alert symbol",
+          "Role based Accesing , add new medicine feature and edit patient feature , medicine details tab",
+          "tried chandra ocr , easy ocr and glm ocr and glm ocr is working",
+          "Mapped the lab tests and connectd with database for doctor's list and adding new doctors and registering and doctor-wise patients",
+          "did databases changes and uploading from folder feature",
+          "Camp Report section is created which has total camp summary and download option for the camp report",
+          "Added edit feature for patient vitals in Patient Profile section",
+          "Reviewed and Checked the Tables in Database",
+          "Role based access credentials, created manualpatiententry table in database, Connected medicine number and name with database",
+          "Implemented Campwise Total Cost summation in Camp reports and database linking foe Old patients and New patients registration",
+          "Fixed bug in total stock entry page for unit cost, Researched on voice bot approaches with rule based technique",
+          "Fixed bug on medical fulfillment quantity, added returned stock and available stock coloumns, quantity updation issue, Non registered patients should logging isuue, created alternative coloumn in campwise stock table",
+          "Fixed bug of alternate name feature for medicines, modified camp date in old patient registration, Updated role based access, did some database changes",
+          "Integration of Doctor Consultation and Doctor List with database, created Test Issue Tracker page, Medical Details page connected with backend and database",
+          "Added Feature of Log Patient Vitals without Patient Registration, Adding Old Patients Registration through OCR and Data Entry of Patient Registration details",
+          "Replaced the old and new medicine data, Implemented Category wise medicine classification, mapped medicine details with Medicine ID and Medicine Formulation, added an dialogue box which show the newly added medicines and the already existed medicines",
+          "Implmplemented TTS using Sarvam AI for voicebot, Integrated Voice Bot with Exotel and Sarvam AI",
+          "Created Category Management Feature for Medicine Stock, Tested integration of Voice Bot with Exotel and tested inbound call to the exotel test number and extraction of Camp Remainder Audio from URL",
+          "Implemented outbound call for patients for camp remainder and tweaked pronounciation and pace of speech, tested with multiple numbers and Audio generation is accurately being done and Downloaded by exotel",
+          "created an test issued patients follow up voicebot which it asks the questions for the particular patients for whom the tests are issued and stores the responses from the user"
         ],
         weeklyReviews: [
-          { week: 1, review: "Excellent conceptual understanding of our RAG requirements. Pinecone setup completed ahead of schedule.", rating: 4.9 },
-          { week: 2, review: "Successfully configured LangChain routing workflows. Showed robust knowledge of embeddings.", rating: 4.8 },
-          { week: 3, review: "Fine-tuned medical NLP classifiers. Achieved significant benchmark gains.", rating: 4.9 },
-          { week: 4, review: "Implemented prompt output validators flawlessly, reducing hallucination occurrences to near zero.", rating: 5.0 },
-          { week: 5, review: "Superb research mindset! Delivered a state-of-the-art clinical agent with peerless engineering maturity.", rating: 5.0 }
+          { week: 1, review: "Neeraj successfully established the initial database schema and mapped crucial camp-wise stock entry and patient registration modules.", rating: 4.8 },
+          { week: 2, review: "Delivered robust role-based access control and integrated advanced scanning models like GLM OCR for automated text extraction.", rating: 4.9 },
+          { week: 3, review: "Created high-quality reporting analytics for camp summaries and successfully implemented the patient vitals edit workflows.", rating: 4.8 },
+          { week: 4, review: "Implemented Exotel outbound call campaigns, custom Sarvam AI Text-to-Speech reminders, and optimized speech pronunciation.", rating: 4.9 },
+          { week: 5, review: "Superb effort! Integrated dynamic responses from interactive telephonic voice bots, storing follow-up data directly into the database.", rating: 5.0 }
         ],
         resume: {
           education: [
             {
-              degree: "M.Tech in Artificial Intelligence",
+              degree: "B.Tech in Artificial Intelligence & Machine Learning",
               school: "Swami Vivekananda Institute of Technology",
-              year: "2024 - 2026",
-              grade: "CGPA: 9.5"
+              year: "2022 - 2026",
+              grade: "CGPA: 8.35"
             }
           ],
           projects: [
             {
-              title: "Clinical Abstract Summarizer",
-              description: "An offline NLP pipeline that turns multi-page doctor transcriptions into structured summaries in under 3 seconds.",
-              tech: ["Python", "LlamaIndex", "HuggingFace"]
+              title: "Medical Camp Management System (Swasth)",
+              description: "An integrated healthcare logistics platform with patient registrations, inventory management, OCR document scanning, and voicebot reminders.",
+              tech: ["React", "Django", "SQLite", "Exotel", "Sarvam AI"]
             }
           ],
           achievements: [
-            "Co-authored research paper accepted at AAAI-2026 Workshop",
-            "Gold medalist in National Math Olympiad"
+            "Integrated Exotel and Sarvam AI voice reminders for outpatient compliance tracking.",
+            "Optimized medical text extraction pipelines utilizing GLM and docTR OCR models."
           ]
         }
       }
@@ -193,7 +243,7 @@ export const projectsData: Project[] = [
       designation: "Strategic Product Lead (AI Systems)",
       organization: "Alonzo AI Engineering",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
-      comment: "Puja, Ananya, and Rahul demonstrated exemplary engineering maturity. They tackled complex clinical privacy requirements with high technical capability."
+      comment: "Pavithra, Sathvika, and Neeraj demonstrated exemplary engineering maturity. They tackled complex clinical requirements with high technical capability."
     },
     reviews: [
       {
@@ -612,7 +662,7 @@ export const projectsData: Project[] = [
     domain: "Simulated Interactive Education",
     description: "EduSim is an interactive educational platform designed to make learning science and engineering concepts more engaging through real-time simulations and visualizations. It provides a virtual environment where students can experiment with concepts, manipulate parameters, and observe outcomes instantly, helping bridge the gap between theory and practical understanding. The platform combines dynamic simulations, interactive graphics, and guided learning tools to create an immersive, hands-on educational experience for both students and educators.",
     image: "/EduSim.jpeg",
-    tech: ["Frontend: React.js, TypeScript, Vite, Tailwind CSS","Backend: FastAPI, Python, SQLAlchemy","Database: PostgreSQL","Authentication: JWT","AI: OpenRouter, Gemini","Simulation: Matter.js, PixiJS","Version Control: Git, GitHub","Deployment & Runtime: Uvicorn, npm"],
+    tech: ["Frontend: React.js, TypeScript, Vite, Tailwind CSS", "Backend: FastAPI, Python, SQLAlchemy", "Database: PostgreSQL", "Authentication: JWT", "AI: OpenRouter, Gemini", "Simulation: Matter.js, PixiJS", "Version Control: Git, GitHub", "Deployment & Runtime: Uvicorn, npm"],
     contributors: [
       {
         id: "rithvik",

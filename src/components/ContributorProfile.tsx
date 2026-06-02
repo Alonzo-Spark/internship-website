@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Contributor, Mentor } from "../types";
 import { get30DaysTasks, TaskItem } from "../utils/dailyTasksGenerator";
-import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone } from "lucide-react";
+import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone, Download } from "lucide-react";
 
 interface ContributorProfileProps {
   contributor: Contributor;
@@ -113,12 +113,9 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             </div>
 
             {contributor.resume.education.map((edu, idx) => (
-              <div key={idx} className="space-y-1.5 pt-2 border-t border-slate-800/50">
-                <div className="text-xs font-semibold text-slate-300 leading-snug">{edu.degree}</div>
-                <div className="text-[11px] text-slate-400">{edu.school}</div>
-                <div className="flex justify-between items-center text-[10px] text-slate-500 font-mono pt-0.5">
-                  <span>{edu.year}</span>
-                </div>
+              <div key={idx} className="flex justify-between items-center pt-3 border-t border-slate-800/50 text-xs font-mono">
+                <span className="text-slate-400">{edu.year}</span>
+                <span className="text-orange-400 font-semibold">{edu.grade}</span>
               </div>
             ))}
           </div>
@@ -343,15 +340,9 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   <span className="text-xs font-bold text-slate-200 uppercase tracking-widest block">Interactive CV Document</span>
                   <span className="text-[10px] text-slate-500 font-mono mt-0.5 block">Alonzo verified digital signature</span>
                 </div>
-              </div>
-
-              <button
+              </div>              <button
                 onClick={() => {
-                  if (contributor.resumePdf) {
-                    window.open(contributor.resumePdf, "_blank");
-                  } else {
-                    setShowResume(!showResume);
-                  }
+                  setShowResume(!showResume);
                 }}
                 className={`px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border ${showResume
                   ? "bg-slate-950 hover:bg-slate-900 border-slate-850 text-slate-400 hover:text-slate-200"
@@ -371,111 +362,142 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  {/* Realistic Clean A4 Résumé Paper Rendering */}
-                  <div className="p-8 md:p-12 bg-white text-slate-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-slate-100">
-
-                    {/* Resume Header */}
-                    <div className="text-center space-y-2 border-b-2 border-slate-900 pb-5">
-                      <h2 className="text-slate-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
-                      <div className="text-xs font-mono font-bold tracking-wide text-orange-600 uppercase">{contributor.role}</div>
-                      <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 font-mono">
-                        {contributor.email && <span>{contributor.email}</span>}
-                        {contributor.email && contributor.phone && <span>•</span>}
-                        {contributor.phone && <span>{contributor.phone}</span>}
-                        {githubDisplay && (contributor.email || contributor.phone) && <span>•</span>}
-                        {githubDisplay && <span>{githubDisplay}</span>}
-                        {linkedinDisplay && (contributor.email || contributor.phone || githubDisplay) && <span>•</span>}
-                        {linkedinDisplay && <span>{linkedinDisplay}</span>}
+                  {contributor.resumePdf ? (
+                    <div className="bg-slate-950 p-4 space-y-4 border-t border-slate-850">
+                      {/* PDF Toolbar with Download option */}
+                      <div className="flex justify-between items-center bg-slate-905/80 border border-slate-800/80 p-3 rounded-xl backdrop-blur-md">
+                        <span className="text-xs text-slate-400 font-mono flex items-center gap-2">
+                          <FileCheck2 size={14} className="text-orange-400" />
+                          {contributor.name}_Resume.pdf
+                        </span>
+                        <a
+                          href={contributor.resumePdf}
+                          download={`${contributor.name}_Resume.pdf`}
+                          className="px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 border border-orange-450 text-white rounded-lg text-xs font-mono font-bold tracking-wider uppercase transition-colors flex items-center gap-1.5 shadow-md shadow-orange-500/20 cursor-pointer"
+                        >
+                          <Download size={13} />
+                          Download PDF
+                        </a>
+                      </div>
+                      
+                      {/* PDF Iframe embed */}
+                      <div className="w-full aspect-[1/1.414] min-h-[500px] sm:min-h-[750px] bg-slate-900 border border-slate-800 rounded-xl overflow-hidden relative">
+                        <iframe
+                          src={`${contributor.resumePdf}#view=FitH`}
+                          title={`${contributor.name} Resume`}
+                          className="w-full h-full border-none"
+                        />
                       </div>
                     </div>
+                  ) : (
+                    <>
+                      {/* Realistic Clean A4 Résumé Paper Rendering */}
+                      <div className="p-8 md:p-12 bg-white text-slate-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-slate-100">
 
-                    {/* Profile Summary Segment */}
-                    <div className="py-5 border-b border-slate-100 space-y-2">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Executive Summary</h3>
-                      <p className="text-xs text-slate-700 leading-relaxed text-justify">
-                        A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}.
-                        Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background
-                        in {contributor.skills.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
-                      </p>
-                    </div>
-
-                    {/* Technical Skills segment */}
-                    <div className="py-5 border-b border-slate-100 space-y-2">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Core Competencies & Stack</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-slate-700">
-                        <div>
-                          <span className="font-bold text-slate-950">Engineering Stack:</span>
-                          <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.techUsed.join(", ")}</p>
-                        </div>
-                        <div>
-                          <span className="font-bold text-slate-950">Platform Skills:</span>
-                          <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.skills.join(", ")}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Professional Placement */}
-                    <div className="py-5 border-b border-slate-100 space-y-3">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Professional Placements</h3>
-                      <div className="space-y-2">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xs font-bold text-slate-950">Alonzo AI Solutions</h4>
-                            <div className="text-[10px] text-slate-500 font-mono uppercase font-bold mt-0.5">Associate Placement — {contributor.role}</div>
+                        {/* Resume Header */}
+                        <div className="text-center space-y-2 border-b-2 border-slate-900 pb-5">
+                          <h2 className="text-slate-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
+                          <div className="text-xs font-mono font-bold tracking-wide text-orange-600 uppercase">{contributor.role}</div>
+                          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 font-mono">
+                            {contributor.email && <span>{contributor.email}</span>}
+                            {contributor.email && contributor.phone && <span>•</span>}
+                            {contributor.phone && <span>{contributor.phone}</span>}
+                            {githubDisplay && (contributor.email || contributor.phone) && <span>•</span>}
+                            {githubDisplay && <span>{githubDisplay}</span>}
+                            {linkedinDisplay && (contributor.email || contributor.phone || githubDisplay) && <span>•</span>}
+                            {linkedinDisplay && <span>{linkedinDisplay}</span>}
                           </div>
-                          <span className="text-[10px] text-slate-500 font-mono text-right">{projectDuration}</span>
                         </div>
-                        <p className="text-xs text-slate-755 leading-relaxed text-justify">
-                          {contributor.contributions} Assured the technical and architectural delivery standards specified under primary advisor {mentor.name}.
-                        </p>
-                      </div>
-                    </div>
 
-                    {/* Core Academic Projects */}
-                    <div className="py-5 border-b border-slate-100 space-y-4">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Specialized Projects</h3>
-                      {contributor.resume.projects.map((proj, idx) => (
-                        <div key={idx} className="space-y-1">
-                          <div className="flex justify-between items-baseline">
-                            <h4 className="text-xs font-bold text-slate-950">{proj.title}</h4>
-                            <span className="text-[9px] font-mono bg-slate-100 text-slate-600 px-1.5 py-0.5 font-bold rounded">{proj.tech.join(" | ")}</span>
-                          </div>
-                          <p className="text-xs text-slate-650 leading-relaxed">
-                            {proj.description}
+                        {/* Profile Summary Segment */}
+                        <div className="py-5 border-b border-slate-100 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Executive Summary</h3>
+                          <p className="text-xs text-slate-700 leading-relaxed text-justify">
+                            A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}.
+                            Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background
+                            in {contributor.skills.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
                           </p>
                         </div>
-                      ))}
-                    </div>
 
-                    {/* Achievements section */}
-                    <div className="py-5 space-y-2">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Selected Achievements</h3>
-                      <ul className="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
-                        {contributor.resume.achievements.map((ach, idx) => (
-                          <li key={idx} className="leading-relaxed">
-                            {ach}
-                          </li>
-                        ))}
-                        <li className="leading-relaxed">
-                          Awarded full merit-based certificate of excellence during {projectName} internship showcase.
-                        </li>
-                      </ul>
-                    </div>
+                        {/* Technical Skills segment */}
+                        <div className="py-5 border-b border-slate-100 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Core Competencies & Stack</h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-slate-700">
+                            <div>
+                              <span className="font-bold text-slate-955">Engineering Stack:</span>
+                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.techUsed.join(", ")}</p>
+                            </div>
+                            <div>
+                              <span className="font-bold text-slate-955">Platform Skills:</span>
+                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.skills.join(", ")}</p>
+                            </div>
+                          </div>
+                        </div>
 
-                  </div>
+                        {/* Professional Placement */}
+                        <div className="py-5 border-b border-slate-100 space-y-3">
+                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Professional Placements</h3>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-start">
+                              <div>
+                                <h4 className="text-xs font-bold text-slate-955">Alonzo AI Solutions</h4>
+                                <div className="text-[10px] text-slate-500 font-mono uppercase font-bold mt-0.5">Associate Placement — {contributor.role}</div>
+                              </div>
+                              <span className="text-[10px] text-slate-500 font-mono text-right">{projectDuration}</span>
+                            </div>
+                            <p className="text-xs text-slate-755 leading-relaxed text-justify">
+                              {contributor.contributions} Assured the technical and architectural delivery standards specified under primary advisor {mentor.name}.
+                            </p>
+                          </div>
+                        </div>
 
-                  {/* Action row */}
-                  <div className="flex items-center justify-between p-5 bg-slate-950 border-t border-slate-850">
-                    <span className="text-[10px] text-slate-500 font-mono">Verified Security Hash ID: alz_{contributor.id.substring(0, 4)}</span>
-                    <button
-                      id="faux-print-btn"
-                      onClick={() => window.print()}
-                      className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg text-xs font-medium text-slate-200 transition-colors cursor-pointer flex items-center gap-1.5"
-                    >
-                      <ExternalLink size={13} />
-                      Print Document
-                    </button>
-                  </div>
+                        {/* Core Academic Projects */}
+                        <div className="py-5 border-b border-slate-100 space-y-4">
+                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Specialized Projects</h3>
+                          {contributor.resume.projects.map((proj, idx) => (
+                            <div key={idx} className="space-y-1">
+                              <div className="flex justify-between items-baseline">
+                                <h4 className="text-xs font-bold text-slate-955">{proj.title}</h4>
+                                <span className="text-[9px] font-mono bg-slate-100 text-slate-600 px-1.5 py-0.5 font-bold rounded">{proj.tech.join(" | ")}</span>
+                              </div>
+                              <p className="text-xs text-slate-650 leading-relaxed">
+                                {proj.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Achievements section */}
+                        <div className="py-5 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-slate-950 uppercase">Selected Achievements</h3>
+                          <ul className="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
+                            {contributor.resume.achievements.map((ach, idx) => (
+                              <li key={idx} className="leading-relaxed">
+                                {ach}
+                              </li>
+                            ))}
+                            <li className="leading-relaxed">
+                              Awarded full merit-based certificate of excellence during {projectName} internship showcase.
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+
+                      {/* Action row */}
+                      <div className="flex items-center justify-between p-5 bg-slate-950 border-t border-slate-850">
+                        <span className="text-[10px] text-slate-500 font-mono">Verified Security Hash ID: alz_{contributor.id.substring(0, 4)}</span>
+                        <button
+                          id="faux-print-btn"
+                          onClick={() => window.print()}
+                          className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg text-xs font-medium text-slate-200 transition-colors cursor-pointer flex items-center gap-1.5"
+                        >
+                          <ExternalLink size={13} />
+                          Print Document
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
