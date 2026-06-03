@@ -547,10 +547,10 @@ export const projectsData: Project[] = [
   },
   {
     id: "chps-automation",
-    name: "CA Audit Notification & Automation Management System",
+    name: "Appellate Automation",
     duration: "5 Weeks",
     domain: "LegalTech & Document Intelligence",
-    description: "The CA Audit Notification & Automation Management System is a comprehensive role-based web application developed to streamline the management of Income Tax e-Proceedings for Chartered Accountants, tax professionals, and audit firms. The platform centralizes the handling of client assignments, proceedings, notices, responses, adjournments, document management, and compliance tracking, reducing the manual effort required to monitor multiple taxpayer accounts and ensuring timely action on important notices. The system is built around three dedicated user roles: Admin, Staff, and Professional. The Admin Dashboard provides complete control over user management, client onboarding, professional assignments, access control, workflow monitoring, and overall system administration. The Staff Dashboard enables staff members to manage assigned clients, monitor proceedings, track notices and responses, review adjournment requests, access notice orders, and oversee operational activities. The Professional Dashboard allows tax professionals to manage their assigned clients, review notices, update response statuses, track workflow progress, maintain review comments, and monitor compliance deadlines through a structured interface. A major component of the platform is its automation engine, which utilizes browser automation technology to interact directly with the Income Tax e-Filing Portal. The automation securely logs into taxpayer accounts, navigates through e-Proceedings, and automatically extracts proceedings, notices, orders, response details, adjournment details, document reference information, communication metadata, and downloadable PDF documents. The automation framework is designed to handle multiple professionals and multiple clients simultaneously through parallel execution, significantly improving processing speed and operational efficiency. All extracted information is stored in a centralized PostgreSQL database, ensuring data consistency and easy accessibility across dashboards. The platform maintains detailed records of proceedings, notices, responses, adjournments, assignments, automation activities, and document repositories. Notices are categorized into “For Your Action” and “For Your Information” sections, allowing users to quickly identify items that require immediate attention. Downloaded PDF documents are automatically renamed using meaningful business information such as assessee name, notice section, and issue date, making document management more organized and searchable. The application also includes workflow tracking features that allow professionals to update notice statuses, record review comments, track filing information, and maintain activity history for each notice. Advanced filtering, searching, client assignment management, role-based access control, and dashboard analytics provide users with a clear view of ongoing compliance activities and pending actions. Overall, the CA Audit Notification & Automation Management System serves as a centralized compliance and audit management solution that automates the collection of Income Tax proceeding data, improves operational efficiency, enhances visibility across teams, reduces manual monitoring efforts, and enables Chartered Accountant firms to manage large volumes of client proceedings in a structured, scalable, and efficient manner.",
+    description: "The Appellate Automation System is a comprehensive role-based web application developed to streamline the management of Income Tax e-Proceedings for Chartered Accountants, tax professionals, and audit firms. The platform centralizes the handling of client assignments, proceedings, notices, responses, adjournments, document management, and compliance tracking, reducing the manual effort required to monitor multiple taxpayer accounts and ensuring timely action on important notices. The system is built around three dedicated user roles: Admin, Staff, and Professional. The Admin Dashboard provides complete control over user management, client onboarding, professional assignments, access control, workflow monitoring, and overall system administration. The Staff Dashboard enables staff members to manage assigned clients, monitor proceedings, track notices and responses, review adjournment requests, access notice orders, and oversee operational activities. The Professional Dashboard allows tax professionals to manage their assigned clients, review notices, update response statuses, track workflow progress, maintain review comments, and monitor compliance deadlines through a structured interface. A major component of the platform is its automation engine, which utilizes browser automation technology to interact directly with the Income Tax e-Filing Portal. The automation securely logs into taxpayer accounts, navigates through e-Proceedings, and automatically extracts proceedings, notices, orders, response details, adjournment details, document reference information, communication metadata, and downloadable PDF documents. The automation framework is designed to handle multiple professionals and multiple clients simultaneously through parallel execution, significantly improving processing speed and operational efficiency. All extracted information is stored in a centralized PostgreSQL database, ensuring data consistency and easy accessibility across dashboards. The platform maintains detailed records of proceedings, notices, responses, adjournments, assignments, automation activities, and document repositories. Notices are categorized into “For Your Action” and “For Your Information” sections, allowing users to quickly identify items that require immediate attention. Downloaded PDF documents are automatically renamed using meaningful business information such as assessee name, notice section, and issue date, making document management more organized and searchable. The application also includes workflow tracking features that allow professionals to update notice statuses, record review comments, track filing information, and maintain activity history for each notice. Advanced filtering, searching, client assignment management, role-based access control, and dashboard analytics provide users with a clear view of ongoing compliance activities and pending actions. Overall, the Appellate Automation System serves as a centralized compliance and audit management solution that automates the collection of Income Tax proceeding data, improves operational efficiency, enhances visibility across teams, reduces manual monitoring efforts, and enables Chartered Accountant firms to manage large volumes of client proceedings in a structured, scalable, and efficient manner.",
     image: "/chps.jpeg",
     tech: ["Frontend: React.js, TypeScript, Vite, Tailwind CSS, Axios",
       "Backend: FastAPI, Python, SQLAlchemy, Pydantic",
@@ -566,10 +566,13 @@ export const projectsData: Project[] = [
         id: "abhinav",
         name: "Abhinav Medasani",
         role: "Backend Role (Automation)",
+        github: "https://github.com/Abhinav1619",
+        linkedin: "https://www.linkedin.com/in/abhinav-medasani-18a032300/",
+        resumePdf: "/ABHINAV RESUME.pdf",
         avatar: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control (RBAC)", "Postgre SQL", "Automation Layer", "Playwright", "Chromium Browser Automation", "Web Scraping & Data Extraction", "Playwright Selectors"],
-        bio: "Specializing in operational research, heuristics, and low-latency network graph optimization algorithms.",
-        contributions: "Arjun designed the fast routing solver in Rust, mapped live vehicle nodes, and integrated real-time congestion models to optimize dispatcher decisions.",
+        bio: "Motivated B.Tech Computer Science student and aspiring Software Engineer with a strong passion for building intelligent and impactful technology solutions. Skilled in Python, Java, C, and Full Stack Web Development with hands-on experience in Artificial Intelligence, Machine Learning, and real-time application development. Developed multiple innovative projects including AI-powered object detection systems, voice-based AI assistants, phishing detection tools using transformer models, and real-time satellite tracking dashboards with machine learning analytics . Seeking opportunities to collaborate on challenging projects, and grow as a future AI driven software engineer.",
+        contributions: "Throughout the internship, Abhinav played a significant role in designing, developing, testing, and automating the Appellate Automation System. He contributed to the development of a complete role-based platform consisting of Admin, Staff, and Professional dashboards for managing Income Tax e-Proceedings, notices, responses, adjournments, client assignments, and workflow tracking. Abhinav actively worked on database schema design, API integration, frontend dashboard development, authentication workflows, and notice management modules. He was heavily involved in building the browser automation engine that logs into the Income Tax e-Filing portal, navigates through client proceedings, extracts notices, responses, adjournments, and downloads notice PDFs automatically. He also contributed to implementing parallel automation workflows, dynamic PDF naming conventions, client management features, notice categorization, assignment tracking, and dashboard-level reporting. Additionally, he participated in functional testing, smoke testing, data validation testing, workflow redesign discussions with clients, documentation preparation, and research activities involving WhatsApp notification integration using Exotel APIs. His contributions helped streamline compliance tracking, reduce manual effort, centralize audit operations, and improve the overall efficiency of tax notice management for Chartered Accountants and audit firms.",
         dailyTasks: [
           "Participated in project architecture discussions, automation workflow planning, and Income Tax portal process analysis.",
           "Researched Income Tax e-Proceedings portal navigation and notice lifecycle workflows.",
@@ -606,6 +609,19 @@ export const projectsData: Project[] = [
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
+        skillsLearntInInternship: [
+          "Role-Based Access Control (RBAC) implementation with Admin, Staff, and Professional Dashboards",
+          "Database Design, Schema Modeling, Relationships, Migrations, and Query Optimization using PostgreSQL",
+          "Browser Automation & Web Scraping using Playwright for Income Tax e-Filing Portal Automation",
+          "Automated Data Extraction of e-Proceedings, Notices, Responses, Adjournments, and PDF Documents",
+          "PDF Management, File Storage, Dynamic File Renaming, and Document Tracking Systems",
+          "WhatsApp Notification Integration using Exotel APIs and Template-Based Messaging",
+          "Parallel Processing and Multi-Client Automation Execution Strategies",
+          "Functional Testing, Smoke Testing, Data Validation Testing, and End-to-End System Testing",
+          "Version Control and Collaborative Development using Git and GitHub",
+          "AI-Assisted Development using Antigravity, Gemini, and Modern Developer Productivity Tools"
+        ],
+
         resume: {
           education: [
             {
@@ -631,10 +647,13 @@ export const projectsData: Project[] = [
         id: "Puja",
         name: "Midde Puja",
         role: "Backend Developer",
+        github: "https://github.com/pujareddy2",
+        linkedin: "https://www.linkedin.com/in/puja-midde3/",
+        resumePdf: "/Midde_Puja_Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["FastAPI", "Uvicorn", "SQLAlchemy", "PostgreSQL", "JWT (python-jose)"],
-        bio: "Creative frontend specialist focused on data-dense maps, route visualizations, and live dispatcher interfaces.",
-        contributions: "Kriti built the real-time geographic map panel, added customized vector truck icons, and visual tracking pipelines showing route delays dynamically.",
+        bio: "Applied AI / ML Engineer and third-year Computer Science student with hands-on experience building Machine Learning, Generative AI, and LLM-powered applications using Python, FastAPI, LangChain, OpenAI API, and Gemini API. Experienced in model training, feature engineering, data preprocessing, model evaluation, prompt engineering, RAG pipelines, REST API development, and AI solution deployment. Delivered AI, ML, analytics, and full-stack projects through industry internships, hackathons, and research-driven initiatives.",
+        contributions: "Puja made significant contributions to the development of the notice management and automation platform by working extensively on backend APIs, database management, workflow automation, and dashboard functionalities. She played a key role in designing and implementing Admin, Professional, and Client Dashboard features, including notice management, proceeding tracking, activity timelines, status monitoring, and workflow controls. She contributed to database schema updates, API integrations, role-based access management, notice blocking mechanisms, and automation control features. Puja was actively involved in debugging backend issues, optimizing business logic, validating data flows, and ensuring seamless integration between dashboards and the automation engine. Additionally, she supported system testing, requirement analysis, and dashboard enhancements to improve overall platform performance, usability, and maintainability.",
         dailyTasks: [
           "Participated in project initiation activities, repository setup, and backend directory structure planning.",
           "Set up the Python FastAPI development environment, installed dependencies, and configured environment variables.",
@@ -669,6 +688,13 @@ export const projectsData: Project[] = [
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
+        skillsLearntInInternship: [
+          "Backend API Development and Integration",
+          "PostgreSQL Database Design and Management",
+          "Workflow Automation and Process Tracking",
+          "Role-Based Access Control (RBAC) Implementation",
+          "Debugging, Testing, and System Optimization"
+        ],
         resume: {
           education: [
             {
@@ -694,10 +720,13 @@ export const projectsData: Project[] = [
         id: "tanusree",
         name: "Jalkam Tanusree",
         role: "Frontend Developer",
+        github: "https://github.com/BitlaUmesh",
+        linkedin: "www.linkedin.com/in/tanusreejalkam16072005",
+        resumePdf: "/Tanusree Final Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["React", "Vite"],
         bio: "Focused on high-performance message routing, Redis streams telemetry, and persistent state management services.",
-        contributions: "Rohan mapped out the background event loop handling locational updates and connected the live Redis pub/sub streams directly with Kriti's map.",
+        contributions: "Tanusree played a key role in developing and enhancing the frontend of the web application using React and Vite, focusing on delivering a clean, responsive, and professional user interface.She designed and implemented multiple UI components, ensuring seamless navigation and an intuitive user experience across the platform.She successfully integrated backend APIs into the frontend, enabling dynamic data fetching and real-time updates in the UI.Her work ensured that data was displayed accurately and efficiently, contributing to a smooth and error - free user experience.Tanusree actively identified and resolved frontend issues, debugging errors and optimizing performance to maintain application stability.She ensured the website functioned reliably across different scenarios while maintaining a visually appealing design.Additionally, she contributed to initial AI feature integrations within the frontend, exploring ways to connect intelligent functionalities into the system.She also participated in QA testing, validating features, tracking bugs, and maintaining code quality using Git and GitHub.Her contributions significantly improved the usability, reliability, and overall presentation of the web application, making it more polished and production- ready.",
         dailyTasks: [
           "Participated in project setup using React, Vite, and frontend architecture planning.",
           "Configured application routing, reusable layouts, and dashboard navigation structures.",
@@ -731,6 +760,16 @@ export const projectsData: Project[] = [
           { week: 3, review: "Tanusree improved dashboard usability through enhanced filtering, navigation, and dynamic data rendering features. Her focus on user experience strengthened the overall application quality" },
           { week: 4, review: "" },
           { week: 5, review: "" }
+        ],
+
+        skillsLearntInInternship: [
+          "Full-stack web development with a focus on Frontend using React + Vite",
+          "Building responsive and user-friendly interfaces with clean UI/UX design",
+          "Integration of REST APIs and handling dynamic data rendering in UI",
+          "Version control using Git & GitHub for collaboration and code management",
+          "Debugging, error handling, and performance optimization in frontend applications",
+          "QA testing, bug tracking, and ensuring smooth application functionality",
+          "Development using modern IDE tools like VS Code & Antigravity"
         ],
         resume: {
           education: [
