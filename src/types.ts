@@ -45,11 +45,10 @@ export interface Mentor {
 }
 
 export interface ClientReview {
+  week: number;
   name: string;
   company: string;
-  rating: number;
   comment: string;
-  avatar: string;
 }
 
 export interface Project {

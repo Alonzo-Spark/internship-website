@@ -92,12 +92,12 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                 </span>
                 <span className="font-mono text-slate-350 text-right">{projectDuration}</span>
               </div>
-              <div className="flex items-center justify-between py-2 text-sm">
-                <span className="text-slate-400 flex items-center gap-2">
+              <div className="flex items-start justify-between py-2 text-sm gap-4">
+                <span className="text-slate-400 flex items-center gap-2 flex-shrink-0">
                   <Code2 size={15} className="text-orange-500" />
-                  Project Assignment
+                  Project Assigned
                 </span>
-                <span className="font-sans font-medium text-slate-200 text-right truncate max-w-[150px]">{projectName}</span>
+                <span className="font-sans font-medium text-slate-200 text-right leading-snug break-words flex-1">{projectName}</span>
               </div>
             </div>
           </div>

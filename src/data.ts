@@ -250,11 +250,34 @@ export const projectsData: Project[] = [
     },
     reviews: [
       {
+        week: 1,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        rating: 5,
-        comment: "The team delivered exceptional results with professionalism and strong technical execution.",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+        comment: "Excited to partner on this initiative. The initial architecture and requirements for the patient registration and vitals tracking modules show great promise."
+      },
+      {
+        week: 2,
+        name: "Marcus Vance",
+        company: "Vance Health Partners",
+        comment: "Progressing well. The doctor registration flow and clinical logs setup are well-aligned with our operational workflows."
+      },
+      {
+        week: 3,
+        name: "Marcus Vance",
+        company: "Vance Health Partners",
+        comment: "Great update. The reporting metrics and inventory dashboards are clean, intuitive, and highly functional."
+      },
+      {
+        week: 4,
+        name: "Marcus Vance",
+        company: "Vance Health Partners",
+        comment: "Very impressed with the AI-driven OCR document scanning prototype. It will save our staff hours of manual data entry."
+      },
+      {
+        week: 5,
+        name: "Marcus Vance",
+        company: "Vance Health Partners",
+        comment: "Outstanding final delivery! The integrated voicebot and complete digital camp management system exceed our expectations for automation."
       }
     ]
   },
@@ -491,11 +514,34 @@ export const projectsData: Project[] = [
     },
     reviews: [
       {
+        week: 1,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        rating: 5,
-        comment: "Outstanding technical expertise. They delivered an institutional-grade sandbox.",
-        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150&q=80"
+        comment: "The platform's initial wireframes and manuscript-inspired design guidelines capture the cultural essence perfectly."
+      },
+      {
+        week: 2,
+        name: "Theressa Vance",
+        company: "Apex Equity Fund",
+        comment: "Excellent database modeling and API definitions for the shloka repository. The search and filter interfaces feel very natural."
+      },
+      {
+        week: 3,
+        name: "Theressa Vance",
+        company: "Apex Equity Fund",
+        comment: "The real-time streaming chat interface and transliteration tools are highly responsive and work beautifully."
+      },
+      {
+        week: 4,
+        name: "Theressa Vance",
+        company: "Apex Equity Fund",
+        comment: "Impressive progress on the Sanskrit-aware AI features and vector search integration. The semantic accuracy is outstanding."
+      },
+      {
+        week: 5,
+        name: "Theressa Vance",
+        company: "Apex Equity Fund",
+        comment: "Spectacular final platform! The community modules, role-based access controls, and beautiful glassmorphism design are excellent."
       }
     ]
   },
@@ -717,11 +763,34 @@ export const projectsData: Project[] = [
     },
     reviews: [
       {
+        week: 1,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        rating: 5,
-        comment: "The route dispatch planner cut fuel margins by 11.2% in our real-world beta tests. Spectacular output.",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+        comment: "The initial analysis of the Income Tax portal proceedings navigation and notices lifecycle is highly detailed."
+      },
+      {
+        week: 2,
+        name: "Robert Miller",
+        company: "SwiftLogix Inc",
+        comment: "Strong progress on the Playwright browser automation framework. The login flow and notices listing extraction are solid."
+      },
+      {
+        week: 3,
+        name: "Robert Miller",
+        company: "SwiftLogix Inc",
+        comment: "Excellent work on notice data parsing and dynamic PDF document renaming. This structure is highly organized."
+      },
+      {
+        week: 4,
+        name: "Robert Miller",
+        company: "SwiftLogix Inc",
+        comment: "The parallel automation architecture for multiple professionals and clients is working efficiently in our testing."
+      },
+      {
+        week: 5,
+        name: "Robert Miller",
+        company: "SwiftLogix Inc",
+        comment: "An exceptional final system! The automated proceedings collection and professional dashboard cut manual auditing effort significantly."
       }
     ]
   },
@@ -951,11 +1020,34 @@ export const projectsData: Project[] = [
     },
     reviews: [
       {
+        week: 1,
         name: "Vikram Sen",
         company: "Metropolitan Traffic Control",
-        rating: 5,
-        comment: "Excellent technical solution. It solved signal delays inside our test intersection flawlessly.",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80"
+        comment: "Excited about the educational physics simulator. The initial scope, wireframes, and concept workflows look great."
+      },
+      {
+        week: 2,
+        name: "Vikram Sen",
+        company: "Metropolitan Traffic Control",
+        comment: "The initial sandbox backend modules and dynamic physics rendering foundations are structured very well."
+      },
+      {
+        week: 3,
+        name: "Vikram Sen",
+        company: "Metropolitan Traffic Control",
+        comment: "Excellent progress on the interactive formula lab and real-time physics rendering loops using Matter.js."
+      },
+      {
+        week: 4,
+        name: "Vikram Sen",
+        company: "Metropolitan Traffic Control",
+        comment: "The AI Tutor integration and RAG pipeline are providing highly contextual, curriculum-aligned explanations."
+      },
+      {
+        week: 5,
+        name: "Vikram Sen",
+        company: "Metropolitan Traffic Control",
+        comment: "Spectacular final educational sandbox! The drag-and-drop experiment creation tools and simulated animations are extremely polished."
       }
     ]
   },
@@ -1190,11 +1282,34 @@ export const projectsData: Project[] = [
     },
     reviews: [
       {
+        week: 1,
         name: "Marcus Vance",
         company: "GreenFields Corporation",
-        rating: 5,
-        comment: "Outstanding results. The agricultural predictor helped optimize our regional seasonal seeds distribution.",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80"
+        comment: "Clear formulation of the query categorization benchmarks and multi-model evaluation framework."
+      },
+      {
+        week: 2,
+        name: "Marcus Vance",
+        company: "GreenFields Corporation",
+        comment: "Strong progress on embedding generation and initial routing logic testing across multiple models."
+      },
+      {
+        week: 3,
+        name: "Marcus Vance",
+        company: "GreenFields Corporation",
+        comment: "The implementation of the Bayesian memory update and matrix calculations is highly robust."
+      },
+      {
+        week: 4,
+        name: "Marcus Vance",
+        company: "GreenFields Corporation",
+        comment: "The LinUCB contextual bandit algorithm is balancing exploration and exploitation beautifully in active tests."
+      },
+      {
+        week: 5,
+        name: "Marcus Vance",
+        company: "GreenFields Corporation",
+        comment: "Outstanding final deployment! The dynamic router minimizes latency and API costs while maintaining high-quality answers."
       }
     ]
   }
