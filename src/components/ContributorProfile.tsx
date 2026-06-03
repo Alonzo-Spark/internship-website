@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Contributor, Mentor } from "../types";
 import { get30DaysTasks, TaskItem } from "../utils/dailyTasksGenerator";
-import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone, Download } from "lucide-react";
+import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone, Download, BookOpen } from "lucide-react";
 
 interface ContributorProfileProps {
   contributor: Contributor;
@@ -114,8 +114,8 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
             {contributor.resume.education.map((edu, idx) => (
               <div key={idx} className="flex justify-between items-center pt-3 border-t border-slate-800/50 text-xs font-mono">
-                <span className="text-slate-400">{edu.year}</span>
-                <span className="text-orange-400 font-semibold">{edu.grade}</span>
+                <span className="text-slate-400">Academic Timeline</span>
+                <span className="text-orange-400 font-semibold">{edu.year}</span>
               </div>
             ))}
           </div>
@@ -179,20 +179,27 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl">{contributor.bio}</p>
           </div>
 
-          {/* Skills tags */}
-          <div className="space-y-3">
-            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {contributor.skills.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 bg-slate-900 border border-slate-800 text-slate-200 text-xs font-mono rounded"
-                >
-                  {skill}
-                </span>
-              ))}
+          {/* Skills Learnt in Internship */}
+          {contributor.skillsLearntInInternship && contributor.skillsLearntInInternship.length > 0 && (
+            <div className="space-y-3 bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 shadow-md">
+              <h3 className="text-xs font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
+                <BookOpen size={15} />
+                Skills Learnt in this Internship
+              </h3>
+              <div className="flex flex-wrap gap-2 pt-1">
+                {contributor.skillsLearntInInternship.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-slate-950/80 border border-slate-850 text-slate-200 text-xs font-sans rounded-lg shadow-sm flex items-center gap-1.5"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
 
           {/* Key Contributions Segment */}
           <div className="space-y-3 bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800/80 p-6 md:p-8 shadow-xl">
@@ -337,10 +344,11 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
               <div className="flex items-center gap-2.5">
                 <FileCheck2 size={18} className="text-orange-400" />
                 <div>
-                  <span className="text-xs font-bold text-slate-200 uppercase tracking-widest block">Interactive CV Document</span>
-                  <span className="text-[10px] text-slate-500 font-mono mt-0.5 block">Alonzo verified digital signature</span>
+                  <span className="text-xs font-bold text-slate-200 uppercase tracking-widest block">Resume Document</span>
+
                 </div>
-              </div>              <button
+              </div>
+              <button
                 onClick={() => {
                   setShowResume(!showResume);
                 }}
@@ -365,11 +373,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   {contributor.resumePdf ? (
                     <div className="bg-slate-950 p-4 space-y-4 border-t border-slate-850">
                       {/* PDF Toolbar with Download option */}
-                      <div className="flex justify-between items-center bg-slate-905/80 border border-slate-800/80 p-3 rounded-xl backdrop-blur-md">
-                        <span className="text-xs text-slate-400 font-mono flex items-center gap-2">
-                          <FileCheck2 size={14} className="text-orange-400" />
-                          {contributor.name}_Resume.pdf
-                        </span>
+                      <div className="flex justify-end items-center bg-slate-905/80 border border-slate-800/80 p-3 rounded-xl backdrop-blur-md">
                         <a
                           href={contributor.resumePdf}
                           download={`${contributor.name}_Resume.pdf`}
@@ -379,7 +383,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                           Download PDF
                         </a>
                       </div>
-                      
+
                       {/* PDF Iframe embed */}
                       <div className="w-full aspect-[1/1.414] min-h-[500px] sm:min-h-[750px] bg-slate-900 border border-slate-800 rounded-xl overflow-hidden relative">
                         <iframe
@@ -415,7 +419,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                           <p className="text-xs text-slate-700 leading-relaxed text-justify">
                             A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}.
                             Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background
-                            in {contributor.skills.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
+                            in {contributor.skillsLearntInInternship?.slice(0, 3).join(", ") || contributor.techUsed.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
                           </p>
                         </div>
 
@@ -429,7 +433,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                             </div>
                             <div>
                               <span className="font-bold text-slate-955">Platform Skills:</span>
-                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.skills.join(", ")}</p>
+                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.skillsLearntInInternship?.join(", ") || contributor.techUsed.join(", ")}</p>
                             </div>
                           </div>
                         </div>

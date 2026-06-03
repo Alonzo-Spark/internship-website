@@ -3,37 +3,29 @@ import { Project } from "./types";
 export const projectsData: Project[] = [
   {
     id: "medical-camp-management",
-    name: "SWASTH Medical Camp Management System",
+    name: "CCC Medical Camp Management System",
     duration: "5 Weeks",
     domain: "Healthcare Tech & Operations",
     description: "This project focuses on enhancing an existing static web-based medical camp system by adding missing functionalities, fixing existing issues, and integrating intelligent automation features. The system supports full-lifecycle patient registration and vastly improves medical inventory management by introducing advanced Vision AI (OCR) models. This OCR integration allows clinical staff to instantly digitize complex, handwritten medicine stock sheets by simply snapping a photo, eliminating manual data entry errors. Additionally, an automated, regional-language voice bot is deeply integrated into the backend to handle patient follow-ups. The AI autonomously dials patients to provide medication reminders, check health statuses, and schedule revisits, instantly syncing their responses back into the database. Ultimately, the overall goal is to transform semi-manual, paper-heavy workflows into a reliable, structured, and fully automated digital healthcare system.",
     image: "/ProjectLogo.jpeg",
-    tech: ["React", "Django", "Google gemini text ( 3.1 flash-lite)", , "Axios", "Lucide React", " SQlite", " Django REST framework", "Tailwind CSS", "Gemini flash 3.5", "Exotel", "Sarvam AI", "Ngrok", "Pillow", "OpenCV "],
+    tech: [
+      "Frontend: React, Javascript, Tailwind CSS, React Router DOM, Axios, Chart.js, Lucide React",
+      "Backend: Python, Django, Django REST framework, django-cors-headers",
+      "Database: SQLite3",
+      "AI & Multimodal Models: Google Gemini 3.1 Flash-Lite (OCR & Voicebot Classification)",
+      "Voice & Speech AI: Sarvam AI",
+      "Image Processing & Computer Vision: OpenCV, Pillow",
+      "Telephony & Tunneling: Exotel, Ngrok"
+    ],
     contributors: [
       {
         id: "Pavithra",
         name: "Y.Pavithra Philomena",
         role: "Frontend, UI/UX, Voice bot ",
         avatar: "/Pavithra.jpeg",
-        cgpa: "8.63/10",
         github: "https://github.com/pavithraphilo-ops",
         linkedin: "linkedin.com/in/pavithra-philomena-3ba501364",
-        email: "pavithraphilo@gmail.com",
-        phone: "+91 8897921297",
         resumePdf: "/Pavithra_Resume.pdf",
-        skills: [
-          "Prompt Engineering",
-          "AI-Assisted Software Development",
-          "Full stack web development",
-          "Databases : SQL",
-          "REST API Integration",
-          "Languages : C, Python",
-          "Tools : Git, GitHub",
-          "Frameworks : React, Django",
-          "Web Technologies: HTML, CSS, Tailwind CSS",
-          "Software Testing & Debugging",
-          "Voice Bot Development Concepts"
-        ],
         techUsed: ["React", "Tailwind CSS", "Django", "SQLite", "Tesseract OCR", "Paddle OCR", "Gemini 3.1 Flash-Lite", "Exotel", "Sarvam AI", "Ngrok"],
         bio: "Aspiring AI enthusiast currently pursuing B.Tech, fascinated by the potential of Artificial Intelligence to solve complex problems. Seeking an internship to gain research exposure and develop innovative AI-driven solutions.",
         contributions: "Pavithra made significant contributions across frontend UI development, database engineering, data visualization, AI document scanning (OCR), and voice bot integration. In frontend, she built and enhanced user interfaces for Patient Registration (Old and New), Admin Login, Patient Vitals, and the Doctor Consultation log, implementing dynamic features like field auto-filling and validation alerts. On the backend and database layer, she created schema tables, mapped medicine formulations, and integrated unit cost metrics. She also drove advanced data visualization by designing graphical summaries for camp reporting and vitals tracking. In AI/automation, she conducted comprehensive research and implementation of document text extraction using models like Tesseract, docTR, and Gemini Flash, and integrated Exotel and Sarvam AI to build a regional-language automated outbound voice bot that schedules patient follow-ups and captures structured responses into the database.",
@@ -70,13 +62,23 @@ export const projectsData: Project[] = [
           { week: 4, review: "Conducted exhaustive comparison of OCR models, analyzing Tesseract vs Paddle OCR performance.", rating: 5.0 },
           { week: 5, review: "Outstanding cohort completion! The SWASTH user interface is highly interactive and polished.", rating: 5.0 }
         ],
+        skillsLearntInInternship: [
+          "Prompt Engineering",
+          "Full Stack Web Development",
+          "HTML, CSS, Tailwind CSS",
+          "Database: SQLite",
+          "Frameworks: React, Django",
+          "Tools: Git, GitHub",
+          "OCR models (how handwritten text gets extracted into digital form)",
+          "Voice bot (Exotel and Sarvam AI integration)",
+          "IDE tools like Antigravity"
+        ],
         resume: {
           education: [
             {
-              degree: "B.Tech in Information Technology",
+              degree: "B.Tech in Artificial Intelligence and Data Science",
               school: "Swami Vivekananda Institute of Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 8.63"
             }
           ],
           projects: [
@@ -98,13 +100,9 @@ export const projectsData: Project[] = [
         name: "Sathvika Talari",
         role: "Frontend, UI/UX, Voice bot ",
         avatar: "/Sathvika.jpeg",
-        cgpa: "9.43/10",
-        github: "https://github.com/pavithraphilo-ops",
-        linkedin: "linkedin.com/in/pavithra-philomena-3ba501364",
-        email: "sathvika.talari04@gmail.com",
-        phone: "+91 93074 23350",
+        github: "https://github.com/SathvikaTalari",
+        linkedin: "www.linkedin.com/in/sathvika-talari-033093308",
         resumePdf: "/SathvikaTalari_Resume.pdf",
-        skills: ["Web Development", "Java", "Python", "JavaScript", "C", "HTML", "CSS", "NodeJS", "Flask", "Django", "React", "tailwind CSS", "Streamlit", "Manual Testing", "Functional Testing", "UI Testing", "Bug Tracking", "MySQL", "SQL lite", "Git", "GitHub", "VS Code", "Artificial Intelligence", "Web3", "Competitive Programming."],
         techUsed: ["React", "Zustand", "Tailwind CSS", "Framer Motion", "Recharts"],
         bio: "Detail-oriented Computer Science student with experience in developing and testing full-stack web applications. Skilled in manual testing, UI validation, and identifying functional issues across dashboards and user workflows. Familiar with Python, Flask, and modern web technologies, with a strong interest in improving software quality and user experience.",
         contributions: "Sathvika made vital contributions across frontend interface design, database schema management, AI-driven document digitizing, and automated voice systems. On the frontend, she designed and optimized core layouts including Admin Login, patient registrations (new and old), doctor listings, and inventory tracking tables. She created and refined relational tables in the database, mapping medicine formulations and integrating camp-wise cost parameters. Sathvika spearheaded extensive research and testing of document scanning pipelines using Tesseract, docTR, PyTorch, OpenCV, Qwen OCR, and Gemini models (Flash and Pro) to enable automated text extraction. Furthermore, she played a key role in integrating outbound follow-up voice bots using Exotel and Sarvam AI, including developing a specialized diabetic patient feedback database loop. Lastly, she assisted in backend FastAPI structuring, comprehensive functional testing, and deploying the system on cloud platforms like Railway.",
@@ -141,13 +139,19 @@ export const projectsData: Project[] = [
           { week: 4, review: "Integrated Exotel and Sarvam AI voice reminders. Excellent effort in building automated patient follow-ups.", rating: 4.9 },
           { week: 5, review: "Fabulous project completion! Sathvika worked tirelessly on testing application features and setting up deployment pipeline.", rating: 5.0 }
         ],
+        skillsLearntInInternship: [
+          "Full stack web development using Frontend React, Vite and Backend Django and Database SQL lite",
+          "Version Control tools like Git and Github",
+          "Text Extraction from Image using OCR method",
+          "Voice Bot Integration using Exotel and Sarvam AI",
+          "IDE tools like Antigravity"
+        ],
         resume: {
           education: [
             {
               degree: "B.E in Computer Science and Engineering",
               school: "Stanley College of Engineering and Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 9.43"
             }
           ],
           projects: [
@@ -168,17 +172,9 @@ export const projectsData: Project[] = [
         name: "Neeraj Gangavarapu",
         role: "Backend Developer , OCR Integration , VoiceBot",
         avatar: "/Neeraj.jpg",
-        cgpa: "8.35/10",
         github: "https://github.com/NEERAJGANGAVARAPU",
         linkedin: "https://www.linkedin.com/in/neeraj-gangavarapu-b59379274/",
-        email: "neerajgangavarapu@gmail.com",
-        phone: "+91 8074862459",
         resumePdf: "/Neeraj Resume.pdf",
-        skills: ["Programming: Python, JavaScript",
-          "Frontend: HTML, CSS, Bootstrap , React",
-          "Web Framework: Django",
-          "Databases: Oracle",
-          "Version Control: Git , Github"],
         techUsed: ["Python", "Django", "React", "SQLite", "Exotel", "Sarvam AI", "EasyOCR", "GLM OCR", "Git", "GitHub"],
         bio: "AI & ML undergraduate student seeking opportunities to apply my technical skills in software development and data-driven problem solving. Motivated to contribute to innovative projects while continuously enhancing my expertise in full-stack development and emerging technologies. Possess foundational knowledge in web development and machine learning, with hands-on experience through academic projects.",
         contributions: "Neeraj made substantial contributions to the backend architecture, database integration, OCR text-extraction pipelines, and automated telephonic systems. He designed the SQLite database schema, mapping relationships for patient vitals, camp-wise medicine inventory, doctor consultation registries, and automated follow-up responses. Neeraj successfully implemented OCR scanning mechanisms using GLM and EasyOCR to automatically capture and parse patient files. In addition, he integrated the application's core telephony notification features, developing both inbound and outbound voice reminders using Exotel and Sarvam AI TTS (Text-to-Speech), complete with interactive follow-up response loops for test-issued patients.",
@@ -215,13 +211,20 @@ export const projectsData: Project[] = [
           { week: 4, review: "Implemented Exotel outbound call campaigns, custom Sarvam AI Text-to-Speech reminders, and optimized speech pronunciation.", rating: 4.9 },
           { week: 5, review: "Superb effort! Integrated dynamic responses from interactive telephonic voice bots, storing follow-up data directly into the database.", rating: 5.0 }
         ],
+        skillsLearntInInternship: [
+          "Full Stack Web Development using React frontend, Django backend, and SQLite database",
+          "Database Schema Design, Relationship Mapping, and Query Optimization",
+          "Advanced Document Digitization using Computer Vision & OCR Models (Chandra OCR, EasyOCR, GLM OCR)",
+          "Telephony and Voice AI Integration (Inbound/Outbound automated follow-up voice bots using Exotel and Sarvam AI TTS)",
+          "Version Control and Collaboration tools like Git and GitHub",
+          "Modern Development & IDE Environments like Antigravity"
+        ],
         resume: {
           education: [
             {
               degree: "B.Tech in Artificial Intelligence & Machine Learning",
               school: "Swami Vivekananda Institute of Technology",
               year: "2022 - 2026",
-              grade: "CGPA: 8.35"
             }
           ],
           projects: [
@@ -239,8 +242,8 @@ export const projectsData: Project[] = [
       }
     ],
     mentor: {
-      name: "Dr. Angela Roberts",
-      designation: "Strategic Product Lead (AI Systems)",
+      name: "Mr.Suman",
+      designation: "",
       organization: "Alonzo AI Engineering",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
       comment: "Pavithra, Sathvika, and Neeraj demonstrated exemplary engineering maturity. They tackled complex clinical requirements with high technical capability."
@@ -269,35 +272,60 @@ export const projectsData: Project[] = [
       "Community: Backend router + PostgreSQL"],
     contributors: [
       {
-        id: "vikram-malhotra",
-        name: "Vikram Malhotra",
-        role: "Fullstack Engineer",
+        id: "Sirisilla Shivani",
+        name: "Sirisilla Shivani",
+        role: "Full-Stack Developer & UI/UX Lead",
+        github: "https://github.com/Shivani2524",
+        linkedin: "https://www.linkedin.com/in/shivani-sirisilla-67034929b/",
+        resumePdf: "/Shivani_Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.0/10",
-        skills: ["Web Performance", "Next.js Architecture", "WebSockets", "Timeseries Data"],
-        techUsed: ["React", "FastAPI", "ClickHouse", "Zustand", "Tailwind CSS"],
-        bio: "An energetic programmer specializing in financial dashboards, stream-based UI rendering, and clean visual layouts.",
-        contributions: "Vikram built the timeseries canvas layer from scratch, designed optimized WebSockets subscribers for ticking data, and linked backend telemetry with modern rendering buffers.",
+        techUsed: ["React", "Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "PostgreSQL", "TensorFlow", "OpenCV"],
+        bio: "CSE student specializing in AI/ML and full-stack development. Proven track record building production-grade RAG systems,AI-native hackathon projects, and scalable web applications across multiple internships. Experienced in computer visionpipelines for cultural preservation and intelligent developer tooling.",
+        contributions: "Designed and developed the complete frontend application using Next.js and React. Created the platform's visual identity using Sacred Glassmorphism and manuscript-inspired UI design. Built reusable components, search interfaces, shloka viewing pages, and responsive layouts. Implemented Devanagari-to-IAST transliteration and script-switching functionality. Integrated frontend with backend APIs, SSE streaming, and PDF export features. Optimized application performance, accessibility, and cross-device compatibility. Led UI testing, bug fixing, and user experience enhancements.",
         dailyTasks: [
-          "Designed quantitative charts leveraging high-performance HTML5 Canvas APIs.",
-          "Created stock simulation ticking engines feeding React state updates via WebSockets.",
-          "Optimized backend telemetry pipelines to query database metrics instantly.",
-          "Engineered drag-and-drop terminal layouts backed up by custom local storage structures."
+          "Analyzed user requirements and application goals",
+          "Created wireframes and user journey flows",
+          "Designed high-fidelity UI mockups",
+          "Set up Next.js frontend architecture",
+          "Configured Tailwind CSS and design system",
+          "Developed landing page and homepage layouts",
+          "Built reusable UI components",
+          "Created dashboard and navigation interfaces",
+          "Developed responsive layouts for multiple devices",
+          "Implemented frontend page structures",
+          "Designed and developed chat interfaces",
+          "Integrated frontend with backend APIs",
+          "Enhanced user interactions and chat experience",
+          "Implemented loading states and feedback indicators",
+          "Developed real-time streaming chat UI",
+          "Optimized mobile responsiveness",
+          "Built citation and reference display components",
+          "Developed Sanskrit shloka display sections",
+          "Implemented Devanagari-to-IAST transliteration features",
+          "Applied Sacred Glassmorphism design and branding",
+          "Added animations and interactive effects",
+          "Optimized frontend performance",
+          "Resolved UI bottlenecks and rendering issues",
+          "Developed authentication and login screens",
+          "Built profile and user management interfaces",
+          "Designed and implemented community discussion modules"
         ],
         weeklyReviews: [
-          { week: 1, review: "Vikram initiated canvas rendering trials. High technical potential demonstrated.", rating: 4.8 },
-          { week: 2, review: "Completed high-frequency websocket subscribers. Stock ticking updates are extremely fluid.", rating: 4.9 },
-          { week: 3, review: "Wrote ScyllaDB timeseries aggregators. Outstanding performance gains on heavy queries.", rating: 4.7 },
-          { week: 4, review: "Engineered responsive drag-and-drop dashboard grid customizers with solid local storage backups.", rating: 4.9 },
-          { week: 5, review: "Sensational output! Created a top-tier quant dashboard matching institutional terminal layouts.", rating: 5.0 }
+          { week: 1, review: "Shivani successfully established the Next.js frontend architecture, designing high-fidelity wireframes and layouts.", rating: 4.8 },
+          { week: 2, review: "Built reusable UI components, dashboard interfaces, and integrated the frontend with backend APIs.", rating: 4.9 },
+          { week: 3, review: "Developed the real-time streaming chat UI and integrated custom Sanskrit shloka display components.", rating: 4.9 },
+          { week: 4, review: "Implemented transliteration features, polished the Sacred Glassmorphism branding, and optimized rendering performance.", rating: 4.9 },
+          { week: 5, review: "Outstanding cohort completion! Created secure authentication routes, profile management, and community discussion modules.", rating: 5.0 }
+        ],
+        skillsLearntInInternship: [
+          "React", "Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "PostgreSQL", "TensorFlow", "OpenCV"
         ],
         resume: {
           education: [
             {
               degree: "B.Tech in Computer Science",
-              school: "Stanley College of Engineering and Technology for Women",
+              school: "Swami Vivekananda Institute of Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 9.0"
             }
           ],
           projects: [
@@ -314,98 +342,149 @@ export const projectsData: Project[] = [
         }
       },
       {
-        id: "shreya-patel",
-        name: "Shreya Patel",
-        role: "Data Scientist",
+        id: "Keerthana",
+        name: "A. Keerthana",
+        role: "AI Feature Engineer & Full-Stack Developer",
+        github: "https://github.com/keerthanareddyyy",
+        linkedin: "https://www.linkedin.com/in/a-keerthana-reddy-b4107835a/",
+        resumePdf: "/Keerthana_Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.3/10",
-        skills: ["Quantitative Finance", "Statistical Modeling", "Pandas & NumPy", "Monte Carlo Simulations"],
         techUsed: ["Python", "NumPy", "Pandas", "Scikit-Learn", "SciPy"],
-        bio: "Passionate about applying probability models to asset management and high-throughput forecasting architectures.",
-        contributions: "Shreya built mathematical stress models including Value-at-Risk (VaR) matrices and automated historical backtesting routines based on 10 years of stock indexes.",
+        bio: "Aspiring IT student with hands-on experience in frontend development, AI/LLM integration, and software development, seeking to apply technical skills and grow in a challenging tech environment.",
+        contributions: "Developed and integrated AI-powered platform features. Engineered prompt workflows and optimized LLM response quality. Assisted in embedding generation, retrieval evaluation, and AI testing. Implemented role-based access control (RBAC) and authentication workflows. Developed community discussion and user interaction modules. Enhanced Sanskrit-aware AI responses and language support features. Conducted AI validation, edge-case testing, and feature optimization.",
         dailyTasks: [
-          "Developed Value-at-Risk modeling programs using numerical methods in Pandas/NumPy.",
-          "Programmed historical simulation scripts processing decades of asset datasets.",
-          "Designed Monte Carlo volatility path forecasting systems in SciPy.",
-          "Integrated quant reporting pipelines outputting statistical evaluation charts."
+          "Analyzed AI requirements and feature scope",
+          "Planned AI integration workflows",
+          "Set up AI development environment",
+          "Designed AI module architecture",
+          "Researched prompt engineering techniques",
+          "Created initial prompt templates",
+          "Designed AI testing scenarios",
+          "Collected and organized Sanskrit datasets",
+          "Preprocessed documents and content",
+          "Generated embeddings and indexing data",
+          "Assisted in vector search integration",
+          "Evaluated retrieval quality and relevance",
+          "Optimized prompts and response generation",
+          "Improved LLM output quality",
+          "Validated AI-generated responses",
+          "Refined prompt workflows and execution logic",
+          "Analyzed retrieval and generation performance",
+          "Implemented Sanskrit-aware AI responses",
+          "Enhanced transliteration and language support",
+          "Tested AI feature integrations",
+          "Optimized AI workflows and prompt execution",
+          "Designed Role-Based Access Control (RBAC) architecture",
+          "Implemented RBAC functionality",
+          "Tested authentication and authorization workflows",
+          "Validated user permissions and access control",
+          "Developed community interaction features"
         ],
         weeklyReviews: [
-          { week: 1, review: "Shreya formulated our portfolio stress mathematics. Solid academic foundation.", rating: 4.9 },
-          { week: 2, review: "Completed statistical modeling components on schedule. High code clarity.", rating: 4.8 },
-          { week: 3, review: "Delivered Monte Carlo simulations pipeline. Performance metrics were stellar.", rating: 4.9 },
-          { week: 4, review: "Integrated automated risk reporting systems. Perfect collaboration with Vikram.", rating: 5.0 },
-          { week: 5, review: "Magnificent quantitative deliverables! Her mathematical models are robust, scalable, and beautifully documented.", rating: 5.0 }
+          { week: 1, review: "Keerthana successfully analyzed the AI feature requirements and designed the core module architecture.", rating: 4.8 },
+          { week: 2, review: "Engineered initial prompt templates, developed AI testing scenarios, and structured the Sanskrit datasets.", rating: 4.9 },
+          { week: 3, review: "Implemented embeddings generation and optimized LLM output response quality and validation checks.", rating: 4.8 },
+          { week: 4, review: "Developed Sanskrit-aware AI features, transliteration enhancements, and successfully tested AI workflow integrations.", rating: 4.9 },
+          { week: 5, review: "Outstanding cohort completion! Designed and implemented the Role-Based Access Control (RBAC) authorization logic and community features.", rating: 5.0 }
+        ],
+        skillsLearntInInternship: [
+          "Python", "FastAPI", "React", "Next.js", "Supabase", "PostgreSQL", "Groq API", "RBAC", "Prompt"
         ],
         resume: {
           education: [
             {
-              degree: "B.Tech in Mathematics & Computing",
-              school: "Swami Vivekananda Institute of Technology",
+              degree: "B.E in Information Technology",
+              school: "Stanley College of Engineering and Technology for Women",
               year: "2023 - 2027",
-              grade: "CGPA: 9.3"
             }
           ],
           projects: [
             {
-              title: "Monte Carlo Portfolio Risk Modeler",
-              description: "An open mathematical engine predicting potential drawdown boundaries using stochastic workflows.",
-              tech: ["Python", "SciPy", "Matplotlib"]
+              title: "AI-Powered Cultural Search Engine",
+              description: "An intelligent search interface parsing classical manuscripts using semantic embeddings and custom prompts.",
+              tech: ["Python", "FastAPI", "React", "Next.js"]
             }
           ],
           achievements: [
-            "First Prize, QuantChallenge 2025",
-            "Published paper on Stock Volatility clustering inside IEEE"
+            "Successfully integrated Role-Based Access Control (RBAC) schemas on PostgreSQL",
+            "Engineered high-accuracy prompt workflows for cultural text transliteration"
           ]
         }
       },
       {
-        id: "meera-reddy",
-        name: "Meera Reddy",
-        role: "Backend Developer",
+        id: "umesh",
+        name: "Bitla Umesh Kumar",
+        role: "Chief Architect & Backend/DevOps Lead",
+        github: "https://github.com/BitlaUmesh",
+        linkedin: "https://www.linkedin.com/in/bitla-umesh-kumar-272b2b344/",
+        resumePdf: "/Umesh Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.1/10",
-        skills: ["Timeseries DBs", "Redis Caching", "API Resilience", "Go", "Docker"],
         techUsed: ["Go", "ClickHouse", "Redis", "Kafka", "PostgreSQL"],
-        bio: "Specialist in super high-throughput database setups, event-driven logging setups, and data stream pipelines.",
-        contributions: "Meera built the fast ingestion pipelines using Apache Kafka and optimized the ClickHouse store to save millions of timeseries ticks per minute.",
+        bio: "CSE student specializing in AI/ML and full-stack development. Proven track record building production-grade RAG systems, AI-native hackathon projects, and scalable web applications across multiple internships. Founder of SVIT’s LEGION Club.",
+        contributions: "Designed the complete system architecture and backend workflow. Developed and optimized FastAPI backend services. Built the RAG pipeline, document indexing, and retrieval infrastructure. Integrated vector databases and semantic search capabilities. Implemented caching, security middleware, and performance optimizations. Managed Dockerization, deployment workflows, and production infrastructure. Established testing frameworks and backend quality assurance processes.",
         dailyTasks: [
-          "Configured ClickHouse distributed dataset schemas for ticking stocks.",
-          "Engineered buffer queues utilizing Apache Kafka to handle tick bursts safely.",
-          "Built high-speed analytical APIs delivering running data aggregates in under 15ms."
+          "Gathered project requirements and defined system objectives",
+          "Designed overall system architecture and workflow",
+          "Established repository structure and development practices",
+          "Initialized FastAPI backend environment",
+          "Configured backend services and database connections",
+          "Designed API architecture and endpoint structure",
+          "Created database schema and entity relationships",
+          "Integrated PostgreSQL and Supabase",
+          "Developed backend models and service layers",
+          "Implemented CRUD operations and core APIs",
+          "Configured pgvector and vector search infrastructure",
+          "Developed semantic retrieval pipelines",
+          "Implemented RAG architecture and indexing workflows",
+          "Integrated LLM services with backend APIs",
+          "Conducted backend integration testing",
+          "Optimized API performance and response times",
+          "Implemented reranking and search optimization",
+          "Developed Sanskrit content APIs",
+          "Built transliteration support services",
+          "Designed caching architecture",
+          "Implemented Redis/Upstash caching",
+          "Added security middleware and request validation",
+          "Optimized database queries and indexing",
+          "Implemented authentication services",
+          "Developed role and permission management APIs",
+          "Built backend services for community modules"
         ],
         weeklyReviews: [
-          { week: 1, review: "Meera mapped our data ingestion flows perfectly. Highly focused engineering.", rating: 4.8 },
-          { week: 2, review: "Delivered the Apache Kafka buffer setup early. Showed top-tier infrastructure skills.", rating: 4.9 },
-          { week: 3, review: "Optimized stock data aggregation queries, slashing read times by 75%.", rating: 5.0 },
-          { week: 4, review: "Integrated ScyllaDB persistence layers seamlessly.", rating: 4.8 },
-          { week: 5, review: "Superb results! She delivered a production-ready timeseries server model.", rating: 5.0 }
+          { week: 1, review: "Umesh established the FastAPI repository structure, defining database entity relationships and Supabase configurations.", rating: 4.8 },
+          { week: 2, review: "Implemented CRUD operations, configured pgvector search databases, and built the core semantic retrieval pipelines.", rating: 4.9 },
+          { week: 3, review: "Successfully integrated LLM endpoints, conducted rigorous backend integration tests, and optimized search query performance.", rating: 5.0 },
+          { week: 4, review: "Built Sanskrit content rendering APIs, transliteration helpers, and implemented Upstash/Redis caching schemas.", rating: 4.8 },
+          { week: 5, review: "Superb completion! Delivered secure authentication services, permission management APIs, and backend routes for community discussion boards.", rating: 5.0 }
+        ],
+        skillsLearntInInternship: [
+          "FastAPI", "Docker", "PostgreSQL", "pgvector", "ChromaDB", "Redis", "Pytest", "DevOps"
         ],
         resume: {
           education: [
             {
               degree: "B.Tech in Computer Science & Engineering",
-              school: "Stanley College of Engineering and Technology for Women",
+              school: "Swami Vivekananda Institute of Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 9.1"
             }
           ],
           projects: [
             {
-              title: "Log Analytics Engine",
-              description: "A secure log parsing agent written in Go that outputs structured insights to timeseries layers.",
-              tech: ["Go", "Kafka", "ClickHouse"]
+              title: "Scalable RAG Classical Literature Backend",
+              description: "An enterprise FastAPI microservice managing semantic search, vector indexing with pgvector, and Upstash caching.",
+              tech: ["FastAPI", "PostgreSQL", "pgvector", "Redis", "Docker"]
             }
           ],
           achievements: [
-            "HackIndia 2025 Infrastructure Gold Award",
-            "Top contributor to open-source database connectors"
+            "Founder of SVIT's LEGION Club developer community",
+            "Optimized API latency by 60% using distributed Redis caching pipelines"
           ]
         }
       }
     ],
     mentor: {
-      name: "Sanjay Chatterjee",
-      designation: "VP of Quantitative Engineering",
+      name: "Mr.Zaheer",
+      designation: "",
       organization: "Alonzo AI FinTech Division",
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80",
       comment: "Vikram, Shreya, and Meera operated as a top-tier quantitative squad. Their timeseries execution was phenomenal."
@@ -425,7 +504,7 @@ export const projectsData: Project[] = [
     name: "CA Audit Notification & Automation Management System",
     duration: "5 Weeks",
     domain: "LegalTech & Document Intelligence",
-    description: "The CA Audit Notification & Automation Management System is a comprehensive role-based web application developed to streamline the management of Income Tax e-Proceedings for Chartered Accountants, tax professionals, and audit firms. The platform centralizes the handling of client assignments, proceedings, notices, responses, adjournments, document management, and compliance tracking, reducing the manual effort required to monitor multiple taxpayer accounts and ensuring timely action on important notices. The system is built around three dedicated user roles: Admin, Staff, and Professional. The Admin Dashboard provides complete control over user management, client onboarding, professional assignments, access control, workflow monitoring, and overall system administration. The Staff Dashboard enables staff members to manage assigned clients, monitor proceedings, track notices and responses, review adjournment requests, access notice orders, and oversee operational activities. The Professional Dashboard allows tax professionals to manage their assigned clients, review notices, update response statuses, track workflow progress, maintain review comments, and monitor compliance deadlines through a structured interface. A major component of the platform is its automation engine, which utilizes browser automation technology to interact directly with the Income Tax e-Filing Portal. The automation securely logs into taxpayer accounts, navigates through e-Proceedings, and automatically extracts proceedings, notices, orders, response details, adjournment details, document reference information, communication metadata, and downloadable PDF documents.",
+    description: "The CA Audit Notification & Automation Management System is a comprehensive role-based web application developed to streamline the management of Income Tax e-Proceedings for Chartered Accountants, tax professionals, and audit firms. The platform centralizes the handling of client assignments, proceedings, notices, responses, adjournments, document management, and compliance tracking, reducing the manual effort required to monitor multiple taxpayer accounts and ensuring timely action on important notices. The system is built around three dedicated user roles: Admin, Staff, and Professional. The Admin Dashboard provides complete control over user management, client onboarding, professional assignments, access control, workflow monitoring, and overall system administration. The Staff Dashboard enables staff members to manage assigned clients, monitor proceedings, track notices and responses, review adjournment requests, access notice orders, and oversee operational activities. The Professional Dashboard allows tax professionals to manage their assigned clients, review notices, update response statuses, track workflow progress, maintain review comments, and monitor compliance deadlines through a structured interface. A major component of the platform is its automation engine, which utilizes browser automation technology to interact directly with the Income Tax e-Filing Portal. The automation securely logs into taxpayer accounts, navigates through e-Proceedings, and automatically extracts proceedings, notices, orders, response details, adjournment details, document reference information, communication metadata, and downloadable PDF documents. The automation framework is designed to handle multiple professionals and multiple clients simultaneously through parallel execution, significantly improving processing speed and operational efficiency. All extracted information is stored in a centralized PostgreSQL database, ensuring data consistency and easy accessibility across dashboards. The platform maintains detailed records of proceedings, notices, responses, adjournments, assignments, automation activities, and document repositories. Notices are categorized into “For Your Action” and “For Your Information” sections, allowing users to quickly identify items that require immediate attention. Downloaded PDF documents are automatically renamed using meaningful business information such as assessee name, notice section, and issue date, making document management more organized and searchable. The application also includes workflow tracking features that allow professionals to update notice statuses, record review comments, track filing information, and maintain activity history for each notice. Advanced filtering, searching, client assignment management, role-based access control, and dashboard analytics provide users with a clear view of ongoing compliance activities and pending actions. Overall, the CA Audit Notification & Automation Management System serves as a centralized compliance and audit management solution that automates the collection of Income Tax proceeding data, improves operational efficiency, enhances visibility across teams, reduces manual monitoring efforts, and enables Chartered Accountant firms to manage large volumes of client proceedings in a structured, scalable, and efficient manner.",
     image: "/chps.jpeg",
     tech: ["Frontend: React.js, TypeScript, Vite, Tailwind CSS, Axios",
       "Backend: FastAPI, Python, SQLAlchemy, Pydantic",
@@ -442,8 +521,6 @@ export const projectsData: Project[] = [
         name: "Abhinav Medasani",
         role: "Backend Role (Automation)",
         avatar: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.1/10",
-        skills: ["Python", "Java", "C", "JavaScript", "Machine Learning", "Generative AI", "LLMs", "Prompt Engineering", "NLP", "Computer Vision", "YOLOv8", "DistilBERT", "FastAPI", "Streamlit", "Pandas", "NumPy", "OpenCV", "Scikit-learn", "MERN Stack", "Chrome Extension Development", "REST APIs", "Git", "GitHub", "Google Cloud Platform", "DSA", "OOP", "Problem Solving", "Leadership", "Teamwork."],
         techUsed: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control (RBAC)", "Postgre SQL", "Automation Layer", "Playwright", "Chromium Browser Automation", "Web Scraping & Data Extraction", "Playwright Selectors"],
         bio: "Specializing in operational research, heuristics, and low-latency network graph optimization algorithms.",
         contributions: "Arjun designed the fast routing solver in Rust, mapped live vehicle nodes, and integrated real-time congestion models to optimize dispatcher decisions.",
@@ -489,7 +566,6 @@ export const projectsData: Project[] = [
               degree: "B.Tech in Computer Science",
               school: "Swami Vivekananda Institute of Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 9.1"
             }
           ],
           projects: [
@@ -510,8 +586,6 @@ export const projectsData: Project[] = [
         name: "Midde Puja",
         role: "Backend Developer",
         avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "8.8/10",
-        skills: ["Python", "Machine Learning", "Artificial Intelligence", "Generative AI", "FastAPI", "SQL", "MySQL", "JavaScript", "React", "HTML", "CSS", "Java", "C", "Git", "GitHub", "Jupyter Notebook", "Streamlit", "Power BI", "LangChain", "PyTorch", "Natural Language Processing (NLP)", "Data Analysis", "Data Visualization", "Web Development", "Database Management", "API Development", "Full-Stack Development", "Prompt Engineering", "Feature Engineering", "Problem Solving", "Research and Development."],
         techUsed: ["FastAPI", "Uvicorn", "SQLAlchemy", "PostgreSQL", "JWT (python-jose)"],
         bio: "Creative frontend specialist focused on data-dense maps, route visualizations, and live dispatcher interfaces.",
         contributions: "Kriti built the real-time geographic map panel, added customized vector truck icons, and visual tracking pipelines showing route delays dynamically.",
@@ -555,7 +629,6 @@ export const projectsData: Project[] = [
               degree: "B.Tech in Information Technology",
               school: "Stanley College of Engineering and Technology for Women",
               year: "2023 - 2027",
-              grade: "CGPA: 8.8"
             }
           ],
           projects: [
@@ -576,8 +649,6 @@ export const projectsData: Project[] = [
         name: "Jalkam Tanusree",
         role: "Frontend Developer",
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.2/10",
-        skills: ["C", "Python", "Java", "MySQL", "HTML", "CSS", "JavaScript", "Artificial Intelligence", "Machine Learning", "FastAPI", "SQL", "MySQL", "React", "Git", "GitHub", "DataScience", "Web Development", "Full Stack Development", "Data Science", "Data Analysis", "Prompt Engineering", "Database Managment", "API Development", "DSA", "Problem Solving"],
         techUsed: ["React", "Vite"],
         bio: "Focused on high-performance message routing, Redis streams telemetry, and persistent state management services.",
         contributions: "Rohan mapped out the background event loop handling locational updates and connected the live Redis pub/sub streams directly with Kriti's map.",
@@ -621,7 +692,6 @@ export const projectsData: Project[] = [
               degree: "B.Tech in Computer Science & Engineering",
               school: "Stanley College of Engineering and Technology for Women",
               year: "2023 - 2027",
-              grade: "CGPA: 9.2"
             }
           ],
           projects: [
@@ -668,11 +738,12 @@ export const projectsData: Project[] = [
         id: "rithvik",
         name: "Papatla Rithvik",
         role: "Simulation Engineer, Database Management",
+        github: "https://github.com/Rith439",
+        linkedin: "https://www.linkedin.com/in/rithvik-benny",
+        resumePdf: "/Rithvik_Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "8.0/10",
-        skills: ["Full-Stack Development", "AI and ML", "Data Science & Analytics", "DBMS", "System Architecture and Design"],
         techUsed: ["Matter-js", "pixiJs", "PostgreSQL"],
-        bio: "Specialist in timeseries anomaly detection, edge computing configurations, and smart infrastructure AI models.",
+        bio: "Computer Science undergraduate specializing in Data Science with hands-on experience in machine learning, web development, and system design. Developed real-world applications including energy consumption prediction and expense tracking systems. Strong foundation in algorithms, problem-solving, and scalable application development.",
         contributions: "Rithvik designed and implemented EduSim's simulation runtime, educational intelligence integration, database infrastructure, and frontend-backend sandbox architecture.",
         dailyTasks: [
           "Explored improvements to the AI-generated simulation architecture for EduSim.",
@@ -708,13 +779,15 @@ export const projectsData: Project[] = [
           { week: 4, review: "Successfully integrated timeseries DB queries with Divya's frontend templates.", rating: 4.9 },
           { week: 5, review: "Fabulous engineering contribution! Outstanding edge AI optimizer.", rating: 5.0 }
         ],
+        skillsLearntInInternship: [
+          "Matter-js", "pixiJs", "PostgreSQL"
+        ],
         resume: {
           education: [
             {
               degree: "B.Tech in Computer Science and Engineering(Data Science)",
               school: "Swami Vivekananda Institute of Technology",
               year: "2023 - 2027",
-              grade: "CGPA: 8.0"
             }
           ],
           projects: [
@@ -734,11 +807,12 @@ export const projectsData: Project[] = [
         id: "mythri",
         name: "Banda Mythri Raj",
         role: "UI/UX Designer,Frontend Developer",
+        github: "https://github.com/mythribanda",
+        linkedin: "https://www.linkedin.com/in/mythri-banda",
+        resumePdf: "/Mythri_Resume.docx.pdf",
         avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "8.7/10",
-        skills: ["Artificial Intelligence & Machine Learning", "Data Science & Analytics", "Full-Stack Web Development", "Database Management & Backend Development", "Software Engineering & Development Tools"],
         techUsed: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "FAST API Integration", "Responsive UI Design", "User Experience Design (UX)"],
-        bio: "Frontend engineer specializing in complex dashboard wireframes, fast responsive views, and dynamic sensor telemetry charts.",
+        bio: "Motivated and detail-oriented AI and Data Science student (2027 graduate, CGPA 7.5) with hands-on experience in software engineering, machine learning, data analysis, and full-stack development. Proficient in Python, Java, JavaScript, and SQL with demonstrated ability to design, build, test, and deploy production-ready applications end-to-end. Built PillTalk, an AI-powered healthcare application integrating NLP, computer vision, and Google Gemini LLM, deployed on cloud (Hugging Face Spaces). Experienced in REST API integration, data pipelines, Power BI dashboards, and agile development workflows. Holds Oracle Certified Data Science Professional, Oracle AI Foundations Associate, and IBM and Cisco AI Fundamentals certifications. Seeking internship and entry-level opportunities in software engineering, AI/ML, data science, or data analytics.",
         contributions: "Divya built the live traffic dashboard visual layouts, configured dynamic charts plotting signal delay metrics, and maintained perfect mobile responsiveness.",
         dailyTasks: [
           "Planned EduSim project scope, modules, and overall learning workflow.",
@@ -774,13 +848,15 @@ export const projectsData: Project[] = [
           { week: 4, review: "Optimized mobile view metrics sheets, hitting zero alignment problems.", rating: 4.9 },
           { week: 5, review: "Spectacular dashboard completed! Visually beautiful, smooth, and highly responsive.", rating: 5.0 }
         ],
+        skillsLearntInInternship: [
+          "React.js", "TypeScript", "Vite", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "FAST API Integration", "Responsive UI Design", "User Experience Design (UX)"
+        ],
         resume: {
           education: [
             {
               degree: "B.Tech in Information Technology",
               school: "Stanley College of Enginering and Technology for Women",
               year: "2023 - 2027",
-              grade: "CGPA: 8.7"
             }
           ],
           projects: [
@@ -800,12 +876,13 @@ export const projectsData: Project[] = [
         id: "satish",
         name: "Thadela Satish",
         role: "Backend Developer, RAG Pipeline,",
+        github: "https://github.com/satishx9",
+        linkedin: "https://www.linkedin.com/in/satishthadela/",
+        resumePdf: "/Satish__Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.0/10",
-        skills: ["Artificial Intelligence & Machine Learning", "Backend & API Development", "Data Science & Analytics", "Database Management", "Software Engineering & Development Tools", "RAG"],
         techUsed: ["Python", "JavaScript", "RAG", "LLM Evaluation", "PixiJS", "Matter.js", "SVG Rendering", "FAST API", "React"],
-        bio: "Specializing in high-performance datastores, timeseries caching, and robust microservices infrastructure pipelines.",
-        contributions: "Aditya programmed the FastAPI backend routes, managed the dual-database setup (InfluxDB + PostgreSQL), and built secure automated backup actions.",
+        bio: "Motivated Computer Science student specializing in AI and ML with strong programming, DSA, and problem-solving skills. Experienced in building scalable web interfaces and implementing machine learning models using Python and modern frameworks. Passionate about creating efficient, user-focused solutions and continuously improving through hands-on projects and competitive coding.",
+        contributions: "Satish contributed significantly to the development of the EduSim platform by working on AI-powered educational features, RAG pipeline optimization, backend development using Python/FastAPI, and interactive physics simulation integration. He also contributed to model evaluation systems, API development, and enhancing overall application performance and user experience.",
         dailyTasks: [
           "Set up and explored the initial RAG pipeline architecture for the EduSim project.",
           "Worked on document embedding generation and retrieval workflow optimization for the RAG system.",
@@ -840,13 +917,15 @@ export const projectsData: Project[] = [
           { week: 4, review: "Completed comprehensive unit test templates with excellent coverage.", rating: 4.7 },
           { week: 5, review: "Superb backend architecture execution! High reliability and excellent documentation.", rating: 5.0 }
         ],
+        skillsLearntInInternship: [
+          "Python", "JavaScript", "RAG", "LLM Evaluation", "PixiJS", "Matter.js", "SVG Rendering", "FAST API", "React"
+        ],
         resume: {
           education: [
             {
               degree: "B.Tech in Computer Science & Engineering",
               school: "Swami Vivekananda Institute of Technology",
               year: "2022 - 2026",
-              grade: "CGPA: 9.0"
             }
           ],
           projects: [
@@ -864,8 +943,8 @@ export const projectsData: Project[] = [
       }
     ],
     mentor: {
-      name: "Dr. Elena Rostova",
-      designation: "Principal Infrastructure Lead",
+      name: "Mr.Pavan",
+      designation: "",
       organization: "Alonzo AI Smart Infrastructure Division",
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=400&q=80",
       comment: "Neha, Divya, and Aditya formed a highly collaborative unit. Their smart city signal optimization dashboard is spectacular."
@@ -898,9 +977,10 @@ export const projectsData: Project[] = [
         id: "shashank",
         name: "Shashank",
         role: "AI/ML Engineer",
+        github: "https://github.com/satishx9",
+        linkedin: "https://www.linkedin.com/in/satishthadela/",
+        resumePdf: "/GODUGU_SHASHANK_RESUME.pdf",
         avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.0/10",
-        skills: ["Python", "HTML/CSS", "Flask", "FastAPI", "Scikit-Learn", "NumPy", "Pandas", "Matplotlib", "Git", "GitHub", "MySQL", "SQLite3", "Data Preprocessing", "EDA", "LLMs", "RAG", "Generative AI", "ML Algorithms: Logistic Regression, KNN, Decision Tree, XGBoost, Random Forest, SVM"],
         techUsed: ["Python", "XGBoost", "ScyllaDB", "Pandas", "Scikit-Learn"],
         bio: "Specializing in statistical regression models, satellite data normalization algorithms, and AgriTech predictive systems.",
         contributions: "Sneha engineered the predictive XGBoost model forecasting harvest outputs and structured the spatial normalization arrays handling climate datasets.",
@@ -949,7 +1029,6 @@ export const projectsData: Project[] = [
               degree: "B.Tech in Artificial Intelligence",
               school: "Swami Vivekananda Institute of Technology",
               year: "2022 - 2026",
-              grade: "CGPA: 9.3"
             }
           ],
           projects: [
@@ -970,8 +1049,6 @@ export const projectsData: Project[] = [
         name: "Sai Vaishnavi Kodali",
         role: "Frontend Developer",
         avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "8.9/10",
-        skills: ["Java", "Python", "html", "css", "js", "react", "nodejs", "SQL", "AI/ML", "GitHUB", "FastAPI", "DSA"],
         techUsed: ["React", "Tailwind CSS", "Zustand", "Leaflet GL", "TypeScript"],
         bio: "Dedicated to designing elegant map-focused visualizations, clean data tables, and highly intuitive layouts.",
         contributions: "Tanvi crafted the meteorology dashboard structure, set up interactive geographical overlays, and engineered responsive data analytics consoles.",
@@ -1020,7 +1097,6 @@ export const projectsData: Project[] = [
               degree: "B.Tech in Computer Science",
               school: "Stanley College of Engineering and Technology for Women",
               year: "2023-2027",
-              grade: "CGPA: 8.9"
             }
           ],
           projects: [
@@ -1041,8 +1117,6 @@ export const projectsData: Project[] = [
         name: "Dhanvi Annam",
         role: "Cloud Engineer",
         avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
-        cgpa: "9.1/10",
-        skills: ["Python", "Java", "AI/ML", "GenAI", "LLMs", "RAG", "FastAPI", "SQL", "GitHub"],
         techUsed: ["FastAPI", "ScyllaDB", "Docker", "AWS API", "Python"],
         bio: "Specializing in Docker deployment layers, ScyllaDB cluster configurations, and scalable cloud APIs.",
         contributions: "Priya managed the Docker compose layouts, optimized ScyllaDB to store seasonal agricultural logs, and built the FastAPI backend routes.",
@@ -1091,7 +1165,6 @@ export const projectsData: Project[] = [
               degree: "B.Tech in Information Technology",
               school: "Stanley College of Engineering and Technology for Women",
               year: "2023 - 2027",
-              grade: "CGPA: 9.1"
             }
           ],
           projects: [

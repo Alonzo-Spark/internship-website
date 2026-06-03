@@ -9,8 +9,7 @@ export interface Contributor {
   name: string;
   role: string;
   avatar: string;
-  cgpa: string;
-  skills: string[];
+  skills?: string[];
   techUsed: string[];
   bio: string;
   contributions: string;
@@ -21,12 +20,12 @@ export interface Contributor {
   resumePdf?: string;
   dailyTasks: string[];
   weeklyReviews: WeeklyReview[];
+  skillsLearntInInternship?: string[];
   resume: {
     education: {
       degree: string;
       school: string;
       year: string;
-      grade: string;
     }[];
     projects: {
       title: string;

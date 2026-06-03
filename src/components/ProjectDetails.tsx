@@ -115,14 +115,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                       <p className="text-[10px] text-orange-500 font-mono uppercase tracking-wider mt-0.5">
                         {contrib.role}
                       </p>
-                      
-                      {/* Sub-label info */}
-                      <div className="flex items-center gap-3 mt-1.5 text-[9px] text-slate-500 font-mono">
-                        <span className="flex items-center gap-1">
-                          <Code2 size={10} />
-                          {contrib.skills[0]}
-                        </span>
-                      </div>
+
                     </div>
                   </div>
 

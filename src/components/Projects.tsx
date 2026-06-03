@@ -4,6 +4,23 @@ import { projectsData } from "../data";
 import { motion, AnimatePresence } from "motion/react";
 import { Users, Star, Bookmark, User, MessageSquareCode, ArrowDownRight, ChevronDown, ChevronUp } from "lucide-react";
 
+const getProjectBgColor = (projectId: string) => {
+  switch (projectId) {
+    case "medical-camp-management":
+      return "#f6fbfa";
+    case "natya-samhita":
+      return "#b8a486";
+    case "chps-automation":
+      return "#fdfdfd";
+    case "edu-sim":
+      return "#f7f7f7";
+    case "sustainable-infrastructure":
+      return "#1b1b1b";
+    default:
+      return "#020617";
+  }
+};
+
 interface ProjectsProps {
   onContributorSelect: (contributor: Contributor, project: Project) => void;
   onProjectSelect: (project: Project) => void;
@@ -59,14 +76,16 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                 >
                   
                   {/* Left Side: Solid representation of image */}
-                  <div className="md:col-span-5 relative h-64 md:h-full min-h-[250px] bg-slate-950">
+                  <div 
+                    className="md:col-span-5 relative h-64 md:h-full min-h-[250px] overflow-hidden bg-slate-950"
+                    style={{ backgroundColor: getProjectBgColor(project.id) }}
+                  >
                     <img
                       src={project.image}
                       alt={project.name}
                       onClick={() => onProjectSelect(project)}
-                      className="w-full h-full object-contain p-4 bg-white transition-transform duration-500 hover:scale-105 cursor-pointer"
+                      className="w-full h-full object-contain p-4 transition-transform duration-500 hover:scale-105 cursor-pointer"
                     />
-                    <div className="absolute inset-0 project-image-overlay" />
                     
                     {/* Domain floated badge */}
                     <div className="absolute top-4 left-4">
@@ -91,7 +110,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                       </div>
 
                       {/* Technical Description */}
-                      <p className="text-slate-300 text-sm leading-relaxed">
+                      <p 
+                        onClick={() => onProjectSelect(project)}
+                        className="text-slate-300 text-sm leading-relaxed line-clamp-5 cursor-pointer hover:text-slate-200 transition-colors"
+                        title="Click to view full description"
+                      >
                         {project.description}
                       </p>
 
@@ -178,7 +201,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                               >
                                 <div className="flex gap-3">
                                   {/* Minimal photo frame */}
-                                  <div className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850">
+                                  <div 
+                                    onClick={() => onContributorSelect(contrib, project)}
+                                    className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850 cursor-pointer"
+                                    title="View Profile"
+                                  >
                                     <img
                                       src={contrib.avatar}
                                       alt={contrib.name}
@@ -188,7 +215,11 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
 
                                   {/* Info Column */}
                                   <div className="flex-1 min-w-0">
-                                    <h5 className="font-serif text-sm font-bold text-slate-100 group-hover:text-orange-400 transition-colors truncate">
+                                    <h5 
+                                      onClick={() => onContributorSelect(contrib, project)}
+                                      className="font-serif text-sm font-bold text-slate-100 group-hover:text-orange-400 cursor-pointer hover:underline transition-colors truncate"
+                                      title="View Profile"
+                                    >
                                       {contrib.name}
                                     </h5>
                                     <p className="text-[11px] text-orange-500 font-mono uppercase tracking-wide mt-0.5">
@@ -201,9 +232,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                                 </div>
 
                                 {/* Skills Tag Row */}
-                                <div className="border-t border-slate-950 mt-4 pt-3 flex justify-between items-center text-[10px]">
-                                  <span className="text-slate-500 font-mono">Primary Skill: <strong className="text-orange-500/80 font-mono">{contrib.skills[0]}</strong></span>
-                                  
+                                <div className="border-t border-slate-950 mt-4 pt-3 flex justify-end items-center text-[10px]">
                                   <button
                                     id={`view-profile-btn-${contrib.id}`}
                                     onClick={() => onContributorSelect(contrib, project)}
