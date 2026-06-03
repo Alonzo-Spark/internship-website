@@ -4,7 +4,7 @@ import { projectsData } from "../data";
 import { motion, AnimatePresence } from "motion/react";
 import { Users, Star, Bookmark, User, MessageSquareCode, ArrowDownRight, ChevronDown, ChevronUp } from "lucide-react";
 
-const getProjectBgColor = (projectId: string) => {
+export const getProjectBgColor = (projectId: string) => {
   switch (projectId) {
     case "medical-camp-management":
       return "#f6fbfa";
@@ -72,7 +72,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                 {/* Horizontal main project container (Desktop layout combines visual + description, mobile wraps vertically) */}
                 <div 
                   onClick={() => onProjectSelect(project)}
-                  className="grid grid-cols-1 md:grid-cols-12 gap-0 cursor-pointer hover:bg-slate-900/10 transition-colors"
+                  className="grid grid-cols-1 md:grid-cols-12 gap-0 cursor-pointer hover:bg-slate-900/10 transition-colors md:h-[420px]"
                 >
                   
                   {/* Left Side: Solid representation of image */}
@@ -84,6 +84,9 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                       src={project.image}
                       alt={project.name}
                       onClick={() => onProjectSelect(project)}
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
                       className="w-full h-full object-contain p-4 transition-transform duration-500 hover:scale-105 cursor-pointer"
                     />
                     
@@ -112,14 +115,14 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                       {/* Technical Description */}
                       <p 
                         onClick={() => onProjectSelect(project)}
-                        className="text-slate-300 text-sm leading-relaxed line-clamp-5 cursor-pointer hover:text-slate-200 transition-colors"
+                        className="text-slate-300 text-sm leading-relaxed line-clamp-4 cursor-pointer hover:text-slate-200 transition-colors"
                         title="Click to view full description"
                       >
                         {project.description}
                       </p>
 
                       {/* Technology Pill List */}
-                      <div className="flex flex-wrap gap-1.5 pt-2">
+                      <div className="flex flex-wrap gap-1.5 pt-2 max-h-[58px] overflow-hidden">
                         {project.tech.map((singleTech, idx) => (
                           <span
                             key={idx}
@@ -201,17 +204,21 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                               >
                                 <div className="flex gap-3">
                                   {/* Minimal photo frame */}
-                                  <div 
-                                    onClick={() => onContributorSelect(contrib, project)}
-                                    className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850 cursor-pointer"
-                                    title="View Profile"
-                                  >
-                                    <img
-                                      src={contrib.avatar}
-                                      alt={contrib.name}
-                                      className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 duration-300"
-                                    />
-                                  </div>
+                                   <div 
+                                     onClick={() => onContributorSelect(contrib, project)}
+                                     className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850 cursor-pointer flex items-center justify-center relative group"
+                                     title="View Profile"
+                                   >
+                                     <img
+                                       src={contrib.avatar}
+                                       alt={contrib.name}
+                                       onError={(e) => {
+                                         e.currentTarget.style.display = 'none';
+                                       }}
+                                       className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 duration-300 relative z-10"
+                                     />
+                                     <User size={18} className="text-slate-500 absolute" />
+                                   </div>
 
                                   {/* Info Column */}
                                   <div className="flex-1 min-w-0">
@@ -270,15 +277,18 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                                   "{rev.comment}"
                                 </p>
 
-                                {/* Partner Author Frame */}
-                                <div className="flex items-center gap-3 border-t border-slate-950 pt-3">
-                                  <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850">
-                                    <img
-                                      src={rev.avatar}
-                                      alt={rev.name}
-                                      className="w-full h-full object-cover"
-                                    />
-                                  </div>
+                                 <div className="flex items-center gap-3 border-t border-slate-950 pt-3">
+                                   <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850 flex items-center justify-center relative">
+                                     <img
+                                       src={rev.avatar}
+                                       alt={rev.name}
+                                       onError={(e) => {
+                                         e.currentTarget.style.display = 'none';
+                                       }}
+                                       className="w-full h-full object-cover relative z-10"
+                                     />
+                                     <User size={14} className="text-slate-500 absolute" />
+                                   </div>
                                   <div>
                                     <div className="text-sm font-bold text-slate-100">{rev.name}</div>
                                     <div className="text-[11px] text-slate-400 font-mono uppercase tracking-wide mt-0.5">

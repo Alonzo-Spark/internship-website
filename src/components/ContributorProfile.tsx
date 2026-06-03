@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Contributor, Mentor } from "../types";
 import { get30DaysTasks, TaskItem } from "../utils/dailyTasksGenerator";
-import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone, Download, BookOpen } from "lucide-react";
+import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone, Download, BookOpen, User } from "lucide-react";
 
 interface ContributorProfileProps {
   contributor: Contributor;
@@ -71,12 +71,16 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
           {/* Portrait Card */}
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-slate-800 overflow-hidden shadow-xl" id="portrait-card">
-            <div className="aspect-square w-full relative bg-slate-950">
+            <div className="aspect-square w-full relative bg-slate-950 flex items-center justify-center">
               <img
                 src={contributor.avatar}
                 alt={contributor.name}
-                className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+                className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500 relative z-10"
               />
+              <User size={64} className="text-slate-500 absolute" />
             </div>
 
             {/* Stat Lines in Portrait */}
@@ -396,13 +400,13 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   ) : (
                     <>
                       {/* Realistic Clean A4 Résumé Paper Rendering */}
-                      <div className="p-8 md:p-12 bg-white text-slate-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-slate-100">
+                      <div className="p-8 md:p-12 bg-white text-zinc-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-zinc-200">
 
                         {/* Resume Header */}
-                        <div className="text-center space-y-2 border-b-2 border-slate-900 pb-5">
-                          <h2 className="text-slate-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
+                        <div className="text-center space-y-2 border-b-2 border-zinc-900 pb-5">
+                          <h2 className="text-zinc-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
                           <div className="text-xs font-mono font-bold tracking-wide text-orange-600 uppercase">{contributor.role}</div>
-                          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-500 font-mono">
+                          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-zinc-550 font-mono">
                             {contributor.email && <span>{contributor.email}</span>}
                             {contributor.email && contributor.phone && <span>•</span>}
                             {contributor.phone && <span>{contributor.phone}</span>}
@@ -414,9 +418,9 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                         </div>
 
                         {/* Profile Summary Segment */}
-                        <div className="py-5 border-b border-slate-100 space-y-2">
-                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Executive Summary</h3>
-                          <p className="text-xs text-slate-700 leading-relaxed text-justify">
+                        <div className="py-5 border-b border-zinc-200 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Executive Summary</h3>
+                          <p className="text-xs text-zinc-700 leading-relaxed text-justify">
                             A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}.
                             Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background
                             in {contributor.skillsLearntInInternship?.slice(0, 3).join(", ") || contributor.techUsed.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
@@ -424,47 +428,47 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                         </div>
 
                         {/* Technical Skills segment */}
-                        <div className="py-5 border-b border-slate-100 space-y-2">
-                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Core Competencies & Stack</h3>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-slate-700">
+                        <div className="py-5 border-b border-zinc-200 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Core Competencies & Stack</h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-zinc-700">
                             <div>
-                              <span className="font-bold text-slate-955">Engineering Stack:</span>
-                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.techUsed.join(", ")}</p>
+                              <span className="font-bold text-zinc-900">Engineering Stack:</span>
+                              <p className="text-[11px] text-zinc-500 font-medium mt-0.5">{contributor.techUsed.join(", ")}</p>
                             </div>
                             <div>
-                              <span className="font-bold text-slate-955">Platform Skills:</span>
-                              <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.skillsLearntInInternship?.join(", ") || contributor.techUsed.join(", ")}</p>
+                              <span className="font-bold text-zinc-900">Platform Skills:</span>
+                              <p className="text-[11px] text-zinc-500 font-medium mt-0.5">{contributor.skillsLearntInInternship?.join(", ") || contributor.techUsed.join(", ")}</p>
                             </div>
                           </div>
                         </div>
 
                         {/* Professional Placement */}
-                        <div className="py-5 border-b border-slate-100 space-y-3">
-                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Professional Placements</h3>
+                        <div className="py-5 border-b border-zinc-200 space-y-3">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Professional Placements</h3>
                           <div className="space-y-2">
                             <div className="flex justify-between items-start">
                               <div>
-                                <h4 className="text-xs font-bold text-slate-955">Alonzo AI Solutions</h4>
-                                <div className="text-[10px] text-slate-500 font-mono uppercase font-bold mt-0.5">Associate Placement — {contributor.role}</div>
+                                <h4 className="text-xs font-bold text-zinc-900">Alonzo AI Solutions</h4>
+                                <div className="text-[10px] text-zinc-500 font-mono uppercase font-bold mt-0.5">Associate Placement — {contributor.role}</div>
                               </div>
-                              <span className="text-[10px] text-slate-500 font-mono text-right">{projectDuration}</span>
+                              <span className="text-[10px] text-zinc-550 font-mono text-right">{projectDuration}</span>
                             </div>
-                            <p className="text-xs text-slate-755 leading-relaxed text-justify">
+                            <p className="text-xs text-zinc-700 leading-relaxed text-justify">
                               {contributor.contributions} Assured the technical and architectural delivery standards specified under primary advisor {mentor.name}.
                             </p>
                           </div>
                         </div>
 
                         {/* Core Academic Projects */}
-                        <div className="py-5 border-b border-slate-100 space-y-4">
-                          <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Specialized Projects</h3>
+                        <div className="py-5 border-b border-zinc-200 space-y-4">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Specialized Projects</h3>
                           {contributor.resume.projects.map((proj, idx) => (
                             <div key={idx} className="space-y-1">
                               <div className="flex justify-between items-baseline">
-                                <h4 className="text-xs font-bold text-slate-955">{proj.title}</h4>
-                                <span className="text-[9px] font-mono bg-slate-100 text-slate-600 px-1.5 py-0.5 font-bold rounded">{proj.tech.join(" | ")}</span>
+                                <h4 className="text-xs font-bold text-zinc-900">{proj.title}</h4>
+                                <span className="text-[9px] font-mono bg-zinc-100 text-zinc-650 px-1.5 py-0.5 font-bold rounded">{proj.tech.join(" | ")}</span>
                               </div>
-                              <p className="text-xs text-slate-650 leading-relaxed">
+                              <p className="text-xs text-zinc-600 leading-relaxed">
                                 {proj.description}
                               </p>
                             </div>
@@ -473,8 +477,8 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
                         {/* Achievements section */}
                         <div className="py-5 space-y-2">
-                          <h3 className="text-xs font-bold tracking-widest text-slate-950 uppercase">Selected Achievements</h3>
-                          <ul className="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Selected Achievements</h3>
+                          <ul className="list-disc pl-5 text-xs text-zinc-700 space-y-1.5">
                             {contributor.resume.achievements.map((ach, idx) => (
                               <li key={idx} className="leading-relaxed">
                                 {ach}
