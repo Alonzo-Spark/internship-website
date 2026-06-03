@@ -266,7 +266,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                                 </div>
 
                                 {/* Commentary text */}
-                                <p className="text-slate-300 text-xs italic leading-relaxed">
+                                <p className="text-slate-200 text-sm italic leading-relaxed font-sans">
                                   "{rev.comment}"
                                 </p>
 
@@ -280,8 +280,8 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                                     />
                                   </div>
                                   <div>
-                                    <div className="text-xs font-bold text-slate-100">{rev.name}</div>
-                                    <div className="text-[10px] text-slate-450 font-mono uppercase tracking-wide mt-0.5">
+                                    <div className="text-sm font-bold text-slate-100">{rev.name}</div>
+                                    <div className="text-[11px] text-slate-400 font-mono uppercase tracking-wide mt-0.5">
                                       {rev.company}
                                     </div>
                                   </div>

@@ -107,8 +107,8 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
             {/* Primary College highlight */}
             <div className="space-y-1.5 p-3 bg-slate-950/60 border border-slate-900 rounded-xl">
-              <div className="text-[10px] text-slate-500 font-mono uppercase font-bold">Academic Institution</div>
-              <div className="text-xs font-bold text-slate-100 leading-relaxed">{contributor.resume.education[0].school}</div>
+              <div className="text-[11px] text-slate-500 font-mono uppercase font-bold">Academic Institution</div>
+              <div className="text-sm font-bold text-slate-100 leading-relaxed">{contributor.resume.education[0].school}</div>
               <div className="text-[10px] text-orange-500 font-mono mt-1 font-semibold">{contributor.resume.education[0].degree}</div>
             </div>
 
@@ -231,7 +231,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   <button
                     key={wk}
                     onClick={() => setSelectedWeekFilter(wk)}
-                    className={`px-2.5 py-1 text-[10px] font-mono font-bold uppercase rounded-lg transition-all cursor-pointer ${selectedWeekFilter === wk
+                    className={`px-3 py-1.5 text-xs font-mono font-bold uppercase rounded-lg transition-all cursor-pointer ${selectedWeekFilter === wk
                       ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
                       : "text-slate-500 hover:text-slate-350 border border-transparent"
                       }`}
@@ -254,12 +254,12 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                       <button
                         key={t.day}
                         onClick={() => setSelectedDay(t.day)}
-                        className={`h-11 rounded-lg flex flex-col items-center justify-center font-mono text-xs font-bold transition-all relative cursor-pointer border ${isSelected
+                        className={`h-12 rounded-lg flex flex-col items-center justify-center font-mono text-sm font-bold transition-all relative cursor-pointer border ${isSelected
                           ? "bg-blue-500/10 border-blue-500 text-blue-400 shadow-md shadow-blue-500/10 scale-105"
                           : "bg-slate-950/60 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800"
                           }`}
                       >
-                        <span className="text-[9px] text-slate-500 block leading-none mb-0.5">Day</span>
+                        <span className="text-[10px] text-slate-500 block leading-none mb-0.5">Day</span>
                         {t.day}
                       </button>
                     );
@@ -299,12 +299,12 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-orange-500/15 p-6 md:p-8 space-y-6 shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
               <div className="space-y-1">
-                <h3 className="text-xs font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
-                  <UserCheck size={15} />
+                <h3 className="text-sm font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
+                  <UserCheck size={16} />
                   Weekly Mentor Review (5 Weeks)
                 </h3>
-                <p className="text-[11px] text-slate-500 font-sans">
-                  Evaluation logs drafted by {mentor.name} ({mentor.designation})
+                <p className="text-xs text-slate-400 font-sans mt-1">
+                  Evaluation logs drafted by <span className="font-semibold text-slate-250">{mentor.name}</span> (<span className="italic text-slate-400">{mentor.designation}</span>)
                 </p>
               </div>
               <div className="flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full">
@@ -321,16 +321,16 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   key={rev.week}
                   className="p-4 bg-slate-950/60 border border-slate-900 hover:border-orange-500/30 rounded-xl space-y-3 transition-all duration-300 relative group overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 p-1 px-2 bg-orange-500/10 text-orange-400 font-mono text-[9px] font-bold rounded-bl-lg">
+                  <div className="absolute top-0 right-0 p-1 px-2 bg-orange-500/10 text-orange-400 font-mono text-[11px] font-bold rounded-bl-lg">
                     W-{rev.week}
                   </div>
 
                   <div className="flex items-center gap-1 text-amber-500">
-                    <Award size={12} fill="currentColor" />
-                    <span className="text-xs font-mono font-bold text-slate-200">{rev.rating.toFixed(1)}</span>
+                    <Award size={13} fill="currentColor" />
+                    <span className="text-sm font-mono font-bold text-slate-200">{rev.rating.toFixed(1)}</span>
                   </div>
 
-                  <p className="text-[11px] text-slate-350 leading-relaxed font-light font-sans group-hover:text-slate-200 transition-colors">
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal font-sans group-hover:text-slate-200 transition-colors">
                     "{rev.review}"
                   </p>
                 </div>
