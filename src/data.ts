@@ -551,7 +551,7 @@ export const projectsData: Project[] = [
     duration: "5 Weeks",
     domain: "LegalTech & Document Intelligence",
     description: "The Appellate Automation System is a comprehensive role-based web application developed to streamline the management of Income Tax e-Proceedings for Chartered Accountants, tax professionals, and audit firms. The platform centralizes the handling of client assignments, proceedings, notices, responses, adjournments, document management, and compliance tracking, reducing the manual effort required to monitor multiple taxpayer accounts and ensuring timely action on important notices. The system is built around three dedicated user roles: Admin, Staff, and Professional. The Admin Dashboard provides complete control over user management, client onboarding, professional assignments, access control, workflow monitoring, and overall system administration. The Staff Dashboard enables staff members to manage assigned clients, monitor proceedings, track notices and responses, review adjournment requests, access notice orders, and oversee operational activities. The Professional Dashboard allows tax professionals to manage their assigned clients, review notices, update response statuses, track workflow progress, maintain review comments, and monitor compliance deadlines through a structured interface. A major component of the platform is its automation engine, which utilizes browser automation technology to interact directly with the Income Tax e-Filing Portal. The automation securely logs into taxpayer accounts, navigates through e-Proceedings, and automatically extracts proceedings, notices, orders, response details, adjournment details, document reference information, communication metadata, and downloadable PDF documents. The automation framework is designed to handle multiple professionals and multiple clients simultaneously through parallel execution, significantly improving processing speed and operational efficiency. All extracted information is stored in a centralized PostgreSQL database, ensuring data consistency and easy accessibility across dashboards. The platform maintains detailed records of proceedings, notices, responses, adjournments, assignments, automation activities, and document repositories. Notices are categorized into “For Your Action” and “For Your Information” sections, allowing users to quickly identify items that require immediate attention. Downloaded PDF documents are automatically renamed using meaningful business information such as assessee name, notice section, and issue date, making document management more organized and searchable. The application also includes workflow tracking features that allow professionals to update notice statuses, record review comments, track filing information, and maintain activity history for each notice. Advanced filtering, searching, client assignment management, role-based access control, and dashboard analytics provide users with a clear view of ongoing compliance activities and pending actions. Overall, the Appellate Automation System serves as a centralized compliance and audit management solution that automates the collection of Income Tax proceeding data, improves operational efficiency, enhances visibility across teams, reduces manual monitoring efforts, and enables Chartered Accountant firms to manage large volumes of client proceedings in a structured, scalable, and efficient manner.",
-    image: "/chps.jpeg",
+    image: "/CA.jpeg",
     tech: ["Frontend: React.js, TypeScript, Vite, Tailwind CSS, Axios",
       "Backend: FastAPI, Python, SQLAlchemy, Pydantic",
       "Database: PostgreSQL, pgAdmin",
@@ -720,12 +720,12 @@ export const projectsData: Project[] = [
         id: "tanusree",
         name: "Jalkam Tanusree",
         role: "Frontend Developer",
-        github: "https://github.com/BitlaUmesh",
+        github: "https://github.com/JalkamTanusree16",
         linkedin: "www.linkedin.com/in/tanusreejalkam16072005",
         resumePdf: "/Tanusree Final Resume.pdf",
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["React", "Vite"],
-        bio: "Focused on high-performance message routing, Redis streams telemetry, and persistent state management services.",
+        bio: "I'm Jalkam Tanusree, a Computer Engineering student passionate about technology, innovation, and solving real-world problems through software development and Artificial Intelligence. My interests span Web Development, Artificial Intelligence, Machine Learning, Data Science, and Software Engineering, where I enjoy transforming ideas into impactful digital solutions. Through academic projects, internships, and hackathons, I have gained hands-on experience in building responsive web applications, developing AI-driven solutions, and creating data-driven systems that enhance user experiences. I have worked on projects such as an Air Quality Visualizer & Forecast Application, an AI-powered Hypertension Risk Prediction System, and a Skill Advisor Application, showcasing my ability to combine technical expertise with practical problem-solving. I am driven by a vision to leverage emerging technologies to create meaningful solutions that positively impact society. As an aspiring software engineer and AI enthusiast, I am constantly exploring new technologies, expanding my knowledge, and seeking opportunities to contribute to innovative and transformative projects.",
         contributions: "Tanusree played a key role in developing and enhancing the frontend of the web application using React and Vite, focusing on delivering a clean, responsive, and professional user interface.She designed and implemented multiple UI components, ensuring seamless navigation and an intuitive user experience across the platform.She successfully integrated backend APIs into the frontend, enabling dynamic data fetching and real-time updates in the UI.Her work ensured that data was displayed accurately and efficiently, contributing to a smooth and error - free user experience.Tanusree actively identified and resolved frontend issues, debugging errors and optimizing performance to maintain application stability.She ensured the website functioned reliably across different scenarios while maintaining a visually appealing design.Additionally, she contributed to initial AI feature integrations within the frontend, exploring ways to connect intelligent functionalities into the system.She also participated in QA testing, validating features, tracking bugs, and maintaining code quality using Git and GitHub.Her contributions significantly improved the usability, reliability, and overall presentation of the web application, making it more polished and production- ready.",
         dailyTasks: [
           "Participated in project setup using React, Vite, and frontend architecture planning.",
@@ -1107,14 +1107,14 @@ export const projectsData: Project[] = [
       {
         id: "shashank",
         name: "Shashank",
-        role: "AI/ML Engineer",
-        github: "https://github.com/satishx9",
-        linkedin: "https://www.linkedin.com/in/satishthadela/",
+        role: "LLM Performance Engineer",
+        github: "https://github.com/GoduguShashank26",
+        linkedin: "https://www.linkedin.com/in/godugu-shashank-004b7829a/",
         resumePdf: "/GODUGU_SHASHANK_RESUME.pdf",
         avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["Python", "XGBoost", "ScyllaDB", "Pandas", "Scikit-Learn"],
-        bio: "Specializing in statistical regression models, satellite data normalization algorithms, and AgriTech predictive systems.",
-        contributions: "Sneha engineered the predictive XGBoost model forecasting harvest outputs and structured the spatial normalization arrays handling climate datasets.",
+        bio: "Computer Science graduate (B.Tech, AI & ML) with hands-on experience building ML-powered early prediction heartdisease systems and bot detection systems. Proficient in Python, Flask, and Scikit-Learn with a strong foundation inmachine learning, data analysis, and backend development. Passionate about applying AI to solve real-world problemsand ready to contribute in a full-time role",
+        contributions: "Implemented a LinUCB-based routing system using exploration and exploitation strategies. Developed Bayesian memory updates and persistent state management for model learning. Built routing logic, logging mechanisms, and reward-based model updates. Evaluated routing decisions using regret analysis and exploration-exploitation metrics. Generated comparative analyses and visualizations against Thompson Sampling and Round Robin approaches.",
         dailyTasks: [
           "Studied the project goal and understood why a single LLM is inefficient.",
           "Defined 10 query categories inspired by MMLU benchmarks.",
@@ -1154,6 +1154,9 @@ export const projectsData: Project[] = [
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
+        skillsLearntInInternship: [
+          "Machine Learning and Online Learning Algorithms", "Natural Language Processing and Vector Embeddings", "Backend Development and API Integration", "Statistical Analysis and Decision-Making Algorithms", "Data Visualization and Performance Analysis."
+        ],
         resume: {
           education: [
             {
@@ -1178,11 +1181,14 @@ export const projectsData: Project[] = [
       {
         id: "vaishanvi",
         name: "Sai Vaishnavi Kodali",
-        role: "Frontend Developer",
+        role: "Model Routing Engineer",
+        github: "github.com/SaiVaishnavi236",
+        linkedin: "linkedin.com/in/SaiVaishnaviKodali",
+        resumePdf: "/Vaishnavi.pdf",
         avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["React", "Tailwind CSS", "Zustand", "Leaflet GL", "TypeScript"],
-        bio: "Dedicated to designing elegant map-focused visualizations, clean data tables, and highly intuitive layouts.",
-        contributions: "Tanvi crafted the meteorology dashboard structure, set up interactive geographical overlays, and engineered responsive data analytics consoles.",
+        bio: "Aspiring Computer Science student with strong foundation in programming, problem-solving. Seeking opportunities to contribute to impactful software development or data-driven projects.",
+        contributions: "Contributed to building a comprehensive LLM benchmarking and evaluation framework using the MS MARCO dataset by evaluating multiple models across quality, cost, latency, and reward metrics. Developed modules for validity, cost, latency, and reward calculation, supported the implementation and analysis of dynamic routing strategies, and automated large-scale model evaluations through OpenRouter API integration. Assisted in creating training, testing, and oracle benchmark datasets, performed performance and cost analysis for model selection, and developed interactive dashboards and analytical reports, including correlation heatmaps and cumulative regret analysis.",
         dailyTasks: [
           "Studied LLM statistics and performance trends across different model types.",
           "Analyzed model behavior across different query categories.",
@@ -1222,6 +1228,14 @@ export const projectsData: Project[] = [
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
+        skillsLearntInInternship: [
+          "1.LLM Evaluation & Benchmarking",
+          "2.Thompson Sampling, LinUCB, Round Robin Routing",
+          "3.NLP Metrics (BERTScore, BLEU, ROUGE, F1)",
+          "4.Python & OpenRouter API Integration",
+          "5.Data Analysis & Statistical Evaluation",
+          "6.Dataset Preparation and Ground Truth Validation"
+        ],
         resume: {
           education: [
             {
@@ -1246,11 +1260,14 @@ export const projectsData: Project[] = [
       {
         id: "Dhanvi",
         name: "Dhanvi Annam",
-        role: "Cloud Engineer",
+        role: "AI Infrastructure Engineer",
+        github: "https://github.com/Dhanvi0206",
+        linkedin: "https://www.linkedin.com/in/dhanvi-annam/",
+        resumePdf: "/Resume Dhanvi.pdf",
         avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["FastAPI", "ScyllaDB", "Docker", "AWS API", "Python"],
-        bio: "Specializing in Docker deployment layers, ScyllaDB cluster configurations, and scalable cloud APIs.",
-        contributions: "Priya managed the Docker compose layouts, optimized ScyllaDB to store seasonal agricultural logs, and built the FastAPI backend routes.",
+        bio: "Computer Science Engineering student with a strong foundation in programming and machine learning, supported by significant project experience. Skilled in applying analytical thinking to solve real-world problems, particularly in Artificial Intelligence, Natural Language Processing and optimization techniques, with a focus on developing efficient and interpretable solutions.",
+        contributions: "Implemented a Thompson Sampling-based LLM routing system for adaptive model selection. Developed semantic query embedding and similarity matching using all-MiniLM-L6-v2. Integrated OpenRouter and FastAPI for efficient model routing and response collection. Evaluated model performance using quality, latency, cost, and reward metrics. Performed regret analysis, generated visualizations, and compared routing performance with baseline methods.",
         dailyTasks: [
           "Researched and selected 10 different LLM models for experimentation.",
           "Checked benchmarks and aligned them with defined categories.",
@@ -1289,6 +1306,9 @@ export const projectsData: Project[] = [
           { week: 3, review: "1. Able to design and implement the complete adaptive routing workflow using Thompson Sampling and Bayesian learning logic effectively. 2. Took strong ownership in complete routing pipeline implementation and coordinated well during integration discussions." },
           { week: 4, review: "" },
           { week: 5, review: "" }
+        ],
+        skillsLearntInInternship: [
+          "Machine Learning and Contextual Bandits", " Natural Language Processing and Semantic Embeddings", " API Integration and Backend Development", " Performance Evaluation and Benchmarking", "Data Analysis and Visualization."
         ],
         resume: {
           education: [
