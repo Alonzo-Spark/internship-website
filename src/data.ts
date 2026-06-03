@@ -253,25 +253,25 @@ export const projectsData: Project[] = [
         week: 1,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        comment: "Excited to partner on this initiative. The initial architecture and requirements for the patient registration and vitals tracking modules show great promise."
+        comment: "I really liked the Old Patient Registration functionality, Inventory Medicine Details module, and role-based dashboard access. The workflow feels much simpler now, and the role-specific navigation makes the system easier to use."
       },
       {
         week: 2,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        comment: "Progressing well. The doctor registration flow and clinical logs setup are well-aligned with our operational workflows."
+        comment: "I am very satisfied with the Inventory Management, Camp Reports, Log Vitals, Patient Profile Editing, and Doctor Management features. The suggested improvements for patient registration, medicine access, inventory handling, and cost calculations have made the system more practical and efficient."
       },
       {
         week: 3,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        comment: "Great update. The reporting metrics and inventory dashboards are clean, intuitive, and highly functional."
+        comment: "I really liked the OCR integration and the overall UI improvements, as they made the application more user-friendly and efficient. The enhancements to access control, duplicate prevention, and Test Details organization have improved the overall workflow."
       },
       {
         week: 4,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        comment: "Very impressed with the AI-driven OCR document scanning prototype. It will save our staff hours of manual data entry."
+        comment: "I am very happy with the final application and the way all requested improvements were incorporated. The OCR enhancements, workflow optimizations, access controls, and Voice Bot integration have made the system reliable and well-suited for our medical camp operations."
       },
       {
         week: 5,
@@ -334,14 +334,14 @@ export const projectsData: Project[] = [
           "Designed and implemented community discussion modules"
         ],
         weeklyReviews: [
-          { week: 1, review: "Shivani successfully established the Next.js frontend architecture, designing high-fidelity wireframes and layouts." },
-          { week: 2, review: "Built reusable UI components, dashboard interfaces, and integrated the frontend with backend APIs." },
-          { week: 3, review: "Developed the real-time streaming chat UI and integrated custom Sanskrit shloka display components." },
-          { week: 4, review: "Implemented transliteration features, polished the Sacred Glassmorphism branding, and optimized rendering performance." },
-          { week: 5, review: "Outstanding cohort completion! Created secure authentication routes, profile management, and community discussion modules." }
+          { week: 1, review: "Shivani Contributed effectively in researching OCR, embeddings, and document extraction workflows while supporting frontend improvements. Proactively learned new technologies and contributed well during presentations and coordination tasks." },
+          { week: 2, review: "Shivani Enhanced the frontend experience significantly through improved UI/UX, animations, authentication flows, and reusable components. Coordinated effectively with the team and contributed to improving the overall product presentation and visual quality." },
+          { week: 3, review: "Shivani Contributed strongly to frontend stability, authentication upgrades, and UI improvements during the migration phase. Work on visual consistency and user experience enhancements significantly improved overall product quality." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
-          "React", "Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "PostgreSQL", "TensorFlow", "OpenCV"
+          "frontend development", "UI/UX designing", "animation and visual effect", "AI model integration", "deployment"
         ],
         resume: {
           education: [
@@ -404,14 +404,14 @@ export const projectsData: Project[] = [
           "Developed community interaction features"
         ],
         weeklyReviews: [
-          { week: 1, review: "Keerthana successfully analyzed the AI feature requirements and designed the core module architecture." },
-          { week: 2, review: "Engineered initial prompt templates, developed AI testing scenarios, and structured the Sanskrit datasets." },
-          { week: 3, review: "Implemented embeddings generation and optimized LLM output response quality and validation checks." },
-          { week: 4, review: "Developed Sanskrit-aware AI features, transliteration enhancements, and successfully tested AI workflow integrations." },
-          { week: 5, review: "Outstanding cohort completion! Designed and implemented the Role-Based Access Control (RBAC) authorization logic and community features." }
+          { week: 1, review: "Keerthana Worked consistently on OCR workflows, parsing tools, and automation scripts. Showed strong interest in exploring new AI tools and research areas beyond assigned responsibilities." },
+          { week: 2, review: "Keerthana Handled frontend usability improvements, streaming chat integration, and dashboard-related tasks effectively. Demonstrated strong learning ability while working on state management, integrations, and Sanskrit content workflows." },
+          { week: 3, review: "Keerthana Contributed effectively to AI response improvements, frontend refactoring, dashboard modernization, and prompt engineering tasks. Demonstrated strong ownership in improving usability, maintainability, and frontend consistency across the platform." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
-          "Python", "FastAPI", "React", "Next.js", "Supabase", "PostgreSQL", "Groq API", "RBAC", "Prompt"
+          "Backend Development", "Real-Time Response Streaming", "Performance Optimization", "deployment"
         ],
         resume: {
           education: [
@@ -474,14 +474,14 @@ export const projectsData: Project[] = [
           "Built backend services for community modules"
         ],
         weeklyReviews: [
-          { week: 1, review: "Quickly understood the RAG requirements and built the base pipeline properly with strong backend integration support. Demonstrated good ownership in backend tasks while independently exploring privacy-first approaches and integrations." },
-          { week: 2, review: "Contributed strongly to backend architecture, caching, authentication, and retrieval optimization with stable implementations. Took solid ownership of the backend system while proactively improving performance and prompt engineering quality." },
-          { week: 3, review: "Delivered excellent contributions in AI optimization, caching, deployment improvements, and backend scalability. Played an important role in improving platform speed, response quality, and overall production readiness." },
+          { week: 1, review: "Umesh quickly understood the RAG requirements and built the base pipeline properly with strong backend integration support. Demonstrated good ownership in backend tasks while independently exploring privacy-first approaches and integrations." },
+          { week: 2, review: "Umesh Contributed strongly to backend architecture, caching, authentication, and retrieval optimization with stable implementations. Took solid ownership of the backend system while proactively improving performance and prompt engineering quality." },
+          { week: 3, review: "Umesh Delivered excellent contributions in AI optimization, caching, deployment improvements, and backend scalability. Played an important role in improving platform speed, response quality, and overall production readiness." },
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
-          "FastAPI", "Docker", "PostgreSQL", "pgvector", "ChromaDB", "Redis", "Pytest", "DevOps"
+          "Vector Database Management", "Semantic Search Implementation", "Docker Containerization", "Deployment & Server Management"
         ],
         resume: {
           education: [
@@ -517,19 +517,19 @@ export const projectsData: Project[] = [
         week: 1,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "The platform's initial wireframes and manuscript-inspired design guidelines capture the cultural essence perfectly."
+        comment: "During Week 1, the team successfully implemented a Retrieval-Augmented Generation (RAG) system on the original Natya Shastra text to enable accurate knowledge retrieval from source material. The UI was redesigned with improved typography and a brighter color palette to enhance user engagement. The search experience was upgraded with chat continuation support, allowing users to ask follow-up questions naturally. The knowledge base was expanded using research papers, articles, and supplementary resources, and support for displaying original Sanskrit shlokas alongside responses was also introduced."
       },
       {
         week: 2,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "Excellent database modeling and API definitions for the shloka repository. The search and filter interfaces feel very natural."
+        comment: "In Week 2, the team successfully demonstrated and received approval for multiple features including real-time streaming chat, authentication systems, shloka retrieval, Redis caching, PDF export, bookmarks, and chat history functionality. Plans were proposed for additional enhancements such as user profile management with image upload support and selective chat history deletion. The project scope was expanded to include Sanskrit glossary support and multilingual shloka translations for improved accessibility. A complete UI/UX redesign was also initiated featuring traditional fonts, richer color themes, and a dedicated Natya Samhita logo, alongside requirements for complaint/reporting systems, Terms & Conditions integration, and PDF export validation."
       },
       {
         week: 3,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "The real-time streaming chat interface and transliteration tools are highly responsive and work beautifully."
+        comment: "During Week 3, the Partner approved the continuation of the Thompson Sampling–based model routing framework for intelligent model selection. Discussions focused on improving the reward function by prioritizing response quality and cost metrics over latency. The team also planned validation checks for algorithm correctness, including Sherman-Morrison matrix updates and covariance sampling methods. Detailed analytical evaluations were conducted using visual techniques such as box plots, violin plots, scatter plots, spider charts, and correlation heatmaps. Future plans included baseline comparisons, BERTScore-based reward systems, oracle benchmarking, and non-stationarity testing to further strengthen the platform’s AI evaluation framework."
       },
       {
         week: 4,
@@ -805,19 +805,19 @@ export const projectsData: Project[] = [
         week: 1,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: "The initial analysis of the Income Tax portal proceedings navigation and notices lifecycle is highly detailed."
+        comment: "We are pleased with the proposed project architecture and automation approach. We recommend implementing role-based dashboards and a user-friendly interface to ensure better accessibility and efficient system management."
       },
       {
         week: 2,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: "Strong progress on the Playwright browser automation framework. The login flow and notices listing extraction are solid."
+        comment: "We are pleased with the dashboard progress and workflow implementation. We would like to see improved notice categorization, enhanced filtering options, and smoother navigation between modules to further improve the user experience."
       },
       {
         week: 3,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: "Excellent work on notice data parsing and dynamic PDF document renaming. This structure is highly organized."
+        comment: "We highly appreciate the development speed and the quality of the features delivered so far. We would like to see advanced notice filtering, response tracking capabilities, and additional automation scalability enhancements to further improve the system's efficiency and performance."
       },
       {
         week: 4,
@@ -881,14 +881,19 @@ export const projectsData: Project[] = [
           "Reviewed overall EduSim progress and planned the next phase of sandbox runtime development."
         ],
         weeklyReviews: [
-          { week: 1, review: "Showed a solid understanding of backend requirements from the outset and contributed meaningfully to core system development. Approached problem-solving in a structured and efficient manner." },
-          { week: 2, review: "Handled backend responsibilities with confidence and consistently took ownership of key development tasks. Focused on improving system scalability and maintainability through thoughtful implementation." },
-          { week: 3, review: "Established himself as a reliable contributor by effectively managing critical backend tasks and supporting the team during key development activities. Maintained a consistent level of performance throughout the project." },
+          { week: 1, review: "Rithvik Showed a solid understanding of backend requirements from the outset and contributed meaningfully to core system development. Approached problem-solving in a structured and efficient manner." },
+          { week: 2, review: "Rithvik Handled backend responsibilities with confidence and consistently took ownership of key development tasks. Focused on improving system scalability and maintainability through thoughtful implementation." },
+          { week: 3, review: "Rithvik Established himself as a reliable contributor by effectively managing critical backend tasks and supporting the team during key development activities. Maintained a consistent level of performance throughout the project." },
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
-          "Matter-js", "pixiJs", "PostgreSQL"
+          "Full-Stack Application Development using React, TypeScript, FastAPI, and Modern Web Technologies",
+          "System Architecture Design, Modular Software Development, and Scalable Runtime Engineering",
+          "AI Integration, Prompt Engineering, Retrieval-Augmented Generation (RAG), and Educational Intelligence Systems",
+          "Database Design, Schema Modeling, Relationships, Authentication, and Data Management using PostgreSQL",
+          "Interactive Physics Simulation Development using Matter.js, PixiJS, and Sandbox Runtime Architectures",
+          "Version Control, Branch Management, Merge Conflict Resolution, and Collaborative Development using Git and GitHub"
         ],
         resume: {
           education: [
@@ -921,7 +926,7 @@ export const projectsData: Project[] = [
         avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "FAST API Integration", "Responsive UI Design", "User Experience Design (UX)"],
         bio: "Motivated and detail-oriented AI and Data Science student (2027 graduate, CGPA 7.5) with hands-on experience in software engineering, machine learning, data analysis, and full-stack development. Proficient in Python, Java, JavaScript, and SQL with demonstrated ability to design, build, test, and deploy production-ready applications end-to-end. Built PillTalk, an AI-powered healthcare application integrating NLP, computer vision, and Google Gemini LLM, deployed on cloud (Hugging Face Spaces). Experienced in REST API integration, data pipelines, Power BI dashboards, and agile development workflows. Holds Oracle Certified Data Science Professional, Oracle AI Foundations Associate, and IBM and Cisco AI Fundamentals certifications. Seeking internship and entry-level opportunities in software engineering, AI/ML, data science, or data analytics.",
-        contributions: "Divya built the live traffic dashboard visual layouts, configured dynamic charts plotting signal delay metrics, and maintained perfect mobile responsiveness.",
+        contributions: "Mythri has contributed to the end-to-end development of EduSim by integrating AI-powered personalized learning, intelligent tutoring, and interactive educational simulations to enhance student engagement and learning outcomes.",
         dailyTasks: [
           "Planned EduSim project scope, modules, and overall learning workflow.",
           "Researched EdTech platforms, AI tutors, and educational learning systems.",
@@ -950,9 +955,9 @@ export const projectsData: Project[] = [
           "Integrated database persistence for users, sessions, tutor history, settings, activity tracking, debugging, testing, and overall project stabilization.",
         ],
         weeklyReviews: [
-          { week: 1, review: "Adapted well to the frontend development requirements and consistently delivered assigned tasks. Displayed a positive attitude toward feedback and continuously worked on improving implementation quality." },
-          { week: 2, review: "Continued to enhance her frontend development skills while maintaining a strong focus on usability and functionality. Proactively addressed issues and contributed to overall interface improvements." },
-          { week: 3, review: "Displayed a high level of commitment and professionalism in delivering frontend features and enhancements. Contributed significantly to improving overall usability and the end-user experience." },
+          { week: 1, review: "Mythri adapted well to the frontend development requirements and consistently delivered assigned tasks. Displayed a positive attitude toward feedback and continuously worked on improving implementation quality." },
+          { week: 2, review: "Mythri continued to enhance her frontend development skills while maintaining a strong focus on usability and functionality. Proactively addressed issues and contributed to overall interface improvements." },
+          { week: 3, review: "Mythri displayed a high level of commitment and professionalism in delivering frontend features and enhancements. Contributed significantly to improving overall usability and the end-user experience." },
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
@@ -1019,9 +1024,9 @@ export const projectsData: Project[] = [
           "Reviewed overall EduSim progress and planned upcoming RAG, simulation, and benchmarking improvements."
         ],
         weeklyReviews: [
-          { week: 1, review: "Demonstrated a strong learning attitude and adapted quickly to the project's AI requirements. Actively explored multiple approaches and contributed effectively to addressing technical challenges." },
-          { week: 2, review: "Demonstrated significant progress in understanding AI workflows and worked with increasing independence. Contributed to improving the quality, accuracy, and effectiveness of the overall solution." },
-          { week: 3, review: "Demonstrated strong ownership and accountability in assigned responsibilities. Consistently delivered quality work and contributed to continuous improvement efforts across the project" },
+          { week: 1, review: "Satish demonstrated a strong learning attitude and adapted quickly to the project's AI requirements. Actively explored multiple approaches and contributed effectively to addressing technical challenges." },
+          { week: 2, review: "Satish demonstrated significant progress in understanding AI workflows and worked with increasing independence. Contributed to improving the quality, accuracy, and effectiveness of the overall solution." },
+          { week: 3, review: "Satish demonstrated strong ownership and accountability in assigned responsibilities. Consistently delivered quality work and contributed to continuous improvement efforts across the project" },
           { week: 4, review: "" },
           { week: 5, review: "" }
         ],
@@ -1060,32 +1065,32 @@ export const projectsData: Project[] = [
     reviews: [
       {
         week: 1,
-        name: "Vikram Sen",
-        company: "Metropolitan Traffic Control",
-        comment: "Excited about the educational physics simulator. The initial scope, wireframes, and concept workflows look great."
+        name: "Mr. Ganesh K",
+        company: "Alonzo AI",
+        comment: "I felt the simulations would be more effective if students were guided step by step rather than exploring everything at once. I also suggested organizing the content into concepts, formulas, and real-world scenarios, while tracking student interactions to better understand their learning progress."
       },
       {
         week: 2,
-        name: "Vikram Sen",
-        company: "Metropolitan Traffic Control",
-        comment: "The initial sandbox backend modules and dynamic physics rendering foundations are structured very well."
+        name: "Mr. Ganesh K",
+        company: "Alonzo AI",
+        comment: "I recommended creating a clear learning flow that takes students from a prompt and AI explanation through formulas, calculations, Q&A, and finally the simulation. I also shared ideas for improving usability, such as search, learning resources, theme options, and guided navigation, while ensuring the overall experience remains smooth and intuitive."
       },
       {
         week: 3,
-        name: "Vikram Sen",
-        company: "Metropolitan Traffic Control",
-        comment: "Excellent progress on the interactive formula lab and real-time physics rendering loops using Matter.js."
+        name: "Mr. Ganesh K",
+        company: "Alonzo AI",
+        comment: "I suggested refining the UI/UX and evaluating the AI responses to make learning more engaging and effective. I also encouraged building NCERT-aligned Physics simulations and adding adjustable, scenario-based experiments so students can actively explore concepts and learn through observation"
       },
       {
         week: 4,
-        name: "Vikram Sen",
-        company: "Metropolitan Traffic Control",
-        comment: "The AI Tutor integration and RAG pipeline are providing highly contextual, curriculum-aligned explanations."
+        name: "Mr. Ganesh K",
+        company: "Alonzo AI",
+        comment: "I encouraged the students to create structured datasets for benchmarking, incorporate comprehensive evaluation workflows, and add analytics tracking for better insights into usage and performance."
       },
       {
         week: 5,
-        name: "Vikram Sen",
-        company: "Metropolitan Traffic Control",
+        name: "Mr. Ganesh K",
+        company: "Alonzo AI",
         comment: "Spectacular final educational sandbox! The drag-and-drop experiment creation tools and simulated animations are extremely polished."
       }
     ]
@@ -1229,12 +1234,7 @@ export const projectsData: Project[] = [
           { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
-          "1.LLM Evaluation & Benchmarking",
-          "2.Thompson Sampling, LinUCB, Round Robin Routing",
-          "3.NLP Metrics (BERTScore, BLEU, ROUGE, F1)",
-          "4.Python & OpenRouter API Integration",
-          "5.Data Analysis & Statistical Evaluation",
-          "6.Dataset Preparation and Ground Truth Validation"
+          "Gained hands-on experience in LLM evaluation and benchmarking", "Dynamic model routing techniques such as Thompson Sampling", "LinUCB", "Round Robin", "NLP evaluation metrics including BERTScore, BLEU, ROUGE, and F1 Score", "Developed proficiency in Python", "OpenRouter API integration", "Data processing using CSV and JSON", "statistical performance analysis, cost and latency optimization", "dashboard development using Streamlit and Plotly for visualization and monitoring."
         ],
         resume: {
           education: [
@@ -1344,19 +1344,19 @@ export const projectsData: Project[] = [
         week: 1,
         name: "Marcus Vance",
         company: "GreenFields Corporation",
-        comment: "Clear formulation of the query categorization benchmarks and multi-model evaluation framework."
+        comment: "The team showed good understanding of the project objectives and contributed effectively to benchmarking, model evaluation and dataset organization activities. They collaborated well, actively participated in discussions and completed assigned tasks within the expected timelines."
       },
       {
         week: 2,
         name: "Marcus Vance",
         company: "GreenFields Corporation",
-        comment: "Strong progress on embedding generation and initial routing logic testing across multiple models."
+        comment: "The team made good progress in embedding-based semantic routing, similarity search and adaptive routing implementation. They effectively utilized technologies such as FAISS, FastAPI and vector embeddings, while contributing well to benchmarking, performance analysis and overall teamwork."
       },
       {
         week: 3,
         name: "Marcus Vance",
         company: "GreenFields Corporation",
-        comment: "The implementation of the Bayesian memory update and matrix calculations is highly robust."
+        comment: "The team successfully implemented the Thompson Sampling–based adaptive routing pipeline and demonstrated strong technical execution throughout the development phase. They contributed effectively to model selection, evaluation and memory update mechanisms, while presenting the workflow and architecture clearly and responding positively to feedback for further improvements."
       },
       {
         week: 4,
