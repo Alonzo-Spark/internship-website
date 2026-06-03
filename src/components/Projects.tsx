@@ -282,13 +282,6 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                                     "{rev.comment}"
                                   </p>
                                 </div>
-
-                                <div className="flex flex-col border-t border-slate-950 pt-3">
-                                  <span className="text-xs font-bold text-slate-100">{rev.name}</span>
-                                  <span className="text-[10px] text-slate-400 font-mono uppercase tracking-wide mt-0.5">
-                                    {rev.company}
-                                  </span>
-                                </div>
                               </div>
                             ))}
                           </div>
