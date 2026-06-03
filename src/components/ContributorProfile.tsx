@@ -301,7 +301,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
           {/* 5-Week Weekly Mentor Review Timeline */}
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-orange-500/15 p-6 md:p-8 space-y-6 shadow-xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-start gap-3 border-b border-slate-800/80 pb-4">
               <div className="space-y-1">
                 <h3 className="text-sm font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
                   <UserCheck size={16} />
@@ -310,12 +310,6 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                 <p className="text-xs text-slate-400 font-sans mt-1">
                   Evaluation logs drafted by <span className="font-semibold text-slate-250">{mentor.name}</span> (<span className="italic text-slate-400">{mentor.designation}</span>)
                 </p>
-              </div>
-              <div className="flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full">
-                <span className="text-[10px] font-mono font-bold text-orange-400">Average:</span>
-                <span className="text-xs font-mono font-bold text-white">
-                  {(contributor.weeklyReviews.reduce((acc, curr) => acc + curr.rating, 0) / 5).toFixed(2)} / 5
-                </span>
               </div>
             </div>
 
@@ -329,12 +323,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                     W-{rev.week}
                   </div>
 
-                  <div className="flex items-center gap-1 text-amber-500">
-                    <Award size={13} fill="currentColor" />
-                    <span className="text-sm font-mono font-bold text-slate-200">{rev.rating.toFixed(1)}</span>
-                  </div>
-
-                  <p className="text-xs text-slate-300 leading-relaxed font-normal font-sans group-hover:text-slate-200 transition-colors">
+                  <p className="text-[11px] text-slate-350 leading-relaxed font-light font-sans group-hover:text-slate-200 transition-colors pt-2">
                     "{rev.review}"
                   </p>
                 </div>

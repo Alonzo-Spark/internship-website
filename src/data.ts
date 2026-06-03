@@ -56,11 +56,11 @@ export const projectsData: Project[] = [
           "created diabetic voicebot where the patients who are diabetic, created a json file where the STT gets converted to text in a json file, created a database called inventory_diabeticfollowup where it stores the speech to text, created a drop down like all patients tests on click that we get to see only those patients and calls goes to patients"
         ],
         weeklyReviews: [
-          { week: 1, review: "Pavithra created the core Patient Vitals logging interface. Excellent attention to user experience.", rating: 4.9 },
-          { week: 2, review: "Successfully designed and implemented the Doctor List view. Showed strong command over responsive tables.", rating: 4.8 },
-          { week: 3, review: "Reorganized the Admin Dashboard layout to match clients feedback beautifully.", rating: 4.9 },
-          { week: 4, review: "Conducted exhaustive comparison of OCR models, analyzing Tesseract vs Paddle OCR performance.", rating: 5.0 },
-          { week: 5, review: "Outstanding cohort completion! The SWASTH user interface is highly interactive and polished.", rating: 5.0 }
+          { week: 1, review: "Understood the project structure well and contributed effectively to frontend development and documentation activities. Collaborated efficiently with the team and researched OCR models and frontend usability enhancements." },
+          { week: 2, review: "Improved project contribution and ownership compared to Week 1, delivering UI and reporting enhancements on schedule. Contributed to dashboard improvements and actively researched OCR tools and analytics features." },
+          { week: 3, review: "Contributed to OCR latency optimization and frontend analytics visualization improvements. Supported OCR testing, UI integration, documentation, and reporting enhancements effectively." },
+          { week: 4, review: " Supported Voice Bot workflow implementation, user interface improvements, and final testing activities. Contributed to reporting, documentation, and usability refinements during project completion." },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "Prompt Engineering",
@@ -133,11 +133,11 @@ export const projectsData: Project[] = [
           "Implemented Overall Functional Testing and Data Testing of all the features in the Application and worked on voice bot for Diabetic Patients"
         ],
         weeklyReviews: [
-          { week: 1, review: "Sathvika immediately established UI system foundations and designed the patient registration interfaces.", rating: 4.7 },
-          { week: 2, review: "Successfully implemented doctor and camp details tables. Outstanding database management skills.", rating: 4.9 },
-          { week: 3, review: "Delivered clean text-extraction logic using advanced scanning models. Showed great analytical skills.", rating: 4.8 },
-          { week: 4, review: "Integrated Exotel and Sarvam AI voice reminders. Excellent effort in building automated patient follow-ups.", rating: 4.9 },
-          { week: 5, review: "Fabulous project completion! Sathvika worked tirelessly on testing application features and setting up deployment pipeline.", rating: 5.0 }
+          { week: 1, review: "adapted quickly and delivered frontend modules consistently. Contributed to frontend enhancements, bug fixes, and researched OCR and authentication-related technologies." },
+          { week: 2, review: "Showed noticeable improvement in technical understanding and execution, particularly in frontend visualization tasks. Contributed to registration workflow improvements, bug fixing, and research on OCR and Voice Bot technologies." },
+          { week: 3, review: "Identified and analyzed OCR latency issues while contributing to frontend enhancements and testing activities. Explored Voice Bot and authentication concepts and actively participated in implementation discussions." },
+          { week: 4, review: "Assisted in Voice Bot integration, frontend workflow enhancements, and system validation. Maintained consistent contribution through testing, research, and implementation support." },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "Full stack web development using Frontend React, Vite and Backend Django and Database SQL lite",
@@ -171,7 +171,7 @@ export const projectsData: Project[] = [
         id: "Neeraj",
         name: "Neeraj Gangavarapu",
         role: "Backend Developer , OCR Integration , VoiceBot",
-        avatar: "/Neeraj.jpg",
+        avatar: "",
         github: "https://github.com/NEERAJGANGAVARAPU",
         linkedin: "https://www.linkedin.com/in/neeraj-gangavarapu-b59379274/",
         resumePdf: "/Neeraj Resume.pdf",
@@ -205,11 +205,11 @@ export const projectsData: Project[] = [
           "created an test issued patients follow up voicebot which it asks the questions for the particular patients for whom the tests are issued and stores the responses from the user"
         ],
         weeklyReviews: [
-          { week: 1, review: "Neeraj successfully established the initial database schema and mapped crucial camp-wise stock entry and patient registration modules.", rating: 4.8 },
-          { week: 2, review: "Delivered robust role-based access control and integrated advanced scanning models like GLM OCR for automated text extraction.", rating: 4.9 },
-          { week: 3, review: "Created high-quality reporting analytics for camp summaries and successfully implemented the patient vitals edit workflows.", rating: 4.8 },
-          { week: 4, review: "Implemented Exotel outbound call campaigns, custom Sarvam AI Text-to-Speech reminders, and optimized speech pronunciation.", rating: 4.9 },
-          { week: 5, review: "Superb effort! Integrated dynamic responses from interactive telephonic voice bots, storing follow-up data directly into the database.", rating: 5.0 }
+          { week: 1, review: " Quickly adapted to the project requirements and technology stack, successfully completing backend integration and database connectivity tasks. Demonstrated strong ownership and collaboration by supporting frontend integration and exploring backend workflow improvements." },
+          { week: 2, review: "Demonstrated significant improvement in technical execution and ownership while successfully delivering backend workflows and integrations. Played a key role in inventory and reporting modules while contributing automation and scalability enhancements." },
+          { week: 3, review: " Successfully implemented OCR model integration and backend enhancements with strong analytical and problem-solving capabilities. Took ownership of system integration, workflow mapping, and automation improvements across the application." },
+          { week: 4, review: "Contributed significantly to Voice Bot integration for reminder calls and test verification workflows. Assisted in backend communication workflows, integration testing, and final system optimization." },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "Full Stack Web Development using React frontend, Django backend, and SQLite database",
@@ -311,11 +311,11 @@ export const projectsData: Project[] = [
           "Designed and implemented community discussion modules"
         ],
         weeklyReviews: [
-          { week: 1, review: "Shivani successfully established the Next.js frontend architecture, designing high-fidelity wireframes and layouts.", rating: 4.8 },
-          { week: 2, review: "Built reusable UI components, dashboard interfaces, and integrated the frontend with backend APIs.", rating: 4.9 },
-          { week: 3, review: "Developed the real-time streaming chat UI and integrated custom Sanskrit shloka display components.", rating: 4.9 },
-          { week: 4, review: "Implemented transliteration features, polished the Sacred Glassmorphism branding, and optimized rendering performance.", rating: 4.9 },
-          { week: 5, review: "Outstanding cohort completion! Created secure authentication routes, profile management, and community discussion modules.", rating: 5.0 }
+          { week: 1, review: "Shivani successfully established the Next.js frontend architecture, designing high-fidelity wireframes and layouts." },
+          { week: 2, review: "Built reusable UI components, dashboard interfaces, and integrated the frontend with backend APIs." },
+          { week: 3, review: "Developed the real-time streaming chat UI and integrated custom Sanskrit shloka display components." },
+          { week: 4, review: "Implemented transliteration features, polished the Sacred Glassmorphism branding, and optimized rendering performance." },
+          { week: 5, review: "Outstanding cohort completion! Created secure authentication routes, profile management, and community discussion modules." }
         ],
         skillsLearntInInternship: [
           "React", "Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "PostgreSQL", "TensorFlow", "OpenCV"
@@ -381,11 +381,11 @@ export const projectsData: Project[] = [
           "Developed community interaction features"
         ],
         weeklyReviews: [
-          { week: 1, review: "Keerthana successfully analyzed the AI feature requirements and designed the core module architecture.", rating: 4.8 },
-          { week: 2, review: "Engineered initial prompt templates, developed AI testing scenarios, and structured the Sanskrit datasets.", rating: 4.9 },
-          { week: 3, review: "Implemented embeddings generation and optimized LLM output response quality and validation checks.", rating: 4.8 },
-          { week: 4, review: "Developed Sanskrit-aware AI features, transliteration enhancements, and successfully tested AI workflow integrations.", rating: 4.9 },
-          { week: 5, review: "Outstanding cohort completion! Designed and implemented the Role-Based Access Control (RBAC) authorization logic and community features.", rating: 5.0 }
+          { week: 1, review: "Keerthana successfully analyzed the AI feature requirements and designed the core module architecture." },
+          { week: 2, review: "Engineered initial prompt templates, developed AI testing scenarios, and structured the Sanskrit datasets." },
+          { week: 3, review: "Implemented embeddings generation and optimized LLM output response quality and validation checks." },
+          { week: 4, review: "Developed Sanskrit-aware AI features, transliteration enhancements, and successfully tested AI workflow integrations." },
+          { week: 5, review: "Outstanding cohort completion! Designed and implemented the Role-Based Access Control (RBAC) authorization logic and community features." }
         ],
         skillsLearntInInternship: [
           "Python", "FastAPI", "React", "Next.js", "Supabase", "PostgreSQL", "Groq API", "RBAC", "Prompt"
@@ -451,11 +451,11 @@ export const projectsData: Project[] = [
           "Built backend services for community modules"
         ],
         weeklyReviews: [
-          { week: 1, review: "Umesh established the FastAPI repository structure, defining database entity relationships and Supabase configurations.", rating: 4.8 },
-          { week: 2, review: "Implemented CRUD operations, configured pgvector search databases, and built the core semantic retrieval pipelines.", rating: 4.9 },
-          { week: 3, review: "Successfully integrated LLM endpoints, conducted rigorous backend integration tests, and optimized search query performance.", rating: 5.0 },
-          { week: 4, review: "Built Sanskrit content rendering APIs, transliteration helpers, and implemented Upstash/Redis caching schemas.", rating: 4.8 },
-          { week: 5, review: "Superb completion! Delivered secure authentication services, permission management APIs, and backend routes for community discussion boards.", rating: 5.0 }
+          { week: 1, review: "Quickly understood the RAG requirements and built the base pipeline properly with strong backend integration support. Demonstrated good ownership in backend tasks while independently exploring privacy-first approaches and integrations." },
+          { week: 2, review: "Contributed strongly to backend architecture, caching, authentication, and retrieval optimization with stable implementations. Took solid ownership of the backend system while proactively improving performance and prompt engineering quality." },
+          { week: 3, review: "Delivered excellent contributions in AI optimization, caching, deployment improvements, and backend scalability. Played an important role in improving platform speed, response quality, and overall production readiness." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "FastAPI", "Docker", "PostgreSQL", "pgvector", "ChromaDB", "Redis", "Pytest", "DevOps"
@@ -554,11 +554,11 @@ export const projectsData: Project[] = [
           "Redesigned professional dashboard workflows based on client requirements."
         ],
         weeklyReviews: [
-          { week: 1, review: "Arjun analyzed fleet routing graph models. Excellent initial technical insights.", rating: 4.9 },
-          { week: 2, review: "Successfully prototyped the graph routing engine in Rust. Execution speed is incredible.", rating: 5.0 },
-          { week: 3, review: "Integrated Leaflet GL map coordinates. Real-time updates operate flawlessly.", rating: 4.8 },
-          { week: 4, review: "Connected redis pub-sub layers for live location telemetry broadcasts.", rating: 4.9 },
-          { week: 5, review: "Exceptional Rust developer! Reduced path computation times from minutes to milliseconds. Outstanding work.", rating: 5.0 }
+          { week: 1, review: "Abhinav successfully researched and implemented Playwright-based automation for the Income Tax portal. He demonstrated strong problem-solving skills and took ownership of the automation architecture." },
+          { week: 2, review: "Abhinav enhanced the automation framework by improving PDF downloads, proceeding extraction, and database integration. His work improved the reliability and efficiency of the automation process." },
+          { week: 3, review: "Abhinav implemented scalable automation solutions with concurrent processing and automation tracking. His contributions significantly improved the system's scalability and performance." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         resume: {
           education: [
@@ -617,11 +617,11 @@ export const projectsData: Project[] = [
           "Designed client assignment database models and registration services."
         ],
         weeklyReviews: [
-          { week: 1, review: "Kriti established our Mapbox mapping guidelines cleanly.", rating: 4.7 },
-          { week: 2, review: "Delivered stunning route visualization filters. High attention to aesthetic detailing.", rating: 4.8 },
-          { week: 3, review: "Integrated custom SVG vehicle tags and delays animations flawlessly.", rating: 4.9 },
-          { week: 4, review: "Polished dashboard panel responsiveness on tablet dimensions.", rating: 4.9 },
-          { week: 5, review: "Brilliant execution! The map dispatcher UI feels extremely premium and fast.", rating: 5.0 }
+          { week: 1, review: "Puja contributed effectively to the backend authentication module by implementing user registration, email verification, and JWT-based login functionality. She showed good collaboration and quickly adapted to FastAPI development." },
+          { week: 2, review: "Puja resolved multiple backend challenges related to database relationships and API integration. She contributed significantly to dashboard, notice, and proceeding management APIs." },
+          { week: 3, review: "Puja successfully restructured the backend architecture by implementing role-based workflows and assignment management. She showed strong ownership and technical maturity in handling complex backend requirements." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         resume: {
           education: [
@@ -680,11 +680,11 @@ export const projectsData: Project[] = [
           "Integrated search and filtering functionality across Admin, Staff, and Professional dashboards."
         ],
         weeklyReviews: [
-          { week: 1, review: "Rohan designed the Redis server streams base on schedule.", rating: 4.8 },
-          { week: 2, review: "Delivered high-throughput coordinate ingestion APIs safely.", rating: 4.7 },
-          { week: 3, review: "Successfully linked ML routing models with frontend sockets triggers.", rating: 4.9 },
-          { week: 4, review: "Integrated Docker stack environments with clear compose setups.", rating: 4.8 },
-          { week: 5, review: "Stellar final pass! The telemetry ingestion system maintains microsecond limits.", rating: 5.0 }
+          { week: 1, review: "Tanusree established the frontend foundation by developing authentication screens and dashboard layouts. She showed good learning ability and worked closely with the backend team for integration." },
+          { week: 2, review: "Tanusree developed major dashboard and client management modules while ensuring responsive UI implementation. She effectively coordinated with backend and automation teams." },
+          { week: 3, review: "Tanusree improved dashboard usability through enhanced filtering, navigation, and dynamic data rendering features. Her focus on user experience strengthened the overall application quality" },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         resume: {
           education: [
@@ -773,11 +773,11 @@ export const projectsData: Project[] = [
           "Reviewed overall EduSim progress and planned the next phase of sandbox runtime development."
         ],
         weeklyReviews: [
-          { week: 1, review: "Neha drafted the urban sensor schema. Highly robust statistical approach.", rating: 4.8 },
-          { week: 2, review: "Delivered queue forecasting models hitting 93% accuracy limits.", rating: 4.9 },
-          { week: 3, review: "Optimized inference timings by converting models to tiny TF-Lite templates.", rating: 4.8 },
-          { week: 4, review: "Successfully integrated timeseries DB queries with Divya's frontend templates.", rating: 4.9 },
-          { week: 5, review: "Fabulous engineering contribution! Outstanding edge AI optimizer.", rating: 5.0 }
+          { week: 1, review: "Showed a solid understanding of backend requirements from the outset and contributed meaningfully to core system development. Approached problem-solving in a structured and efficient manner." },
+          { week: 2, review: "Handled backend responsibilities with confidence and consistently took ownership of key development tasks. Focused on improving system scalability and maintainability through thoughtful implementation." },
+          { week: 3, review: "Established himself as a reliable contributor by effectively managing critical backend tasks and supporting the team during key development activities. Maintained a consistent level of performance throughout the project." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "Matter-js", "pixiJs", "PostgreSQL"
@@ -842,11 +842,11 @@ export const projectsData: Project[] = [
           "Integrated database persistence for users, sessions, tutor history, settings, activity tracking, debugging, testing, and overall project stabilization.",
         ],
         weeklyReviews: [
-          { week: 1, review: "Divya mapped initial system wireframes. Matches Figma tokens completely.", rating: 4.7 },
-          { week: 2, review: "Delivered dynamic charts with beautiful responsive columns.", rating: 4.8 },
-          { week: 3, review: "Successfully integrated Zustand hooks updating active layouts cleanly.", rating: 4.9 },
-          { week: 4, review: "Optimized mobile view metrics sheets, hitting zero alignment problems.", rating: 4.9 },
-          { week: 5, review: "Spectacular dashboard completed! Visually beautiful, smooth, and highly responsive.", rating: 5.0 }
+          { week: 1, review: "Adapted well to the frontend development requirements and consistently delivered assigned tasks. Displayed a positive attitude toward feedback and continuously worked on improving implementation quality." },
+          { week: 2, review: "Continued to enhance her frontend development skills while maintaining a strong focus on usability and functionality. Proactively addressed issues and contributed to overall interface improvements." },
+          { week: 3, review: "Displayed a high level of commitment and professionalism in delivering frontend features and enhancements. Contributed significantly to improving overall usability and the end-user experience." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "React.js", "TypeScript", "Vite", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "FAST API Integration", "Responsive UI Design", "User Experience Design (UX)"
@@ -911,11 +911,11 @@ export const projectsData: Project[] = [
           "Reviewed overall EduSim progress and planned upcoming RAG, simulation, and benchmarking improvements."
         ],
         weeklyReviews: [
-          { week: 1, review: "Aditya designed the dual-database connection layers.", rating: 4.8 },
-          { week: 2, review: "Delivered FastAPI endpoints ahead of schedule with robust verification.", rating: 4.8 },
-          { week: 3, review: "Configured InfluxDB aggregation views, accelerating query routines.", rating: 4.9 },
-          { week: 4, review: "Completed comprehensive unit test templates with excellent coverage.", rating: 4.7 },
-          { week: 5, review: "Superb backend architecture execution! High reliability and excellent documentation.", rating: 5.0 }
+          { week: 1, review: "Demonstrated a strong learning attitude and adapted quickly to the project's AI requirements. Actively explored multiple approaches and contributed effectively to addressing technical challenges." },
+          { week: 2, review: "Demonstrated significant progress in understanding AI workflows and worked with increasing independence. Contributed to improving the quality, accuracy, and effectiveness of the overall solution." },
+          { week: 3, review: "Demonstrated strong ownership and accountability in assigned responsibilities. Consistently delivered quality work and contributed to continuous improvement efforts across the project" },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         skillsLearntInInternship: [
           "Python", "JavaScript", "RAG", "LLM Evaluation", "PixiJS", "Matter.js", "SVG Rendering", "FAST API", "React"
@@ -1017,11 +1017,11 @@ export const projectsData: Project[] = [
           "Reviewed final analysis and prepared LinUCB results for client presentation."
         ],
         weeklyReviews: [
-          { week: 1, review: "Sneha formulated the target Agri-model schemas beautifully.", rating: 4.8 },
-          { week: 2, review: "Tuned XGBoost learning pipelines, reaching excellent accuracy levels.", rating: 4.9 },
-          { week: 3, review: "Connected historical soil datasets with local persistence layers.", rating: 4.8 },
-          { week: 4, review: "Collaborated with Tanvi to map crop metrics dynamically.", rating: 4.9 },
-          { week: 5, review: "Sensational work! Created a peerless predictive climate model.", rating: 5.0 }
+          { week: 1, review: "1. Initially required time to understand the complete project workflow, but gradually developed a clear understanding of the routing and benchmarking process. 2. Contributed effectively to dataset preparation, query categorization and benchmarking activities while maintaining good communication and ownership" },
+          { week: 2, review: "1. Able to understand embedding based routing workflow quickly and contributed well in vector similarity and semantic search implementation. 2. Worked actively on embedding generation, query matching and routing related implementation with good ownership." },
+          { week: 3, review: "1. Able to understand Thompson Sampling workflow, embedding pipeline and persistent memory management concepts clearly. 2. Contributed well in routing workflow implementation, state management and workflow documentation with active communication." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         resume: {
           education: [
@@ -1085,11 +1085,11 @@ export const projectsData: Project[] = [
           "Generated correlation heatmap and output analysis charts for the final report."
         ],
         weeklyReviews: [
-          { week: 1, review: "Tanvi created the primary page layout wireframe on schedule.", rating: 4.7 },
-          { week: 2, review: "Configured Leaflet GIS coordinates layer flawlessly.", rating: 4.8 },
-          { week: 3, review: "Successfully optimized metric loading indicators.", rating: 4.9 },
-          { week: 4, review: "Polished dashboard aesthetics across multiple devices.", rating: 4.9 },
-          { week: 5, review: "Fabulous project completion! The predictive UI is incredibly fast and stunning.", rating: 5.0 }
+          { week: 1, review: "1. Took time to understand the research workflow and benchmarking concepts, but gradually adapted to model analysis and comparison activities. 2. Showed consistent interest in exploring LLM statistics, benchmarking methodologies and research-oriented approaches." },
+          { week: 2, review: "1. Able to explore related methodologies and research papers for adaptive routing and benchmark validation workflows. 2. Worked well on routing strategy analysis, adaptive switching logic and performance aware model selection approaches." },
+          { week: 3, review: "1. Able to understand dashboard requirements and worked well on routing visualization and dispatcher testing workflows. 2. Contributed actively in dashboard integration, routing analytics and end-to-end workflow testing with good collaboration." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         resume: {
           education: [
@@ -1153,11 +1153,11 @@ export const projectsData: Project[] = [
           "Reviewed final analysis and prepared Thompson Sampling results for client presentation."
         ],
         weeklyReviews: [
-          { week: 1, review: "Priya set up our baseline cloud databases cleanly.", rating: 4.8 },
-          { week: 2, review: "Delivered predictive API handlers on schedule.", rating: 4.7 },
-          { week: 3, review: "Configured ScyllaDB indexing, dropping query timings by 60%.", rating: 4.9 },
-          { week: 4, review: "Hardened API security structures and refined data schemas.", rating: 4.8 },
-          { week: 5, review: "Exceptional cloud engineering! Built a bulletproof infrastructure layer.", rating: 5.0 }
+          { week: 1, review: "1. Initially faced challenges in understanding the project structure, but later gained a clear understanding of model benchmarking and comparison workflows. 2. Contributed effectively to multi-model experimentation, response organization and benchmarking setup with active collaboration." },
+          { week: 2, review: "1. Quickly understood research papers and routing concepts, able to implement embedding workflows and router switching logic effectively. 2. Contributed actively in semantic search, FAISS indexing and FastAPI integration with good execution and communication." },
+          { week: 3, review: "1. Able to design and implement the complete adaptive routing workflow using Thompson Sampling and Bayesian learning logic effectively. 2. Took strong ownership in complete routing pipeline implementation and coordinated well during integration discussions." },
+          { week: 4, review: "" },
+          { week: 5, review: "" }
         ],
         resume: {
           education: [

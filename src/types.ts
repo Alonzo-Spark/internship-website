@@ -1,7 +1,7 @@
 export interface WeeklyReview {
   week: number;
   review: string;
-  rating: number;
+  rating?: number;
 }
 
 export interface Contributor {
