@@ -22,6 +22,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
   const [selectedDay, setSelectedDay] = useState<number>(30);
   const [selectedWeekFilter, setSelectedWeekFilter] = useState<string>("all");
   const [showResume, setShowResume] = useState<boolean>(false);
+  const [selectedReview, setSelectedReview] = useState<{week: number, review: string} | null>(null);
 
   const rawGithub = contributor.github !== undefined ? contributor.github : contributor.name.toLowerCase().replace(/\s/g, "");
   const githubUrl = rawGithub ? (rawGithub.startsWith("http") ? rawGithub : `https://github.com/${rawGithub.replace(/^(https?:\/\/)?(www\.)?github\.com\//, "")}`) : "";
@@ -299,7 +300,12 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             </div>
           </div>
 
-          {/* 5-Week Weekly Mentor Review Timeline */}
+        </div>
+      </div>
+
+      {/* FULL-WIDTH BOTTOM SECTION */}
+      <div className="mt-8 lg:mt-12 space-y-8 w-full">
+        {/* 5-Week Weekly Mentor Review Timeline */}
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-orange-500/15 p-6 md:p-8 space-y-6 shadow-xl">
             <div className="flex flex-col sm:flex-row sm:items-center justify-start gap-3 border-b border-slate-800/80 pb-4">
               <div className="space-y-1">
@@ -313,19 +319,25 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-5">
               {contributor.weeklyReviews.map((rev) => (
                 <div
                   key={rev.week}
-                  className="p-4 bg-slate-950/60 border border-slate-900 hover:border-orange-500/30 rounded-xl space-y-3 transition-all duration-300 relative group overflow-hidden"
+                  onClick={() => setSelectedReview(rev)}
+                  className="p-5 min-h-[220px] flex flex-col bg-slate-950/80 border border-slate-800 hover:border-orange-500/40 rounded-xl space-y-4 transition-all duration-300 relative group overflow-hidden shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 cursor-pointer"
                 >
-                  <div className="absolute top-0 right-0 p-1 px-2 bg-orange-500/10 text-orange-400 font-mono text-[11px] font-bold rounded-bl-lg">
+                  <div className="absolute top-0 right-0 p-1.5 px-3 bg-orange-500/15 text-orange-400 font-mono text-xs font-bold rounded-bl-xl transition-colors group-hover:bg-orange-500/25">
                     W-{rev.week}
                   </div>
 
-                  <p className="text-[11px] text-slate-350 leading-relaxed font-light font-sans group-hover:text-slate-200 transition-colors pt-2">
+                  <p className="text-xs text-slate-300 leading-relaxed font-sans group-hover:text-slate-100 transition-colors pt-5 flex-1 text-justify line-clamp-6">
                     "{rev.review}"
                   </p>
+
+                  <div className="mt-auto pt-2 flex items-center gap-1.5 text-[10px] font-mono text-orange-500/0 group-hover:text-orange-400 transition-colors uppercase tracking-widest font-bold">
+                    <span>Read Full Review</span>
+                    <ArrowLeft size={10} className="rotate-180" />
+                  </div>
                 </div>
               ))}
             </div>
@@ -500,9 +512,79 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             </AnimatePresence>
           </div>
 
-        </div>
-
       </div>
+      
+      {/* MENTOR REVIEW MODAL */}
+      <AnimatePresence>
+        {selectedReview && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+          >
+            {/* Backdrop */}
+            <div 
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm cursor-pointer"
+              onClick={() => setSelectedReview(null)}
+            />
+            
+            {/* Modal Content */}
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden z-10"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between p-5 sm:p-6 border-b border-slate-800 bg-slate-900/50">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-orange-500/10 rounded-lg">
+                    <UserCheck size={20} className="text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-slate-100 uppercase tracking-wider font-mono">
+                      Mentor Evaluation Log
+                    </h3>
+                    <p className="text-xs text-slate-400 font-sans mt-0.5">
+                      Week {selectedReview.week} • {mentor.name}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedReview(null)}
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              
+              {/* Body */}
+              <div className="p-6 sm:p-8 bg-slate-950/50">
+                <div className="relative">
+                  <span className="absolute -top-4 -left-4 text-6xl text-slate-800 font-serif opacity-50 select-none">"</span>
+                  <p className="relative z-10 text-sm sm:text-base text-slate-300 leading-relaxed font-sans text-justify">
+                    {selectedReview.review}
+                  </p>
+                  <span className="absolute -bottom-6 -right-2 text-6xl text-slate-800 font-serif opacity-50 select-none">"</span>
+                </div>
+              </div>
+              
+              {/* Footer */}
+              <div className="p-4 sm:p-5 border-t border-slate-800 bg-slate-900/80 flex justify-end">
+                <button
+                  onClick={() => setSelectedReview(null)}
+                  className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
+                >
+                  Close Log
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </motion.div>
   );
 };
