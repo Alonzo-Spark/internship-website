@@ -59,8 +59,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Understood the project structure well and contributed effectively to frontend development and documentation activities. Collaborated efficiently with the team and researched OCR models and frontend usability enhancements." },
           { week: 2, review: "Improved project contribution and ownership compared to Week 1, delivering UI and reporting enhancements on schedule. Contributed to dashboard improvements and actively researched OCR tools and analytics features." },
           { week: 3, review: "Contributed to OCR latency optimization and frontend analytics visualization improvements. Supported OCR testing, UI integration, documentation, and reporting enhancements effectively." },
-          { week: 4, review: " Supported Voice Bot workflow implementation, user interface improvements, and final testing activities. Contributed to reporting, documentation, and usability refinements during project completion." },
-          { week: 5, review: "" }
+          { week: 4, review: "Supported Voice Bot workflow implementation, user interface improvements, and final testing activities. Contributed to reporting, documentation, and usability refinements during project completion." },
+          { week: 5, review: "Pavithra contributed to voice bot integration using a FastAPI approach with Exotel and Sarvam AI, led application testing efforts to ensure stability, and developed deployment strategies while maintaining comprehensive project documentation." }
         ],
         skillsLearntInInternship: [
           "Prompt Engineering",
@@ -137,7 +137,7 @@ export const projectsData: Project[] = [
           { week: 2, review: "Showed noticeable improvement in technical understanding and execution, particularly in frontend visualization tasks. Contributed to registration workflow improvements, bug fixing, and research on OCR and Voice Bot technologies." },
           { week: 3, review: "Identified and analyzed OCR latency issues while contributing to frontend enhancements and testing activities. Explored Voice Bot and authentication concepts and actively participated in implementation discussions." },
           { week: 4, review: "Assisted in Voice Bot integration, frontend workflow enhancements, and system validation. Maintained consistent contribution through testing, research, and implementation support." },
-          { week: 5, review: "" }
+          { week: 5, review: "Sathvika implemented both manual and automated testing frameworks, utilizing Playwright, ReportLab, and Docker integration for robust automated reporting and containerization. Additionally, she provided key contributions to deployment strategies and final documentation." }
         ],
         skillsLearntInInternship: [
           "Full stack web development using Frontend React, Vite and Backend Django and Database SQL lite",
@@ -171,7 +171,7 @@ export const projectsData: Project[] = [
         id: "Neeraj",
         name: "Neeraj Gangavarapu",
         role: "Backend Developer , OCR Integration , VoiceBot",
-        avatar: "",
+        avatar: "/Neeraj.jpeg",
         github: "https://github.com/NEERAJGANGAVARAPU",
         linkedin: "https://www.linkedin.com/in/neeraj-gangavarapu-b59379274/",
         resumePdf: "/Neeraj_Resume.pdf",
@@ -209,7 +209,7 @@ export const projectsData: Project[] = [
           { week: 2, review: "Demonstrated significant improvement in technical execution and ownership while successfully delivering backend workflows and integrations. Played a key role in inventory and reporting modules while contributing automation and scalability enhancements." },
           { week: 3, review: " Successfully implemented OCR model integration and backend enhancements with strong analytical and problem-solving capabilities. Took ownership of system integration, workflow mapping, and automation improvements across the application." },
           { week: 4, review: "Contributed significantly to Voice Bot integration for reminder calls and test verification workflows. Assisted in backend communication workflows, integration testing, and final system optimization." },
-          { week: 5, review: "" }
+          { week: 5, review: "Neeraj successfully managed the working and integration of the voice bot utilizing Exotel and Sarvam AI, while also executing core backend functionality updates, maintaining the database structure, and handling critical API integrations to ensure seamless communication between services." }
         ],
         skillsLearntInInternship: [
           "Full Stack Web Development using React frontend, Django backend, and SQLite database",
@@ -277,7 +277,7 @@ export const projectsData: Project[] = [
         week: 5,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        comment: ""
+        comment: "I am highly satisfied with the final application. Its overall performance is impressive, particularly the efficiency of the voice bot in handling outbound patient calls. The quality of the speech-to-text analysis and audio system is exceptional, and it integrates seamlessly with the medical camp application."
       }
     ]
   },
@@ -301,7 +301,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/Shivani2524",
         linkedin: "https://www.linkedin.com/in/shivani-sirisilla-67034929b/",
         resumePdf: "/Shivani_Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Shiwani.jpeg",
         techUsed: ["React", "Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Supabase", "PostgreSQL", "TensorFlow", "OpenCV"],
         bio: "CSE student specializing in AI/ML and full-stack development. Proven track record building production-grade RAG systems,AI-native hackathon projects, and scalable web applications across multiple internships. Experienced in computer visionpipelines for cultural preservation and intelligent developer tooling.",
         contributions: "Designed and developed the complete frontend application using Next.js and React. Created the platform's visual identity using Sacred Glassmorphism and manuscript-inspired UI design. Built reusable components, search interfaces, shloka viewing pages, and responsive layouts. Implemented Devanagari-to-IAST transliteration and script-switching functionality. Integrated frontend with backend APIs, SSE streaming, and PDF export features. Optimized application performance, accessibility, and cross-device compatibility. Led UI testing, bug fixing, and user experience enhancements.",
@@ -337,8 +337,10 @@ export const projectsData: Project[] = [
           { week: 1, review: "Shivani Contributed effectively in researching OCR, embeddings, and document extraction workflows while supporting frontend improvements. Proactively learned new technologies and contributed well during presentations and coordination tasks." },
           { week: 2, review: "Shivani Enhanced the frontend experience significantly through improved UI/UX, animations, authentication flows, and reusable components. Coordinated effectively with the team and contributed to improving the overall product presentation and visual quality." },
           { week: 3, review: "Shivani Contributed strongly to frontend stability, authentication upgrades, and UI improvements during the migration phase. Work on visual consistency and user experience enhancements significantly improved overall product quality." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          {
+            week: 4, review: "Made strong contributions to frontend visual identity, premium UI enhancements, and Sanskrit transliteration workflows. Implemented engaging mandala animations, smooth Mudra scrolling widgets, dynamic IAST transliteration generation, premium typography and gradient improvements, and refreshed visual assets with modern design elements."
+          },
+          { week: 5, review: "Worked strongly on server-side stability, frontend-backend integration, and automated testing workflows. Successfully resolved backend proxy and API routing issues causing gateway failures and implemented comprehensive Playwright End-to-End testing for authentication, chat systems, dashboards, community features, and security validations. Also improved frontend connectivity by securely integrating backend endpoints into UI pages and chat interfaces." }
         ],
         skillsLearntInInternship: [
           "frontend development", "UI/UX designing", "animation and visual effect", "AI model integration", "deployment"
@@ -371,7 +373,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/keerthanareddyyy",
         linkedin: "https://www.linkedin.com/in/a-keerthana-reddy-b4107835a/",
         resumePdf: "/Keerthana_Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Keerthana.jpeg",
         techUsed: ["Python", "NumPy", "Pandas", "Scikit-Learn", "SciPy"],
         bio: "Aspiring IT student with hands-on experience in frontend development, AI/LLM integration, and software development, seeking to apply technical skills and grow in a challenging tech environment.",
         contributions: "Developed and integrated AI-powered platform features. Engineered prompt workflows and optimized LLM response quality. Assisted in embedding generation, retrieval evaluation, and AI testing. Implemented role-based access control (RBAC) and authentication workflows. Developed community discussion and user interaction modules. Enhanced Sanskrit-aware AI responses and language support features. Conducted AI validation, edge-case testing, and feature optimization.",
@@ -407,8 +409,10 @@ export const projectsData: Project[] = [
           { week: 1, review: "Keerthana Worked consistently on OCR workflows, parsing tools, and automation scripts. Showed strong interest in exploring new AI tools and research areas beyond assigned responsibilities." },
           { week: 2, review: "Keerthana Handled frontend usability improvements, streaming chat integration, and dashboard-related tasks effectively. Demonstrated strong learning ability while working on state management, integrations, and Sanskrit content workflows." },
           { week: 3, review: "Keerthana Contributed effectively to AI response improvements, frontend refactoring, dashboard modernization, and prompt engineering tasks. Demonstrated strong ownership in improving usability, maintainability, and frontend consistency across the platform." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Worked effectively on core platform features, authentication systems, and administrative access controls. Successfully implemented community platform foundations, Role-Based Access Control (RBAC), Phone OTP login flows, and interactive Daily Shloka modal integrations while also resolving authentication and session-related issues." },
+          {
+            week: 5, review: "Contributed effectively to backend services, AI pipeline improvements, and frontend dashboard enhancements. Successfully developed the auto-heal recovery service, updated backend routing systems, and improved retrieval accuracy through LLM configuration and search pipeline refinements. Also handled multiple frontend improvements across admin dashboards, profile management, login flows, community feeds, reporting systems, and bookmark functionalities while integrating reusable hooks for chat state and global shortcuts."
+          }
         ],
         skillsLearntInInternship: [
           "Backend Development", "Real-Time Response Streaming", "Performance Optimization", "deployment"
@@ -441,7 +445,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/BitlaUmesh",
         linkedin: "https://www.linkedin.com/in/bitla-umesh-kumar-272b2b344/",
         resumePdf: "/Umesh Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Umesh.jpeg",
         techUsed: ["Go", "ClickHouse", "Redis", "Kafka", "PostgreSQL"],
         bio: "CSE student specializing in AI/ML and full-stack development. Proven track record building production-grade RAG systems, AI-native hackathon projects, and scalable web applications across multiple internships. Founder of SVIT’s LEGION Club.",
         contributions: "Designed the complete system architecture and backend workflow. Developed and optimized FastAPI backend services. Built the RAG pipeline, document indexing, and retrieval infrastructure. Integrated vector databases and semantic search capabilities. Implemented caching, security middleware, and performance optimizations. Managed Dockerization, deployment workflows, and production infrastructure. Established testing frameworks and backend quality assurance processes.",
@@ -477,8 +481,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Umesh quickly understood the RAG requirements and built the base pipeline properly with strong backend integration support. Demonstrated good ownership in backend tasks while independently exploring privacy-first approaches and integrations." },
           { week: 2, review: "Umesh Contributed strongly to backend architecture, caching, authentication, and retrieval optimization with stable implementations. Took solid ownership of the backend system while proactively improving performance and prompt engineering quality." },
           { week: 3, review: "Umesh Delivered excellent contributions in AI optimization, caching, deployment improvements, and backend scalability. Played an important role in improving platform speed, response quality, and overall production readiness." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Contributed strongly to backend security, database stability, and performance optimization tasks. Successfully resolved database connection scaling issues, implemented secure API proxy routes and middleware, and optimized cache latency and streaming performance. Also handled analytics integration and production deployment documentation effectively." },
+          { week: 5, review: "Contributed well to search experience improvements, branch integration tasks, and testing organization. Developed search suggestion history features, resolved React rendering warnings, and handled complex merge conflict resolutions across multiple modules including community pages and daily shloka components. Also restructured testing directories, documented execution workflows, and updated project assets and configuration management files effectively." }
         ],
         skillsLearntInInternship: [
           "Vector Database Management", "Semantic Search Implementation", "Docker Containerization", "Deployment & Server Management"
@@ -541,7 +545,7 @@ export const projectsData: Project[] = [
         week: 5,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: ""
+        comment: "Suggested UI and design improvements to enhance the overall user experience and visual appeal of the platform. We also shared feedback on improving the response generation flow, accuracy, and contextual quality of AI outputs. Additionally, we recommended incorporating selected Natyashastra reference books into the knowledge base to ensure culturally authentic and contextually accurate responses."
       }
     ]
   },
@@ -569,7 +573,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/Abhinav1619",
         linkedin: "https://www.linkedin.com/in/abhinav-medasani-18a032300/",
         resumePdf: "/ABHINAV RESUME.pdf",
-        avatar: "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Abhinav.jpeg",
         techUsed: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "Role-Based Access Control (RBAC)", "Postgre SQL", "Automation Layer", "Playwright", "Chromium Browser Automation", "Web Scraping & Data Extraction", "Playwright Selectors"],
         bio: "Motivated B.Tech Computer Science student and aspiring Software Engineer with a strong passion for building intelligent and impactful technology solutions. Skilled in Python, Java, C, and Full Stack Web Development with hands-on experience in Artificial Intelligence, Machine Learning, and real-time application development. Developed multiple innovative projects including AI-powered object detection systems, voice-based AI assistants, phishing detection tools using transformer models, and real-time satellite tracking dashboards with machine learning analytics . Seeking opportunities to collaborate on challenging projects, and grow as a future AI driven software engineer.",
         contributions: "Throughout the internship, Abhinav played a significant role in designing, developing, testing, and automating the Appellate Automation System. He contributed to the development of a complete role-based platform consisting of Admin, Staff, and Professional dashboards for managing Income Tax e-Proceedings, notices, responses, adjournments, client assignments, and workflow tracking. Abhinav actively worked on database schema design, API integration, frontend dashboard development, authentication workflows, and notice management modules. He was heavily involved in building the browser automation engine that logs into the Income Tax e-Filing portal, navigates through client proceedings, extracts notices, responses, adjournments, and downloads notice PDFs automatically. He also contributed to implementing parallel automation workflows, dynamic PDF naming conventions, client management features, notice categorization, assignment tracking, and dashboard-level reporting. Additionally, he participated in functional testing, smoke testing, data validation testing, workflow redesign discussions with clients, documentation preparation, and research activities involving WhatsApp notification integration using Exotel APIs. His contributions helped streamline compliance tracking, reduce manual effort, centralize audit operations, and improve the overall efficiency of tax notice management for Chartered Accountants and audit firms.",
@@ -606,8 +610,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Abhinav successfully researched and implemented Playwright-based automation for the Income Tax portal. He demonstrated strong problem-solving skills and took ownership of the automation architecture." },
           { week: 2, review: "Abhinav enhanced the automation framework by improving PDF downloads, proceeding extraction, and database integration. His work improved the reliability and efficiency of the automation process." },
           { week: 3, review: "Abhinav implemented scalable automation solutions with concurrent processing and automation tracking. His contributions significantly improved the system's scalability and performance." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Abhinav significantly enhanced the automation platform by implementing parallel automation execution, improving response and adjournment extraction, and optimizing client-professional assignment workflows. He also contributed to automation tracking, error handling, and scalable system architecture." },
+          { week: 5, review: "Abhinav played a crucial role in optimizing the automation platform by researching scalability improvements, designing worker-based execution models, and preparing WhatsApp notification workflows. He also enhanced the Professional Dashboard, improved client management capabilities, and contributed to infrastructure planning for production deployment." }
         ],
         skillsLearntInInternship: [
           "Role-Based Access Control (RBAC) implementation with Admin, Staff, and Professional Dashboards",
@@ -650,7 +654,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/pujareddy2",
         linkedin: "https://www.linkedin.com/in/puja-midde3/",
         resumePdf: "/Midde_Puja_Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/pooja.jpeg",
         techUsed: ["FastAPI", "Uvicorn", "SQLAlchemy", "PostgreSQL", "JWT (python-jose)"],
         bio: "Applied AI / ML Engineer and third-year Computer Science student with hands-on experience building Machine Learning, Generative AI, and LLM-powered applications using Python, FastAPI, LangChain, OpenAI API, and Gemini API. Experienced in model training, feature engineering, data preprocessing, model evaluation, prompt engineering, RAG pipelines, REST API development, and AI solution deployment. Delivered AI, ML, analytics, and full-stack projects through industry internships, hackathons, and research-driven initiatives.",
         contributions: "Puja made significant contributions to the development of the notice management and automation platform by working extensively on backend APIs, database management, workflow automation, and dashboard functionalities. She played a key role in designing and implementing Admin, Professional, and Client Dashboard features, including notice management, proceeding tracking, activity timelines, status monitoring, and workflow controls. She contributed to database schema updates, API integrations, role-based access management, notice blocking mechanisms, and automation control features. Puja was actively involved in debugging backend issues, optimizing business logic, validating data flows, and ensuring seamless integration between dashboards and the automation engine. Additionally, she supported system testing, requirement analysis, and dashboard enhancements to improve overall platform performance, usability, and maintainability.",
@@ -685,8 +689,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Puja contributed effectively to the backend authentication module by implementing user registration, email verification, and JWT-based login functionality. She showed good collaboration and quickly adapted to FastAPI development." },
           { week: 2, review: "Puja resolved multiple backend challenges related to database relationships and API integration. She contributed significantly to dashboard, notice, and proceeding management APIs." },
           { week: 3, review: "Puja successfully restructured the backend architecture by implementing role-based workflows and assignment management. She showed strong ownership and technical maturity in handling complex backend requirements." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Puja strengthened the backend by developing APIs for dashboard analytics, notice management, assignment tracking, and client workflows. She effectively implemented role-based access controls, improved system validations, and ensured smooth frontend-backend synchronization." },
+          { week: 5, review: "Puja successfully redesigned key backend workflows, including user registration, approval-based authentication, client assignments, and notice blocking mechanisms. She strengthened the system architecture through database restructuring, API improvements, activity timeline integration, and backend stability enhancements." }
         ],
         skillsLearntInInternship: [
           "Backend API Development and Integration",
@@ -723,7 +727,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/JalkamTanusree16",
         linkedin: "www.linkedin.com/in/tanusreejalkam16072005",
         resumePdf: "/Tanusree Final Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Thanushree.jpeg",
         techUsed: ["React", "Vite"],
         bio: "I'm Jalkam Tanusree, a Computer Engineering student passionate about technology, innovation, and solving real-world problems through software development and Artificial Intelligence. My interests span Web Development, Artificial Intelligence, Machine Learning, Data Science, and Software Engineering, where I enjoy transforming ideas into impactful digital solutions. Through academic projects, internships, and hackathons, I have gained hands-on experience in building responsive web applications, developing AI-driven solutions, and creating data-driven systems that enhance user experiences. I have worked on projects such as an Air Quality Visualizer & Forecast Application, an AI-powered Hypertension Risk Prediction System, and a Skill Advisor Application, showcasing my ability to combine technical expertise with practical problem-solving. I am driven by a vision to leverage emerging technologies to create meaningful solutions that positively impact society. As an aspiring software engineer and AI enthusiast, I am constantly exploring new technologies, expanding my knowledge, and seeking opportunities to contribute to innovative and transformative projects.",
         contributions: "Tanusree played a key role in developing and enhancing the frontend of the web application using React and Vite, focusing on delivering a clean, responsive, and professional user interface.She designed and implemented multiple UI components, ensuring seamless navigation and an intuitive user experience across the platform.She successfully integrated backend APIs into the frontend, enabling dynamic data fetching and real-time updates in the UI.Her work ensured that data was displayed accurately and efficiently, contributing to a smooth and error - free user experience.Tanusree actively identified and resolved frontend issues, debugging errors and optimizing performance to maintain application stability.She ensured the website functioned reliably across different scenarios while maintaining a visually appealing design.Additionally, she contributed to initial AI feature integrations within the frontend, exploring ways to connect intelligent functionalities into the system.She also participated in QA testing, validating features, tracking bugs, and maintaining code quality using Git and GitHub.Her contributions significantly improved the usability, reliability, and overall presentation of the web application, making it more polished and production- ready.",
@@ -758,8 +762,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Tanusree established the frontend foundation by developing authentication screens and dashboard layouts. She showed good learning ability and worked closely with the backend team for integration." },
           { week: 2, review: "Tanusree developed major dashboard and client management modules while ensuring responsive UI implementation. She effectively coordinated with backend and automation teams." },
           { week: 3, review: "Tanusree improved dashboard usability through enhanced filtering, navigation, and dynamic data rendering features. Her focus on user experience strengthened the overall application quality" },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Tanusree delivered major dashboard enhancements including activity timelines, search and filtering improvements, notice controls, and client management features. She focused on improving usability, workflow visibility, and overall user experience across Admin, Staff, and Professional dashboards." },
+          { week: 5, review: "Tanusree delivered significant frontend enhancements by improving dashboard usability, implementing advanced search and filtering capabilities, and ensuring responsive design across all devices. She also strengthened dashboard analytics, client management workflows, and overall user experience through consistent UI improvements." }
         ],
 
         skillsLearntInInternship: [
@@ -823,13 +827,15 @@ export const projectsData: Project[] = [
         week: 4,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: ""
+        comment: "We are highly satisfied with the progress made during this phase of the project. The dashboard enhancements, activity timeline implementation, notice management improvements, and automation upgrades have significantly improved workflow visibility and operational efficiency. We appreciate the team's efforts in delivering scalable solutions and would like to see further enhancements in activity tracking, communication workflows, and overall automation monitoring capabilities."
+
       },
       {
         week: 5,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: ""
+        comment: "We are extremely pleased with the successful completion of all planned Week 5 deliverables. The migration of Client Management to the Admin Dashboard, enhanced automation controls, improved notice tracking workflows, and usability improvements have greatly strengthened the platform. We particularly appreciate the team's proactive approach in identifying automation scalability challenges and proposing optimized solutions that will support future production growth and performance."
+
       }
     ]
   },
@@ -845,11 +851,11 @@ export const projectsData: Project[] = [
       {
         id: "rithvik",
         name: "Papatla Rithvik",
+        avatar: "/Rithvik.jpeg",
         role: "Simulation Engineer, Database Management",
         github: "https://github.com/Rith439",
         linkedin: "https://www.linkedin.com/in/rithvik-benny",
         resumePdf: "/Rithvik_Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80",
         techUsed: ["Matter-js", "pixiJs", "PostgreSQL"],
         bio: "Computer Science undergraduate specializing in Data Science with hands-on experience in machine learning, web development, and system design. Developed real-world applications including energy consumption prediction and expense tracking systems. Strong foundation in algorithms, problem-solving, and scalable application development.",
         contributions: "Rithvik designed and implemented EduSim's simulation runtime, educational intelligence integration, database infrastructure, and frontend-backend sandbox architecture.",
@@ -923,7 +929,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/mythribanda",
         linkedin: "https://www.linkedin.com/in/mythri-banda",
         resumePdf: "/Mythri_Resume.docx.pdf",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Mythri.jpeg",
         techUsed: ["React.js", "TypeScript", "Vite", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "FAST API Integration", "Responsive UI Design", "User Experience Design (UX)"],
         bio: "Motivated and detail-oriented AI and Data Science student (2027 graduate, CGPA 7.5) with hands-on experience in software engineering, machine learning, data analysis, and full-stack development. Proficient in Python, Java, JavaScript, and SQL with demonstrated ability to design, build, test, and deploy production-ready applications end-to-end. Built PillTalk, an AI-powered healthcare application integrating NLP, computer vision, and Google Gemini LLM, deployed on cloud (Hugging Face Spaces). Experienced in REST API integration, data pipelines, Power BI dashboards, and agile development workflows. Holds Oracle Certified Data Science Professional, Oracle AI Foundations Associate, and IBM and Cisco AI Fundamentals certifications. Seeking internship and entry-level opportunities in software engineering, AI/ML, data science, or data analytics.",
         contributions: "Mythri has contributed to the end-to-end development of EduSim by integrating AI-powered personalized learning, intelligent tutoring, and interactive educational simulations to enhance student engagement and learning outcomes.",
@@ -992,7 +998,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/satishx9",
         linkedin: "https://www.linkedin.com/in/satishthadela/",
         resumePdf: "/Satish__Resume.pdf",
-        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Sathish.jpeg",
         techUsed: ["Python", "JavaScript", "RAG", "LLM Evaluation", "PixiJS", "Matter.js", "SVG Rendering", "FAST API", "React"],
         bio: "Motivated Computer Science student specializing in AI and ML with strong programming, DSA, and problem-solving skills. Experienced in building scalable web interfaces and implementing machine learning models using Python and modern frameworks. Passionate about creating efficient, user-focused solutions and continuously improving through hands-on projects and competitive coding.",
         contributions: "Satish contributed significantly to the development of the EduSim platform by working on AI-powered educational features, RAG pipeline optimization, backend development using Python/FastAPI, and interactive physics simulation integration. He also contributed to model evaluation systems, API development, and enhancing overall application performance and user experience.",
@@ -1116,7 +1122,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/GoduguShashank26",
         linkedin: "https://www.linkedin.com/in/godugu-shashank-004b7829a/",
         resumePdf: "/GODUGU_SHASHANK_RESUME.pdf",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Shashank.jpeg",
         techUsed: ["Python", "XGBoost", "ScyllaDB", "Pandas", "Scikit-Learn"],
         bio: "Computer Science graduate (B.Tech, AI & ML) with hands-on experience building ML-powered early prediction heartdisease systems and bot detection systems. Proficient in Python, Flask, and Scikit-Learn with a strong foundation inmachine learning, data analysis, and backend development. Passionate about applying AI to solve real-world problemsand ready to contribute in a full-time role",
         contributions: "Implemented a LinUCB-based routing system using exploration and exploitation strategies. Developed Bayesian memory updates and persistent state management for model learning. Built routing logic, logging mechanisms, and reward-based model updates. Evaluated routing decisions using regret analysis and exploration-exploitation metrics. Generated comparative analyses and visualizations against Thompson Sampling and Round Robin approaches.",
@@ -1190,7 +1196,7 @@ export const projectsData: Project[] = [
         github: "github.com/SaiVaishnavi236",
         linkedin: "linkedin.com/in/SaiVaishnaviKodali",
         resumePdf: "/Vaishnavi.pdf",
-        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Vaishnavi.jpeg",
         techUsed: ["React", "Tailwind CSS", "Zustand", "Leaflet GL", "TypeScript"],
         bio: "Aspiring Computer Science student with strong foundation in programming, problem-solving. Seeking opportunities to contribute to impactful software development or data-driven projects.",
         contributions: "Contributed to building a comprehensive LLM benchmarking and evaluation framework using the MS MARCO dataset by evaluating multiple models across quality, cost, latency, and reward metrics. Developed modules for validity, cost, latency, and reward calculation, supported the implementation and analysis of dynamic routing strategies, and automated large-scale model evaluations through OpenRouter API integration. Assisted in creating training, testing, and oracle benchmark datasets, performed performance and cost analysis for model selection, and developed interactive dashboards and analytical reports, including correlation heatmaps and cumulative regret analysis.",
@@ -1264,7 +1270,7 @@ export const projectsData: Project[] = [
         github: "https://github.com/Dhanvi0206",
         linkedin: "https://www.linkedin.com/in/dhanvi-annam/",
         resumePdf: "/Resume Dhanvi.pdf",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
+        avatar: "/Dhanvi.jpeg",
         techUsed: ["FastAPI", "ScyllaDB", "Docker", "AWS API", "Python"],
         bio: "Computer Science Engineering student with a strong foundation in programming and machine learning, supported by significant project experience. Skilled in applying analytical thinking to solve real-world problems, particularly in Artificial Intelligence, Natural Language Processing and optimization techniques, with a focus on developing efficient and interpretable solutions.",
         contributions: "Implemented a Thompson Sampling-based LLM routing system for adaptive model selection. Developed semantic query embedding and similarity matching using all-MiniLM-L6-v2. Integrated OpenRouter and FastAPI for efficient model routing and response collection. Evaluated model performance using quality, latency, cost, and reward metrics. Performed regret analysis, generated visualizations, and compared routing performance with baseline methods.",
