@@ -174,7 +174,7 @@ export const projectsData: Project[] = [
         avatar: "",
         github: "https://github.com/NEERAJGANGAVARAPU",
         linkedin: "https://www.linkedin.com/in/neeraj-gangavarapu-b59379274/",
-        resumePdf: "/Neeraj Resume.pdf",
+        resumePdf: "/Neeraj_Resume.pdf",
         techUsed: ["Python", "Django", "React", "SQLite", "Exotel", "Sarvam AI", "EasyOCR", "GLM OCR", "Git", "GitHub"],
         bio: "AI & ML undergraduate student seeking opportunities to apply my technical skills in software development and data-driven problem solving. Motivated to contribute to innovative projects while continuously enhancing my expertise in full-stack development and emerging technologies. Possess foundational knowledge in web development and machine learning, with hands-on experience through academic projects.",
         contributions: "Neeraj made substantial contributions to the backend architecture, database integration, OCR text-extraction pipelines, and automated telephonic systems. He designed the SQLite database schema, mapping relationships for patient vitals, camp-wise medicine inventory, doctor consultation registries, and automated follow-up responses. Neeraj successfully implemented OCR scanning mechanisms using GLM and EasyOCR to automatically capture and parse patient files. In addition, he integrated the application's core telephony notification features, developing both inbound and outbound voice reminders using Exotel and Sarvam AI TTS (Text-to-Speech), complete with interactive follow-up response loops for test-issued patients.",
@@ -277,7 +277,7 @@ export const projectsData: Project[] = [
         week: 5,
         name: "Marcus Vance",
         company: "Vance Health Partners",
-        comment: "Outstanding final delivery! The integrated voicebot and complete digital camp management system exceed our expectations for automation."
+        comment: ""
       }
     ]
   },
@@ -517,31 +517,31 @@ export const projectsData: Project[] = [
         week: 1,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "During Week 1, the team successfully implemented a Retrieval-Augmented Generation (RAG) system on the original Natya Shastra text to enable accurate knowledge retrieval from source material. The UI was redesigned with improved typography and a brighter color palette to enhance user engagement. The search experience was upgraded with chat continuation support, allowing users to ask follow-up questions naturally. The knowledge base was expanded using research papers, articles, and supplementary resources, and support for displaying original Sanskrit shlokas alongside responses was also introduced."
+        comment: "I was happy to see the team set up a system to fetch answers directly from the Natya Shastra text. The UI looked much better with the new fonts and colors, and I liked that users can now ask follow-up questions naturally. The addition of original Sanskrit shlokas in the responses was a great touch."
       },
       {
         week: 2,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "In Week 2, the team successfully demonstrated and received approval for multiple features including real-time streaming chat, authentication systems, shloka retrieval, Redis caching, PDF export, bookmarks, and chat history functionality. Plans were proposed for additional enhancements such as user profile management with image upload support and selective chat history deletion. The project scope was expanded to include Sanskrit glossary support and multilingual shloka translations for improved accessibility. A complete UI/UX redesign was also initiated featuring traditional fonts, richer color themes, and a dedicated Natya Samhita logo, alongside requirements for complaint/reporting systems, Terms & Conditions integration, and PDF export validation."
+        comment: "I reviewed and was satisfied with the features shown — chat, login, shloka retrieval, bookmarks, and PDF export all looked good. I suggested adding a Sanskrit glossary and translations to make it more accessible. I also shared my vision for a full UI redesign with traditional fonts, richer colors, and a dedicated Natya Samhita logo."
       },
       {
         week: 3,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "During Week 3, the Partner approved the continuation of the Thompson Sampling–based model routing framework for intelligent model selection. Discussions focused on improving the reward function by prioritizing response quality and cost metrics over latency. The team also planned validation checks for algorithm correctness, including Sherman-Morrison matrix updates and covariance sampling methods. Detailed analytical evaluations were conducted using visual techniques such as box plots, violin plots, scatter plots, spider charts, and correlation heatmaps. Future plans included baseline comparisons, BERTScore-based reward systems, oracle benchmarking, and non-stationarity testing to further strengthen the platform’s AI evaluation framework."
+        comment: "I was happy with how the system selects the best responses based on quality and cost. The team showed me detailed charts comparing performance, which gave me a clear picture of how the platform is doing. I look forward to seeing further improvements in accuracy and reliability."
       },
       {
         week: 4,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "Impressive progress on the Sanskrit-aware AI features and vector search integration. The semantic accuracy is outstanding."
+        comment: "I really liked how the overall look and feel of the app has come together — it looks beautiful and fits the theme well. The way the shlokas are shown is nice and I am happy with it. I would like more shlokas from the Natyashastra to be added. I have also shared what I have in mind for the logo and I hope it captures the true spirit of Natya Samhita."
       },
       {
         week: 5,
         name: "Theressa Vance",
         company: "Apex Equity Fund",
-        comment: "Spectacular final platform! The community modules, role-based access controls, and beautiful glassmorphism design are excellent."
+        comment: ""
       }
     ]
   },
@@ -823,13 +823,13 @@ export const projectsData: Project[] = [
         week: 4,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: "The parallel automation architecture for multiple professionals and clients is working efficiently in our testing."
+        comment: ""
       },
       {
         week: 5,
         name: "Robert Miller",
         company: "SwiftLogix Inc",
-        comment: "An exceptional final system! The automated proceedings collection and professional dashboard cut manual auditing effort significantly."
+        comment: ""
       }
     ]
   },
@@ -1085,22 +1085,22 @@ export const projectsData: Project[] = [
         week: 4,
         name: "Mr. Ganesh K",
         company: "Alonzo AI",
-        comment: "I encouraged the students to create structured datasets for benchmarking, incorporate comprehensive evaluation workflows, and add analytics tracking for better insights into usage and performance."
+        comment: ""
       },
       {
         week: 5,
         name: "Mr. Ganesh K",
         company: "Alonzo AI",
-        comment: "Spectacular final educational sandbox! The drag-and-drop experiment creation tools and simulated animations are extremely polished."
+        comment: ""
       }
     ]
   },
   {
-    id: "sustainable-infrastructure",
-    name: "Sustainable infrastructure",
+    id: "AdaptiveGenAIRouter",
+    name: "Adaptive GenAI Router",
     duration: "5 Weeks",
     domain: "Urban Tech & Eco Engineering",
-    description: "Sustainable Infra is an intelligent LLM routing system that automatically selects the best AI model for each user query by balancing response quality and API cost. It evaluates each model response using a quality score and normalizes API cost to compute a final reward, ensuring the most cost-efficient model is preferred when quality is equal. The router supports two intelligent strategies — Thompson Sampling and LinUCB — and compares them against a baseline using cumulative regret to measure how close each strategy gets to the best possible routing decision.",
+    description: "Adaptive GenAI Router is an intelligent LLM routing system that automatically selects the best AI model for each user query by balancing response quality and API cost. It evaluates each model response using a quality score and normalizes API cost to compute a final reward, ensuring the most cost-efficient model is preferred when quality is equal. The router supports two intelligent strategies — Thompson Sampling and LinUCB — and compares them against a baseline using cumulative regret to measure how close each strategy gets to the best possible routing decision.",
     image: "/Sustainable Infra.png",
     tech: ["Language: Python",
       "Tools: OpenRouter API, FastAPI, Streamlit, Plotly, Git, GitHub, VS Code, Jupyter Notebook",
@@ -1362,13 +1362,13 @@ export const projectsData: Project[] = [
         week: 4,
         name: "Marcus Vance",
         company: "GreenFields Corporation",
-        comment: "The LinUCB contextual bandit algorithm is balancing exploration and exploitation beautifully in active tests."
+        comment: ""
       },
       {
         week: 5,
         name: "Marcus Vance",
         company: "GreenFields Corporation",
-        comment: "Outstanding final deployment! The dynamic router minimizes latency and API costs while maintaining high-quality answers."
+        comment: ""
       }
     ]
   }
