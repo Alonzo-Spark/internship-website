@@ -21,19 +21,19 @@
 
 :root.light {
   /* Light theme: carefully reversed slate hierarchy for optimal contrast & aesthetics */
-  --slate-50: #0f172a;      /* Invert slate-50 to dark slate-900 for dark text */
-  --slate-100: #0f172a;     /* Invert slate-100 to dark slate-900 for main headers */
-  --slate-200: #1e293b;     /* Invert slate-200 to dark slate-800 */
-  --slate-250: #334155;
-  --slate-300: #334155;     /* Invert slate-300 to slate-700 for body texts */
-  --slate-350: #475569;
-  --slate-400: #475569;     /* Invert slate-400 to slate-600 for subtext and captions */
-  --slate-500: #64748b;
-  --slate-600: #cbd5e1;     /* Invert slate-600 to slate-300 for soft lines */
-  --slate-700: #e2e8f0;     /* Invert slate-700 to slate-200 */
-  --slate-800: #e2e8f0;     /* Invert slate-800 to slate-200 for card outlines */
+  --slate-50: #020617;      /* Invert slate-50 to dark slate-950 for black text */
+  --slate-100: #020617;     /* Invert slate-100 to dark slate-950 for main headers */
+  --slate-200: #0f172a;     /* Invert slate-200 to dark slate-900 */
+  --slate-250: #1e293b;
+  --slate-300: #1e293b;     /* Invert slate-300 to slate-800 for body texts */
+  --slate-350: #334155;
+  --slate-400: #334155;     /* Invert slate-400 to slate-700 for subtext and captions */
+  --slate-500: #475569;     /* Invert slate-500 to slate-600 for secondary elements */
+  --slate-600: #94a3b8;     /* Invert slate-600 to slate-400 for soft lines (was #cbd5e1) */
+  --slate-700: #cbd5e1;     /* Invert slate-700 to slate-300 (was #e2e8f0) */
+  --slate-800: #cbd5e1;     /* Invert slate-800 to slate-300 for card outlines (was #e2e8f0) */
   --slate-850: #cbd5e1;     /* Invert slate-850 to slate-300 */
-  --slate-900: #f8fafc;     /* Invert slate-900 to slate-50 for secondary containers */
+  --slate-900: #f1f5f9;     /* Invert slate-900 to slate-100 (was #f8fafc) */
   --slate-950: #ffffff;     /* Invert slate-950 to pure white for primary pages canvas */
 }
 
@@ -121,6 +121,25 @@ body {
   background-image: none !important;
   background: transparent !important;
 }
+
+/* Custom horizontal scrollbar matching Alonzo dark theme */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.2); /* Soft orange-500/20 */
+  border-radius: 4px;
+  border: 1px solid rgba(249, 115, 22, 0.1);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.4); /* Highlighted orange */
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
 
 
 

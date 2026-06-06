@@ -4,6 +4,23 @@ import { projectsData } from "../data";
 import { motion, AnimatePresence } from "motion/react";
 import { Users, Star, Bookmark, User, MessageSquareCode, ArrowDownRight, ChevronDown, ChevronUp } from "lucide-react";
 
+export const getProjectBgColor = (projectId: string) => {
+  switch (projectId) {
+    case "medical-camp-management":
+      return "#f6fbfa";
+    case "natya-samhita":
+      return "#b8a486";
+    case "chps-automation":
+      return "#fdfdfd";
+    case "edu-sim":
+      return "#f7f7f7";
+    case "sustainable-infrastructure":
+      return "#1b1b1b";
+    default:
+      return "#020617";
+  }
+};
+
 interface ProjectsProps {
   onContributorSelect: (contributor: Contributor, project: Project) => void;
   onProjectSelect: (project: Project) => void;
@@ -55,18 +72,23 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                 {/* Horizontal main project container (Desktop layout combines visual + description, mobile wraps vertically) */}
                 <div 
                   onClick={() => onProjectSelect(project)}
-                  className="grid grid-cols-1 md:grid-cols-12 gap-0 cursor-pointer hover:bg-slate-900/10 transition-colors"
+                  className="grid grid-cols-1 md:grid-cols-12 gap-0 cursor-pointer hover:bg-slate-900/10 transition-colors md:h-[420px]"
                 >
                   
                   {/* Left Side: Solid representation of image */}
-                  <div className="md:col-span-5 relative h-64 md:h-full min-h-[250px] bg-slate-950">
+                  <div 
+                    className="md:col-span-5 relative h-64 md:h-full min-h-[250px] overflow-hidden bg-slate-950"
+                    style={{ backgroundColor: getProjectBgColor(project.id) }}
+                  >
                     <img
                       src={project.image}
                       alt={project.name}
                       onClick={() => onProjectSelect(project)}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                      className="w-full h-full object-contain p-4 transition-transform duration-500 hover:scale-105 cursor-pointer"
                     />
-                    <div className="absolute inset-0 project-image-overlay" />
                     
                     {/* Domain floated badge */}
                     <div className="absolute top-4 left-4">
@@ -91,12 +113,16 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                       </div>
 
                       {/* Technical Description */}
-                      <p className="text-slate-300 text-sm leading-relaxed">
+                      <p 
+                        onClick={() => onProjectSelect(project)}
+                        className="text-slate-300 text-sm leading-relaxed line-clamp-4 cursor-pointer hover:text-slate-200 transition-colors"
+                        title="Click to view full description"
+                      >
                         {project.description}
                       </p>
 
                       {/* Technology Pill List */}
-                      <div className="flex flex-wrap gap-1.5 pt-2">
+                      <div className="flex flex-wrap gap-1.5 pt-2 max-h-[58px] overflow-hidden">
                         {project.tech.map((singleTech, idx) => (
                           <span
                             key={idx}
@@ -178,17 +204,29 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                               >
                                 <div className="flex gap-3">
                                   {/* Minimal photo frame */}
-                                  <div className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850">
-                                    <img
-                                      src={contrib.avatar}
-                                      alt={contrib.name}
-                                      className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 duration-300"
-                                    />
-                                  </div>
+                                   <div 
+                                     onClick={() => onContributorSelect(contrib, project)}
+                                     className="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850 cursor-pointer flex items-center justify-center relative group"
+                                     title="View Profile"
+                                   >
+                                     <img
+                                       src={contrib.avatar}
+                                       alt={contrib.name}
+                                       onError={(e) => {
+                                         e.currentTarget.style.display = 'none';
+                                       }}
+                                       className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 duration-300 relative z-10"
+                                     />
+                                     <User size={18} className="text-slate-500 absolute" />
+                                   </div>
 
                                   {/* Info Column */}
                                   <div className="flex-1 min-w-0">
-                                    <h5 className="font-serif text-sm font-bold text-slate-100 group-hover:text-orange-400 transition-colors truncate">
+                                    <h5 
+                                      onClick={() => onContributorSelect(contrib, project)}
+                                      className="font-serif text-sm font-bold text-slate-100 group-hover:text-orange-400 cursor-pointer hover:underline transition-colors truncate"
+                                      title="View Profile"
+                                    >
                                       {contrib.name}
                                     </h5>
                                     <p className="text-[11px] text-orange-500 font-mono uppercase tracking-wide mt-0.5">
@@ -201,9 +239,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                                 </div>
 
                                 {/* Skills Tag Row */}
-                                <div className="border-t border-slate-950 mt-4 pt-3 flex justify-between items-center text-[10px]">
-                                  <span className="text-slate-500 font-mono">Primary Skill: <strong className="text-orange-500/80 font-mono">{contrib.skills[0]}</strong></span>
-                                  
+                                <div className="border-t border-slate-950 mt-4 pt-3 flex justify-end items-center text-[10px]">
                                   <button
                                     id={`view-profile-btn-${contrib.id}`}
                                     onClick={() => onContributorSelect(contrib, project)}
@@ -220,44 +256,32 @@ export const Projects: React.FC<ProjectsProps> = ({ onContributorSelect, onProje
                       )}
 
                       {activeSection === "reviews" && (
-                        <div className="p-6 md:p-8 space-y-6" id={`expansion-reviews-${project.id}`}>
+                        <div className="p-6 md:p-8 space-y-4" id={`expansion-reviews-${project.id}`}>
+                          
+                          {/* Section Title with Subtitle */}
+                          <div className="flex flex-col gap-1 mb-2">
+                            <span className="text-[10px] text-orange-500 font-mono uppercase tracking-wider font-bold">Partner Feedback Timeline</span>
+                            <h4 className="text-sm font-bold text-slate-200">5-Week Integration Reviews</h4>
+                          </div>
 
-                          {/* Partner testimonial cards */}
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                          {/* Horizontal scrolling partner reviews timeline */}
+                          <div className="flex gap-5 overflow-x-auto pb-4 pt-1 custom-scrollbar snap-x snap-mandatory">
                             {project.reviews.map((rev, idx) => (
                               <div
                                 key={idx}
-                                className="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl space-y-3.5 shadow"
+                                className="min-w-[280px] md:min-w-[340px] max-w-[360px] bg-slate-900/60 border border-slate-800 hover:border-orange-500/30 p-5 rounded-xl space-y-3.5 shadow-md flex flex-col justify-between snap-start transition-all duration-300 relative group overflow-hidden"
                               >
-                                {/* Stars bar */}
-                                <div className="flex gap-0.5 text-amber-500">
-                                  {[...Array(rev.rating)].map((_, i) => (
-                                    <Star key={i} size={12} fill="currentColor" />
-                                  ))}
+                                {/* Week tag in the card */}
+                                <div className="absolute top-0 right-0 p-1 px-2.5 bg-orange-500/10 text-orange-400 font-mono text-[10px] font-bold rounded-bl-lg">
+                                  W-{rev.week}
                                 </div>
 
-                                {/* Commentary text */}
-                                <p className="text-slate-300 text-xs italic leading-relaxed">
-                                  "{rev.comment}"
-                                </p>
-
-                                {/* Partner Author Frame */}
-                                <div className="flex items-center gap-3 border-t border-slate-950 pt-3">
-                                  <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-slate-950 border border-slate-850">
-                                    <img
-                                      src={rev.avatar}
-                                      alt={rev.name}
-                                      className="w-full h-full object-cover"
-                                    />
-                                  </div>
-                                  <div>
-                                    <div className="text-xs font-bold text-slate-100">{rev.name}</div>
-                                    <div className="text-[10px] text-slate-450 font-mono uppercase tracking-wide mt-0.5">
-                                      {rev.company}
-                                    </div>
-                                  </div>
+                                <div className="space-y-3">
+                                  {/* Commentary text */}
+                                  <p className="text-slate-200 text-xs md:text-sm italic leading-relaxed font-sans mt-3">
+                                    "{rev.comment}"
+                                  </p>
                                 </div>
-
                               </div>
                             ))}
                           </div>

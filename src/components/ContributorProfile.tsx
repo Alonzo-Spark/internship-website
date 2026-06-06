@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Contributor, Mentor } from "../types";
 import { get30DaysTasks, TaskItem } from "../utils/dailyTasksGenerator";
-import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar } from "lucide-react";
+import { X, Award, Code2, GraduationCap, ArrowLeft, Github, Linkedin, ExternalLink, FileCheck2, UserCheck, Calendar, Mail, Phone, Download, BookOpen, User } from "lucide-react";
 
 interface ContributorProfileProps {
   contributor: Contributor;
@@ -22,8 +22,17 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
   const [selectedDay, setSelectedDay] = useState<number>(30);
   const [selectedWeekFilter, setSelectedWeekFilter] = useState<string>("all");
   const [showResume, setShowResume] = useState<boolean>(false);
+  const [selectedReview, setSelectedReview] = useState<{week: number, review: string} | null>(null);
 
-  const allTasks = get30DaysTasks(contributor.role, contributor.name);
+  const rawGithub = contributor.github !== undefined ? contributor.github : contributor.name.toLowerCase().replace(/\s/g, "");
+  const githubUrl = rawGithub ? (rawGithub.startsWith("http") ? rawGithub : `https://github.com/${rawGithub.replace(/^(https?:\/\/)?(www\.)?github\.com\//, "")}`) : "";
+  const githubDisplay = rawGithub ? `github.com/${rawGithub.replace(/^(https?:\/\/)?(www\.)?github\.com\//, "")}` : "";
+
+  const rawLinkedin = contributor.linkedin !== undefined ? contributor.linkedin : contributor.name.toLowerCase().replace(/\s/g, "");
+  const linkedinUrl = rawLinkedin ? (rawLinkedin.startsWith("http") ? rawLinkedin : `https://linkedin.com/in/${rawLinkedin.replace(/^(https?:\/\/)?(www\.)?linkedin\.com\/in\//, "")}`) : "";
+  const linkedinDisplay = rawLinkedin ? `linkedin.com/in/${rawLinkedin.replace(/^(https?:\/\/)?(www\.)?linkedin\.com\/in\//, "")}` : "";
+
+  const allTasks = get30DaysTasks(contributor.role, contributor.name, contributor.dailyTasks);
 
   // Filter tasks for grid presentation based on week selector
   const displayedTasks = allTasks.filter((task) => {
@@ -57,18 +66,22 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
       {/* 2-Column Main Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start" id="contributor-main-grid">
-        
+
         {/* LEFT SIDE: Portrait, Contact Links, Experience, Achievements & Education */}
         <div className="lg:col-span-4 space-y-6">
-          
+
           {/* Portrait Card */}
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-slate-800 overflow-hidden shadow-xl" id="portrait-card">
-            <div className="aspect-square w-full relative bg-slate-950">
+            <div className="aspect-square w-full relative bg-slate-950 flex items-center justify-center">
               <img
                 src={contributor.avatar}
                 alt={contributor.name}
-                className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+                className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-500 relative z-10"
               />
+              <User size={64} className="text-slate-500 absolute" />
             </div>
 
             {/* Stat Lines in Portrait */}
@@ -80,12 +93,12 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                 </span>
                 <span className="font-mono text-slate-350 text-right">{projectDuration}</span>
               </div>
-              <div className="flex items-center justify-between py-2 text-sm">
-                <span className="text-slate-400 flex items-center gap-2">
+              <div className="flex items-start justify-between py-2 text-sm gap-4">
+                <span className="text-slate-400 flex items-center gap-2 flex-shrink-0">
                   <Code2 size={15} className="text-orange-500" />
-                  Project Assignment
+                  Project Assigned
                 </span>
-                <span className="font-sans font-medium text-slate-200 text-right truncate max-w-[150px]">{projectName}</span>
+                <span className="font-sans font-medium text-slate-200 text-right leading-snug break-words flex-1">{projectName}</span>
               </div>
             </div>
           </div>
@@ -96,21 +109,18 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
               <GraduationCap size={15} />
               College & Education
             </h3>
-            
+
             {/* Primary College highlight */}
             <div className="space-y-1.5 p-3 bg-slate-950/60 border border-slate-900 rounded-xl">
-              <div className="text-[10px] text-slate-500 font-mono uppercase font-bold">Academic Institution</div>
-              <div className="text-xs font-bold text-slate-100 leading-relaxed">{contributor.resume.education[0].school}</div>
+              <div className="text-[11px] text-slate-500 font-mono uppercase font-bold">Academic Institution</div>
+              <div className="text-sm font-bold text-slate-100 leading-relaxed">{contributor.resume.education[0].school}</div>
               <div className="text-[10px] text-orange-500 font-mono mt-1 font-semibold">{contributor.resume.education[0].degree}</div>
             </div>
 
             {contributor.resume.education.map((edu, idx) => (
-              <div key={idx} className="space-y-1.5 pt-2 border-t border-slate-800/50">
-                <div className="text-xs font-semibold text-slate-300 leading-snug">{edu.degree}</div>
-                <div className="text-[11px] text-slate-400">{edu.school}</div>
-                <div className="flex justify-between items-center text-[10px] text-slate-500 font-mono pt-0.5">
-                  <span>{edu.year}</span>
-                </div>
+              <div key={idx} className="flex justify-between items-center pt-3 border-t border-slate-800/50 text-xs font-mono">
+                <span className="text-slate-400">Academic Timeline</span>
+                <span className="text-orange-400 font-semibold">{edu.year}</span>
               </div>
             ))}
           </div>
@@ -119,24 +129,46 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
           <div className="bg-slate-900/40 backdrop-blur-md rounded-xl border border-slate-800/80 p-5 space-y-3.5 shadow-md">
             <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">Professional Directory</h3>
             <div className="space-y-2.5 text-xs">
-              <a 
-                href={`https://github.com/${contributor.name.toLowerCase().replace(/\s/g, "")}`}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
-              >
-                <Github size={14} className="text-slate-500" />
-                <span>github.com/{contributor.name.toLowerCase().replace(/\s/g, "")}</span>
-              </a>
-              <a 
-                href={`https://linkedin.com/in/${contributor.name.toLowerCase().replace(/\s/g, "")}`}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
-              >
-                <Linkedin size={14} className="text-slate-500" />
-                <span>linkedin.com/in/{contributor.name.toLowerCase().replace(/\s/g, "")}</span>
-              </a>
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Github size={14} className="text-slate-500" />
+                  <span>{githubDisplay}</span>
+                </a>
+              )}
+              {linkedinUrl && (
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Linkedin size={14} className="text-slate-500" />
+                  <span>{linkedinDisplay}</span>
+                </a>
+              )}
+              {contributor.email && (
+                <a
+                  href={`mailto:${contributor.email}`}
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Mail size={14} className="text-slate-500" />
+                  <span>{contributor.email}</span>
+                </a>
+              )}
+              {contributor.phone && (
+                <a
+                  href={`tel:${contributor.phone}`}
+                  className="flex items-center gap-2 text-slate-300 hover:text-orange-400 transition-colors"
+                >
+                  <Phone size={14} className="text-slate-500" />
+                  <span>{contributor.phone}</span>
+                </a>
+              )}
             </div>
           </div>
 
@@ -144,7 +176,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
         {/* RIGHT SIDE: Biography, "What I Contributed", 30 Days Tasks, Weekly Reviews & Resume */}
         <div className="lg:col-span-8 space-y-8">
-          
+
           {/* Bio Segment */}
           <div className="space-y-3">
             <h1 className="text-3xl md:text-4xl font-serif font-bold text-slate-100 tracking-tight">{contributor.name}</h1>
@@ -152,19 +184,37 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl">{contributor.bio}</p>
           </div>
 
-          {/* Skills tags */}
-          <div className="space-y-3">
-            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Skills</h3>
-            <div className="flex flex-wrap gap-2">
-              {contributor.skills.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 bg-slate-900 border border-slate-800 text-slate-200 text-xs font-mono rounded"
-                >
-                  {skill}
-                </span>
-              ))}
+          {/* Skills Learnt in Internship */}
+          {contributor.skillsLearntInInternship && contributor.skillsLearntInInternship.length > 0 && (
+            <div className="space-y-3 bg-slate-900/30 border border-slate-800/80 rounded-2xl p-6 shadow-md">
+              <h3 className="text-xs font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
+                <BookOpen size={15} />
+                Skills Learnt in this Internship
+              </h3>
+              <div className="flex flex-wrap gap-2 pt-1">
+                {contributor.skillsLearntInInternship.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-slate-950/80 border border-slate-850 text-slate-200 text-xs font-sans rounded-lg shadow-sm flex items-center gap-1.5"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-orange-500" />
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
+          )}
+
+
+          {/* Key Contributions Segment */}
+          <div className="space-y-3 bg-slate-900/40 backdrop-blur-sm rounded-2xl border border-slate-800/80 p-6 md:p-8 shadow-xl">
+            <h3 className="text-xs font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
+              <Award size={15} />
+              Key Internship Contributions
+            </h3>
+            <p className="text-slate-300 text-sm leading-relaxed text-justify font-sans">
+              {contributor.contributions}
+            </p>
           </div>
 
           {/* 5-Week Internship Task Interactive Roadmap */}
@@ -186,11 +236,10 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   <button
                     key={wk}
                     onClick={() => setSelectedWeekFilter(wk)}
-                    className={`px-2.5 py-1 text-[10px] font-mono font-bold uppercase rounded-lg transition-all cursor-pointer ${
-                      selectedWeekFilter === wk
-                        ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                        : "text-slate-500 hover:text-slate-350 border border-transparent"
-                    }`}
+                    className={`px-3 py-1.5 text-xs font-mono font-bold uppercase rounded-lg transition-all cursor-pointer ${selectedWeekFilter === wk
+                      ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                      : "text-slate-500 hover:text-slate-350 border border-transparent"
+                      }`}
                   >
                     {wk === "all" ? "All" : `W-${wk}`}
                   </button>
@@ -200,7 +249,7 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
 
             {/* Task Grid & Showcase Layout split */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-              
+
               {/* Left Column: 30 Interactive Day Tiles */}
               <div className="md:col-span-7 space-y-3">
                 <div className="grid grid-cols-6 gap-2">
@@ -210,13 +259,12 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                       <button
                         key={t.day}
                         onClick={() => setSelectedDay(t.day)}
-                        className={`h-11 rounded-lg flex flex-col items-center justify-center font-mono text-xs font-bold transition-all relative cursor-pointer border ${
-                          isSelected
-                            ? "bg-blue-500/10 border-blue-500 text-blue-400 shadow-md shadow-blue-500/10 scale-105"
-                            : "bg-slate-950/60 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800"
-                        }`}
+                        className={`h-12 rounded-lg flex flex-col items-center justify-center font-mono text-sm font-bold transition-all relative cursor-pointer border ${isSelected
+                          ? "bg-blue-500/10 border-blue-500 text-blue-400 shadow-md shadow-blue-500/10 scale-105"
+                          : "bg-slate-950/60 border-slate-900 text-slate-400 hover:text-slate-200 hover:border-slate-800"
+                          }`}
                       >
-                        <span className="text-[9px] text-slate-500 block leading-none mb-0.5">Day</span>
+                        <span className="text-[10px] text-slate-500 block leading-none mb-0.5">Day</span>
                         {t.day}
                       </button>
                     );
@@ -236,11 +284,11 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                       {activeTask.status}
                     </span>
                   </div>
-                  
+
                   <h4 className="font-serif text-sm font-bold text-slate-100 border-b border-slate-900 pb-2">
                     {activeTask.title}
                   </h4>
-                  
+
                   <p className="text-xs text-slate-350 leading-relaxed font-light font-sans">
                     {activeTask.detail}
                   </p>
@@ -252,44 +300,44 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
             </div>
           </div>
 
-          {/* 5-Week Weekly Mentor Review Timeline */}
+        </div>
+      </div>
+
+      {/* FULL-WIDTH BOTTOM SECTION */}
+      <div className="mt-8 lg:mt-12 space-y-8 w-full">
+        {/* 5-Week Weekly Mentor Review Timeline */}
           <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl border border-orange-500/15 p-6 md:p-8 space-y-6 shadow-xl">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-start gap-3 border-b border-slate-800/80 pb-4">
               <div className="space-y-1">
-                <h3 className="text-xs font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
-                  <UserCheck size={15} />
+                <h3 className="text-sm font-semibold text-orange-400 uppercase tracking-widest flex items-center gap-2 font-mono">
+                  <UserCheck size={16} />
                   Weekly Mentor Review (5 Weeks)
                 </h3>
-                <p className="text-[11px] text-slate-500 font-sans">
-                  Evaluation logs drafted by {mentor.name} ({mentor.designation})
+                <p className="text-xs text-slate-400 font-sans mt-1">
+                  Evaluation logs drafted by <span className="font-semibold text-slate-250">{mentor.name}</span> (<span className="italic text-slate-400">{mentor.designation}</span>)
                 </p>
-              </div>
-              <div className="flex items-center gap-2 px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full">
-                <span className="text-[10px] font-mono font-bold text-orange-400">Average:</span>
-                <span className="text-xs font-mono font-bold text-white">
-                  {(contributor.weeklyReviews.reduce((acc, curr) => acc + curr.rating, 0) / 5).toFixed(2)} / 5
-                </span>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-5">
               {contributor.weeklyReviews.map((rev) => (
-                <div 
-                  key={rev.week} 
-                  className="p-4 bg-slate-950/60 border border-slate-900 hover:border-orange-500/30 rounded-xl space-y-3 transition-all duration-300 relative group overflow-hidden"
+                <div
+                  key={rev.week}
+                  onClick={() => setSelectedReview(rev)}
+                  className="p-5 min-h-[220px] flex flex-col bg-slate-950/80 border border-slate-800 hover:border-orange-500/40 rounded-xl space-y-4 transition-all duration-300 relative group overflow-hidden shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 cursor-pointer"
                 >
-                  <div className="absolute top-0 right-0 p-1 px-2 bg-orange-500/10 text-orange-400 font-mono text-[9px] font-bold rounded-bl-lg">
+                  <div className="absolute top-0 right-0 p-1.5 px-3 bg-orange-500/15 text-orange-400 font-mono text-xs font-bold rounded-bl-xl transition-colors group-hover:bg-orange-500/25">
                     W-{rev.week}
                   </div>
-                  
-                  <div className="flex items-center gap-1 text-amber-500">
-                    <Award size={12} fill="currentColor" />
-                    <span className="text-xs font-mono font-bold text-slate-200">{rev.rating.toFixed(1)}</span>
-                  </div>
 
-                  <p className="text-[11px] text-slate-350 leading-relaxed font-light font-sans group-hover:text-slate-200 transition-colors">
+                  <p className="text-xs text-slate-300 leading-relaxed font-sans group-hover:text-slate-100 transition-colors pt-5 flex-1 text-justify line-clamp-6">
                     "{rev.review}"
                   </p>
+
+                  <div className="mt-auto pt-2 flex items-center gap-1.5 text-[10px] font-mono text-orange-500/0 group-hover:text-orange-400 transition-colors uppercase tracking-widest font-bold">
+                    <span>Read Full Review</span>
+                    <ArrowLeft size={10} className="rotate-180" />
+                  </div>
                 </div>
               ))}
             </div>
@@ -301,18 +349,18 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
               <div className="flex items-center gap-2.5">
                 <FileCheck2 size={18} className="text-orange-400" />
                 <div>
-                  <span className="text-xs font-bold text-slate-200 uppercase tracking-widest block">Interactive CV Document</span>
-                  <span className="text-[10px] text-slate-500 font-mono mt-0.5 block">Alonzo verified digital signature</span>
+                  <span className="text-xs font-bold text-slate-200 uppercase tracking-widest block">Resume Document</span>
+
                 </div>
               </div>
-              
               <button
-                onClick={() => setShowResume(!showResume)}
-                className={`px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border ${
-                  showResume
-                    ? "bg-slate-950 hover:bg-slate-900 border-slate-850 text-slate-400 hover:text-slate-200"
-                    : "bg-orange-500 hover:bg-orange-600 border-orange-450 text-white shadow-lg shadow-orange-500/20"
-                }`}
+                onClick={() => {
+                  setShowResume(!showResume);
+                }}
+                className={`px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border ${showResume
+                  ? "bg-slate-950 hover:bg-slate-900 border-slate-850 text-slate-400 hover:text-slate-200"
+                  : "bg-orange-500 hover:bg-orange-600 border-orange-450 text-white shadow-lg shadow-orange-500/20"
+                  }`}
               >
                 {showResume ? "Hide Resume" : "View Resume CV"}
               </button>
@@ -327,117 +375,216 @@ export const ContributorProfile: React.FC<ContributorProfileProps> = ({
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  {/* Realistic Clean A4 Résumé Paper Rendering */}
-                  <div className="p-8 md:p-12 bg-white text-slate-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-slate-100">
-                    
-                    {/* Resume Header */}
-                    <div className="text-center space-y-2 border-b-2 border-slate-900 pb-5">
-                      <h2 className="text-slate-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
-                      <div className="text-xs font-mono font-bold tracking-wide text-orange-600 uppercase">{contributor.role}</div>
-                      <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] text-slate-500 font-mono">
-                        <span>{contributor.name.toLowerCase().replace(/\s/g, "")}@alonzo.ai</span>
-                        <span>•</span>
-                        <span>+1 (800) 555-ALNZ</span>
-                        <span>•</span>
-                        <span>{contributor.name.toLowerCase().replace(/\s/g, "")}.io</span>
+                  {contributor.resumePdf ? (
+                    <div className="bg-slate-950 p-4 space-y-4 border-t border-slate-850">
+                      {/* PDF Toolbar with Download option */}
+                      <div className="flex justify-end items-center bg-slate-905/80 border border-slate-800/80 p-3 rounded-xl backdrop-blur-md">
+                        <a
+                          href={contributor.resumePdf}
+                          download={`${contributor.name}_Resume.pdf`}
+                          className="px-3.5 py-1.5 bg-orange-500 hover:bg-orange-600 border border-orange-450 text-white rounded-lg text-xs font-mono font-bold tracking-wider uppercase transition-colors flex items-center gap-1.5 shadow-md shadow-orange-500/20 cursor-pointer"
+                        >
+                          <Download size={13} />
+                          Download PDF
+                        </a>
+                      </div>
+
+                      {/* PDF Iframe embed */}
+                      <div className="w-full aspect-[1/1.414] min-h-[500px] sm:min-h-[750px] bg-slate-900 border border-slate-800 rounded-xl overflow-hidden relative">
+                        <iframe
+                          src={`${contributor.resumePdf}#view=FitH`}
+                          title={`${contributor.name} Resume`}
+                          className="w-full h-full border-none"
+                        />
                       </div>
                     </div>
+                  ) : (
+                    <>
+                      {/* Realistic Clean A4 Résumé Paper Rendering */}
+                      <div className="p-8 md:p-12 bg-white text-zinc-900 font-sans leading-relaxed selection:bg-orange-100 max-w-4xl mx-auto border-t border-zinc-200">
 
-                    {/* Profile Summary Segment */}
-                    <div className="py-5 border-b border-slate-100 space-y-2">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Executive Summary</h3>
-                      <p className="text-xs text-slate-700 leading-relaxed text-justify">
-                        A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}. 
-                        Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background 
-                        in {contributor.skills.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
-                      </p>
-                    </div>
-
-                    {/* Technical Skills segment */}
-                    <div className="py-5 border-b border-slate-100 space-y-2">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Core Competencies & Stack</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-slate-700">
-                        <div>
-                          <span className="font-bold text-slate-950">Engineering Stack:</span>
-                          <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.techUsed.join(", ")}</p>
-                        </div>
-                        <div>
-                          <span className="font-bold text-slate-950">Platform Skills:</span>
-                          <p className="text-[11px] text-slate-500 font-medium mt-0.5">{contributor.skills.join(", ")}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Professional Placement */}
-                    <div className="py-5 border-b border-slate-100 space-y-3">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Professional Placements</h3>
-                      <div className="space-y-2">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="text-xs font-bold text-slate-950">Alonzo AI Solutions</h4>
-                            <div className="text-[10px] text-slate-500 font-mono uppercase font-bold mt-0.5">Associate Placement — {contributor.role}</div>
+                        {/* Resume Header */}
+                        <div className="text-center space-y-2 border-b-2 border-zinc-900 pb-5">
+                          <h2 className="text-zinc-900 text-2xl uppercase tracking-wider font-bold">{contributor.name}</h2>
+                          <div className="text-xs font-mono font-bold tracking-wide text-orange-600 uppercase">{contributor.role}</div>
+                          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-zinc-550 font-mono">
+                            {contributor.email && <span>{contributor.email}</span>}
+                            {contributor.email && contributor.phone && <span>•</span>}
+                            {contributor.phone && <span>{contributor.phone}</span>}
+                            {githubDisplay && (contributor.email || contributor.phone) && <span>•</span>}
+                            {githubDisplay && <span>{githubDisplay}</span>}
+                            {linkedinDisplay && (contributor.email || contributor.phone || githubDisplay) && <span>•</span>}
+                            {linkedinDisplay && <span>{linkedinDisplay}</span>}
                           </div>
-                          <span className="text-[10px] text-slate-500 font-mono text-right">{projectDuration}</span>
                         </div>
-                        <p className="text-xs text-slate-755 leading-relaxed text-justify">
-                          {contributor.contributions} Assured the technical and architectural delivery standards specified under primary advisor {mentor.name}.
-                        </p>
-                      </div>
-                    </div>
 
-                    {/* Core Academic Projects */}
-                    <div className="py-5 border-b border-slate-100 space-y-4">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Specialized Projects</h3>
-                      {contributor.resume.projects.map((proj, idx) => (
-                        <div key={idx} className="space-y-1">
-                          <div className="flex justify-between items-baseline">
-                            <h4 className="text-xs font-bold text-slate-950">{proj.title}</h4>
-                            <span className="text-[9px] font-mono bg-slate-100 text-slate-600 px-1.5 py-0.5 font-bold rounded">{proj.tech.join(" | ")}</span>
-                          </div>
-                          <p className="text-xs text-slate-650 leading-relaxed">
-                            {proj.description}
+                        {/* Profile Summary Segment */}
+                        <div className="py-5 border-b border-zinc-200 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Executive Summary</h3>
+                          <p className="text-xs text-zinc-700 leading-relaxed text-justify">
+                            A highly competent, detail-oriented technology engineer from {contributor.resume.education[0].school}.
+                            Extensively contributed to the construction of {projectName} during placement at Alonzo AI. Equipped with a strong background
+                            in {contributor.skillsLearntInInternship?.slice(0, 3).join(", ") || contributor.techUsed.slice(0, 3).join(", ")}, specializing in secure API structures, high-performance architecture, and visual analytics dashboards.
                           </p>
                         </div>
-                      ))}
-                    </div>
 
-                    {/* Achievements section */}
-                    <div className="py-5 space-y-2">
-                      <h3 className="text-xs font-bold tracking-widest text-slate-900 uppercase">Selected Achievements</h3>
-                      <ul className="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
-                        {contributor.resume.achievements.map((ach, idx) => (
-                          <li key={idx} className="leading-relaxed">
-                            {ach}
-                          </li>
-                        ))}
-                        <li className="leading-relaxed">
-                          Awarded full merit-based certificate of excellence during {projectName} internship showcase.
-                        </li>
-                      </ul>
-                    </div>
+                        {/* Technical Skills segment */}
+                        <div className="py-5 border-b border-zinc-200 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Core Competencies & Stack</h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-xs text-zinc-700">
+                            <div>
+                              <span className="font-bold text-zinc-900">Engineering Stack:</span>
+                              <p className="text-[11px] text-zinc-500 font-medium mt-0.5">{contributor.techUsed.join(", ")}</p>
+                            </div>
+                            <div>
+                              <span className="font-bold text-zinc-900">Platform Skills:</span>
+                              <p className="text-[11px] text-zinc-500 font-medium mt-0.5">{contributor.skillsLearntInInternship?.join(", ") || contributor.techUsed.join(", ")}</p>
+                            </div>
+                          </div>
+                        </div>
 
-                  </div>
+                        {/* Professional Placement */}
+                        <div className="py-5 border-b border-zinc-200 space-y-3">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Professional Placements</h3>
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-start">
+                              <div>
+                                <h4 className="text-xs font-bold text-zinc-900">Alonzo AI Solutions</h4>
+                                <div className="text-[10px] text-zinc-500 font-mono uppercase font-bold mt-0.5">Associate Placement — {contributor.role}</div>
+                              </div>
+                              <span className="text-[10px] text-zinc-550 font-mono text-right">{projectDuration}</span>
+                            </div>
+                            <p className="text-xs text-zinc-700 leading-relaxed text-justify">
+                              {contributor.contributions} Assured the technical and architectural delivery standards specified under primary advisor {mentor.name}.
+                            </p>
+                          </div>
+                        </div>
 
-                  {/* Action row */}
-                  <div className="flex items-center justify-between p-5 bg-slate-950 border-t border-slate-850">
-                    <span className="text-[10px] text-slate-500 font-mono">Verified Security Hash ID: alz_{contributor.id.substring(0,4)}</span>
-                    <button
-                      id="faux-print-btn"
-                      onClick={() => window.print()}
-                      className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg text-xs font-medium text-slate-200 transition-colors cursor-pointer flex items-center gap-1.5"
-                    >
-                      <ExternalLink size={13} />
-                      Print Document
-                    </button>
-                  </div>
+                        {/* Core Academic Projects */}
+                        <div className="py-5 border-b border-zinc-200 space-y-4">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Specialized Projects</h3>
+                          {contributor.resume.projects.map((proj, idx) => (
+                            <div key={idx} className="space-y-1">
+                              <div className="flex justify-between items-baseline">
+                                <h4 className="text-xs font-bold text-zinc-900">{proj.title}</h4>
+                                <span className="text-[9px] font-mono bg-zinc-100 text-zinc-650 px-1.5 py-0.5 font-bold rounded">{proj.tech.join(" | ")}</span>
+                              </div>
+                              <p className="text-xs text-zinc-600 leading-relaxed">
+                                {proj.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Achievements section */}
+                        <div className="py-5 space-y-2">
+                          <h3 className="text-xs font-bold tracking-widest text-zinc-900 uppercase">Selected Achievements</h3>
+                          <ul className="list-disc pl-5 text-xs text-zinc-700 space-y-1.5">
+                            {contributor.resume.achievements.map((ach, idx) => (
+                              <li key={idx} className="leading-relaxed">
+                                {ach}
+                              </li>
+                            ))}
+                            <li className="leading-relaxed">
+                              Awarded full merit-based certificate of excellence during {projectName} internship showcase.
+                            </li>
+                          </ul>
+                        </div>
+
+                      </div>
+
+                      {/* Action row */}
+                      <div className="flex items-center justify-between p-5 bg-slate-950 border-t border-slate-850">
+                        <span className="text-[10px] text-slate-500 font-mono">Verified Security Hash ID: alz_{contributor.id.substring(0, 4)}</span>
+                        <button
+                          id="faux-print-btn"
+                          onClick={() => window.print()}
+                          className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-lg text-xs font-medium text-slate-200 transition-colors cursor-pointer flex items-center gap-1.5"
+                        >
+                          <ExternalLink size={13} />
+                          Print Document
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
 
-        </div>
-
       </div>
+      
+      {/* MENTOR REVIEW MODAL */}
+      <AnimatePresence>
+        {selectedReview && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+          >
+            {/* Backdrop */}
+            <div 
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm cursor-pointer"
+              onClick={() => setSelectedReview(null)}
+            />
+            
+            {/* Modal Content */}
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden z-10"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between p-5 sm:p-6 border-b border-slate-800 bg-slate-900/50">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-orange-500/10 rounded-lg">
+                    <UserCheck size={20} className="text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-slate-100 uppercase tracking-wider font-mono">
+                      Mentor Evaluation Log
+                    </h3>
+                    <p className="text-xs text-slate-400 font-sans mt-0.5">
+                      Week {selectedReview.week} • {mentor.name}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedReview(null)}
+                  className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              
+              {/* Body */}
+              <div className="p-6 sm:p-8 bg-slate-950/50">
+                <div className="relative">
+                  <span className="absolute -top-4 -left-4 text-6xl text-slate-800 font-serif opacity-50 select-none">"</span>
+                  <p className="relative z-10 text-sm sm:text-base text-slate-300 leading-relaxed font-sans text-justify">
+                    {selectedReview.review}
+                  </p>
+                  <span className="absolute -bottom-6 -right-2 text-6xl text-slate-800 font-serif opacity-50 select-none">"</span>
+                </div>
+              </div>
+              
+              {/* Footer */}
+              <div className="p-4 sm:p-5 border-t border-slate-800 bg-slate-900/80 flex justify-end">
+                <button
+                  onClick={() => setSelectedReview(null)}
+                  className="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors cursor-pointer"
+                >
+                  Close Log
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </motion.div>
   );
 };

@@ -1,7 +1,8 @@
 import React from "react";
-import { ArrowLeft, Cpu, Code2, GraduationCap } from "lucide-react";
+import { ArrowLeft, Cpu, Code2, GraduationCap, User } from "lucide-react";
 import { Project, Contributor } from "../types";
 import { motion } from "motion/react";
+import { getProjectBgColor } from "./Projects";
 
 interface ProjectDetailsProps {
   project: Project;
@@ -35,11 +36,17 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       <div className="bg-slate-900/40 border border-slate-800/80 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-md">
         
         {/* Giant Project Showcase Hero Card */}
-        <div className="relative h-64 sm:h-96 w-full bg-slate-950">
+        <div 
+          className="relative h-64 sm:h-96 w-full bg-slate-950"
+          style={{ backgroundColor: getProjectBgColor(project.id) }}
+        >
           <img
             src={project.image}
             alt={project.name}
-            className="w-full h-full object-cover opacity-80"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+            className="w-full h-full object-contain p-6 opacity-95"
           />
           {/* Subtle vignette layer */}
           <div className="absolute inset-0 project-details-overlay" />
@@ -99,12 +106,16 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 >
                   <div className="flex items-center gap-4">
                     {/* User profile picture */}
-                    <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 flex-shrink-0 flex items-center justify-center relative">
                       <img
                         src={contrib.avatar}
                         alt={contrib.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 relative z-10"
                       />
+                      <User size={20} className="text-slate-500 absolute" />
                     </div>
 
                     {/* Meta labels */}
@@ -115,14 +126,7 @@ export const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                       <p className="text-[10px] text-orange-500 font-mono uppercase tracking-wider mt-0.5">
                         {contrib.role}
                       </p>
-                      
-                      {/* Sub-label info */}
-                      <div className="flex items-center gap-3 mt-1.5 text-[9px] text-slate-500 font-mono">
-                        <span className="flex items-center gap-1">
-                          <Code2 size={10} />
-                          {contrib.skills[0]}
-                        </span>
-                      </div>
+
                     </div>
                   </div>
 

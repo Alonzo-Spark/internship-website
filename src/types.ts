@@ -1,7 +1,7 @@
 export interface WeeklyReview {
   week: number;
   review: string;
-  rating: number;
+  rating?: number;
 }
 
 export interface Contributor {
@@ -9,19 +9,23 @@ export interface Contributor {
   name: string;
   role: string;
   avatar: string;
-  cgpa: string;
-  skills: string[];
+  skills?: string[];
   techUsed: string[];
   bio: string;
   contributions: string;
+  github?: string;
+  linkedin?: string;
+  email?: string;
+  phone?: string;
+  resumePdf?: string;
   dailyTasks: string[];
   weeklyReviews: WeeklyReview[];
+  skillsLearntInInternship?: string[];
   resume: {
     education: {
       degree: string;
       school: string;
       year: string;
-      grade: string;
     }[];
     projects: {
       title: string;
@@ -41,11 +45,10 @@ export interface Mentor {
 }
 
 export interface ClientReview {
+  week: number;
   name: string;
   company: string;
-  rating: number;
   comment: string;
-  avatar: string;
 }
 
 export interface Project {

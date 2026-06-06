@@ -94,17 +94,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                 Projects
               </button>
 
-              {/* Theme Toggle Button */}
+              {/* Box Theme Toggle Switch */}
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle Theme"
-                className="p-2 text-slate-400 hover:text-slate-100 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg transition-all cursor-pointer flex items-center justify-center shadow-sm"
+                className="relative w-[64px] h-[34px] bg-slate-900 border border-slate-800 rounded-lg p-[3px] transition-colors duration-300 cursor-pointer flex items-center justify-between shadow-inner focus:outline-none select-none"
               >
-                {theme === "light" ? (
-                  <Moon size={17} className="text-slate-300 hover:text-orange-400 transition-colors" />
-                ) : (
-                  <Sun size={17} className="text-slate-300 hover:text-orange-400 transition-colors" />
-                )}
+                {/* Sliding indicator box */}
+                <div
+                  className={`absolute top-[3px] bottom-[3px] w-[26px] bg-gradient-to-br from-orange-500 to-red-500 rounded-md shadow-md transition-all duration-300 ease-in-out ${
+                    theme === "light"
+                      ? "left-[3px]"
+                      : "left-[33px]"
+                  }`}
+                />
+                
+                {/* Sun Icon (light mode) */}
+                <div className="z-10 flex items-center justify-center w-[26px] h-[26px]">
+                  <Sun size={14} className={`transition-colors duration-300 ${theme === "light" ? "text-white" : "text-slate-500"}`} />
+                </div>
+
+                {/* Moon Icon (dark mode) */}
+                <div className="z-10 flex items-center justify-center w-[26px] h-[26px]">
+                  <Moon size={14} className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-slate-500"}`} />
+                </div>
               </button>
             </div>
 
@@ -114,9 +127,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle Theme"
-                className="p-2 text-slate-400 hover:text-slate-100 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg transition-all cursor-pointer flex items-center justify-center shadow-sm"
+                className="relative w-[64px] h-[34px] bg-slate-900 border border-slate-800 rounded-lg p-[3px] transition-colors duration-300 cursor-pointer flex items-center justify-between shadow-inner focus:outline-none select-none"
               >
-                {theme === "light" ? <Moon size={17} /> : <Sun size={17} />}
+                {/* Sliding indicator box */}
+                <div
+                  className={`absolute top-[3px] bottom-[3px] w-[26px] bg-gradient-to-br from-orange-500 to-red-500 rounded-md shadow-md transition-all duration-300 ease-in-out ${
+                    theme === "light"
+                      ? "left-[3px]"
+                      : "left-[33px]"
+                  }`}
+                />
+                
+                {/* Sun Icon (light mode) */}
+                <div className="z-10 flex items-center justify-center w-[26px] h-[26px]">
+                  <Sun size={14} className={`transition-colors duration-300 ${theme === "light" ? "text-white" : "text-slate-500"}`} />
+                </div>
+
+                {/* Moon Icon (dark mode) */}
+                <div className="z-10 flex items-center justify-center w-[26px] h-[26px]">
+                  <Moon size={14} className={`transition-colors duration-300 ${theme === "dark" ? "text-white" : "text-slate-500"}`} />
+                </div>
               </button>
 
               <button
