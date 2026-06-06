@@ -881,11 +881,11 @@ export const projectsData: Project[] = [
           "Reviewed overall EduSim progress and planned the next phase of sandbox runtime development."
         ],
         weeklyReviews: [
-          { week: 1, review: "Rithvik Showed a solid understanding of backend requirements from the outset and contributed meaningfully to core system development. Approached problem-solving in a structured and efficient manner." },
-          { week: 2, review: "Rithvik Handled backend responsibilities with confidence and consistently took ownership of key development tasks. Focused on improving system scalability and maintainability through thoughtful implementation." },
-          { week: 3, review: "Rithvik Established himself as a reliable contributor by effectively managing critical backend tasks and supporting the team during key development activities. Maintained a consistent level of performance throughout the project." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 1, review: "Rithvik showed a solid understanding of backend requirements from the outset and contributed meaningfully to core system development. Approached problem-solving in a structured and efficient manner." },
+          { week: 2, review: "Rithvik handled backend responsibilities with confidence and consistently took ownership of key development tasks. Focused on improving system scalability and maintainability through thoughtful implementation." },
+          { week: 3, review: "Rithvik established himself as a reliable contributor by effectively managing critical backend tasks and supporting the team during key development activities. Maintained a consistent level of performance throughout the project." },
+          { week: 4, review: "Rithvik showed strong ownership in frontend and backend integration efforts by reviewing runtime architectures, validating database connectivity, and ensuring smooth collaboration across development branches. Contributed to system stability through effective merge management, integration testing, and thoughtful planning of upcoming simulation features." },
+          { week: 5, review: "Rithvik demonstrated a structured approach to frontend development by supporting repository cleanup, merge planning, and architecture refinement activities. Contributed to improving educational content delivery and user experience through thoughtful UI enhancements and instructional system design." }
         ],
         skillsLearntInInternship: [
           "Full-Stack Application Development using React, TypeScript, FastAPI, and Modern Web Technologies",
@@ -958,8 +958,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Mythri adapted well to the frontend development requirements and consistently delivered assigned tasks. Displayed a positive attitude toward feedback and continuously worked on improving implementation quality." },
           { week: 2, review: "Mythri continued to enhance her frontend development skills while maintaining a strong focus on usability and functionality. Proactively addressed issues and contributed to overall interface improvements." },
           { week: 3, review: "Mythri displayed a high level of commitment and professionalism in delivering frontend features and enhancements. Contributed significantly to improving overall usability and the end-user experience." },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Mythri displayed a high level of attention to quality assurance by developing comprehensive test cases and performing end-to-end validation across UI, API, and database layers. Contributed significantly to project documentation, workflow analysis, database verification, and overall platform reliability while continuously expanding technical knowledge across multiple domains." },
+          { week: 5, review: "Mythri continued to strengthen platform quality through extensive integration testing and end-to-end validation of key EduSim modules. Played an important role in maintaining system reliability by verifying workflows, supporting test automation initiatives, resolving merge conflicts, and validating backend and database integrations." }
         ],
         skillsLearntInInternship: [
           "React.js", "TypeScript", "Vite", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "FAST API Integration", "Responsive UI Design", "User Experience Design (UX)"
@@ -1027,8 +1027,8 @@ export const projectsData: Project[] = [
           { week: 1, review: "Satish demonstrated a strong learning attitude and adapted quickly to the project's AI requirements. Actively explored multiple approaches and contributed effectively to addressing technical challenges." },
           { week: 2, review: "Satish demonstrated significant progress in understanding AI workflows and worked with increasing independence. Contributed to improving the quality, accuracy, and effectiveness of the overall solution." },
           { week: 3, review: "Satish demonstrated strong ownership and accountability in assigned responsibilities. Consistently delivered quality work and contributed to continuous improvement efforts across the project" },
-          { week: 4, review: "" },
-          { week: 5, review: "" }
+          { week: 4, review: "Satish demonstrated continued growth in AI engineering concepts and contributed effectively to improving EduSim’s AI Tutor capabilities. Worked on prompt refinement, benchmarking strategies, documentation enhancements, and UI/UX planning while actively supporting frontend integration and deployment-related activities." },
+          { week: 5, review: "Satish made impactful contributions to the EduSim platform by enhancing the Physics Sandbox, AI Tutor, and Formula Lab experiences. Focused on improving responsiveness, usability, telemetry tracking, and interactive learning features while consistently driving improvements in overall user engagement and platform functionality." }
         ],
         skillsLearntInInternship: [
           "Python", "JavaScript", "RAG", "LLM Evaluation", "PixiJS", "Matter.js", "SVG Rendering", "FAST API", "React"
